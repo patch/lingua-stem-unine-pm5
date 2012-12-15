@@ -10,159 +10,100 @@ our $VERSION   = '0.00_1';
 our @EXPORT_OK = qw( stem_bg );
 
 sub stem_bg {
-    my ($line, $i);
-    $line = $_[0];
-    $i = length($line);
+    my ($word) = @_;
+    my $length = length $word;
 
-    if ($i > 5) {
-        if ($line =~ m/ища$/) {
-            $line = substr($line, 0, $i - 3);
+    return $word
+        if $length < 4;
 
-            return($line);
-        }
-    }
+    return $word
+        if $length > 5
+        && $word =~ s/ища$//;
 
-    if ($i < 4) {  # consider only words having 5 characters or more
-        return($line);
-    }
+    $word = remove_article($word);
+    $word = remove_plural($word);
+    $length = length $word;
 
-    $line = remove_article($line);
-    $line = remove_plural($line);
-    $i = length($line);
-
-    if ($i > 3) {
-        if ($line =~ m/я$/) {  # final -(R) (masc)
-            $line = substr($line, 0, $i - 1);
-        }
+    if ($length > 3) {
+        $word =~ s/я$//;  # final -(R) (masc)
 
         # normalization (e.g., -a could be a definite article or plural form)
-        if ($line =~ m/[аое]$/) {  # final -[aoe]
-            $line = substr($line, 0, $i - 1);
-        }
+        $word =~ s/[аое]$//;  # final -[aoe]
+
+        $length = length $word;
     }
 
-    # rewritting rule -eH into -H
-    $i = length($line);
+    if ($length > 4) {
+        $word =~ s/ен$/н/;  # final -eH → H
 
-    if ($i > 4) {
-        if ($line =~ m/ен$/) {  # final -eH -> H
-            $line =~ s/ен$/н/;
-            $i -= 1;
-        }
+        $length = length $word;
     }
 
-    # rewritting rule -...b. into -....
-    if ( ($i > 5) && (substr($line, $i - 2, 1) eq "ъ") ) {
-        substr($line, $i - 2, 2) = substr($line, $i - 1, 1);
+    if ($length > 5) {
+        # rewritting rule -...b. into -....
+        $word =~ s/ъ(?=.$)//;
     };
 
-    return($line);
+    return $word;
 }
 
 sub remove_article {
-    my ($word, $i);  # use a local var $word and $i
-    $word = $_[0];
-    $i = length($word);
+    my ($word) = @_;
+    my $length = length $word;
 
-    # definite article with adjectives and masc
-    if ( ($i > 6) && ($word =~ m/ият$/) ) {  # final -H(R)T
-        return( substr($word, 0, $i - 3) );
+    if ($length > 6) {
+        # definite article with adjectives and masc
+        return $word
+            if $word =~ s/ият$//;  # final -H(R)T
     }
 
-    if ($i > 5) {
-        if ($word =~ m/ия$/) {  # final -H(R)
-            return( substr($word, 0, $i - 2) );
-        }
-
-        # definite article (the) for nouns
-        if ($word =~ m/та$/) {  # final -Ta (art for femi)
-            return( substr($word, 0, $i - 2) );
-        }
-
-        if ($word =~ m/ът$/) {  # final -bT (art for masc)
-            return( substr($word, 0, $i - 2) );
-        }
-
-        if ($word =~ m/то$/) {  # final -To (art for neutral)
-            return( substr($word, 0, $i - 2) );
-        }
-
-        if ($word =~ m/те$/) {  # final -Te (art in plural)
-            return( substr($word, 0, $i - 2) );
-        }
+    if ($length > 5) {
+        return $word
+            if $word =~ s/ия$//   # final -H(R)
+            # definite article (the) for nouns
+            || $word =~ s/та$//   # final -Ta (art for femi)
+            || $word =~ s/ът$//   # final -bT (art for masc)
+            || $word =~ s/то$//   # final -To (art for neutral)
+            || $word =~ s/те$//;  # final -Te (art in plural)
     }
 
-    if ( ($i > 4) && ($word =~ m/ят$/) ) {  # final -(R)T (art for masc)
-        return( substr($word, 0, $i - 2) );
+    if ($length > 4) {
+        return $word
+            if $word =~ s/ят$//;  # final -(R)T (art for masc)
     }
 
-    return($word);
+    return $word;
 }
 
 sub remove_plural {
-    my ($word, $i);  # use local var $word and $i
-    $word = $_[0];
-    $i = length($word);
+    my ($word) = @_;
+    my $length = length $word;
 
     # specific plural rules for some words (masc)
-    if ($i > 6) {  # for words having more than 6 characters
-        if ($word =~ m/ове$/) {  # final -OBe
-            return( substr($word, 0, $i - 3) );
-        }
-
-        if ($word =~ m/еве$/) {  # final -eBe --> N
-            $word =~ s/еве$/й/;
-
-            return($word);
-        }
-
-        if ($word =~ m/овци$/) {  # final -oBUH --> O
-            $word =~ s/овци$/о/;
-
-            return($word);
-        }
+    if ($length > 6) {
+        return $word
+            if $word =~ s/ове$//     # final -OBe
+            || $word =~ s/еве$/й/    # final -eBe  → N
+            || $word =~ s/овци$/о/;  # final -oBUH → O
     }
 
-    if ($i > 5) {  # for words having more than 5 characters
-        if ($word =~ m/ища$/) {  # final -HWa
-            return( substr($word, 0, $i - 3) );
-        }
-
-        if ($word =~ m/зи$/) {  # final -(e)H --> T
-            $word =~ s/зи$/г/;
-
-            return($word);
-        }
-
-        if ($word =~ m/е.и$/) {  # rewritting rule
-            substr($word, $i - 3, 1) = "я";
-            substr($word, $i - 1, 1) = "";
-
-            return($word);
-        }
-
-        if ($word =~ m/та$/) {  # final -Ta
-            return( substr($word, 0, $i - 2) );
-        }
-
-        if ($word =~ m/ци$/) {  # final -UH --> k
-            $word =~ s/ци$/к/;
-
-            return($word);
-        }
+    if ($length > 5) {
+        return $word
+            if $word =~ s/ища$//       # final -HWa
+            || $word =~ s/зи$/г/       # final -(e)H → T
+            || $word =~ s/е(.)и$/я$1/
+            || $word =~ s/та$//        # final -Ta
+            || $word =~ s/ци$/к/;      # final -UH → k
     }
 
-    if ($i > 4) {  # for words having more than 4 characters
-        if ($word =~ m/си$/) {  # final -cH --> x
-            $word =~ s/си$/х/;
-
-            return($word);
-        }
-
-        $word =~ s/и$//;  # final -H plural for various nouns and adjectives
+    if ($length > 4) {
+        return $word
+            if $word =~ s/си$/х/  # final -cH → x
+            || $word =~ s/и$//;   # final -H plural for various
+                                  # nouns and adjectives
     }
 
-    return($word);
+    return $word;
 }
 
 1;
