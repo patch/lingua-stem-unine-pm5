@@ -1,0 +1,119 @@
+# use utf8;
+
+while(<>) {
+  $line = $_; 
+
+# letters
+
+  $line =~ s/\xD9\x8A\xD8\xA1/Y/g;  # hamza & Yeh
+
+  $line =~ s/\xD8\xA2/A/g;  # Alef madda
+  $line =~ s/\xD8\xA3/A/g;  # Alef hamza above
+  $line =~ s/\xD8\xA4/w/g;  # Waw hamza
+  $line =~ s/\xD8\xA5/A/g;  # Alef hamza below
+  $line =~ s/\xD8\xA6/y/g;  # Yeh hamza above
+  $line =~ s/\xD8\xA7/A/g;  # Alef
+  $line =~ s/\xD8\xA8/b/g;  # Beh
+  $line =~ s/\xD8\xA9/p/g;  # Teh marbuta (end of a word)
+  $line =~ s/\xD8\xAA/t/g;  # Teh
+  $line =~ s/\xD8\xAB/v/g;  # Theh
+  $line =~ s/\xD8\xAC/j/g;  # Jeem
+  $line =~ s/\xD8\xAD/H/g;  # Hah
+  $line =~ s/\xD8\xAE/x/g;  # Khah
+  $line =~ s/\xD8\xAF/d/g;  # Dal
+  $line =~ s/\xD8\xB0/O/g;  # Thal
+  $line =~ s/\xD8\xB1/r/g;  # Reh
+  $line =~ s/\xD8\xB2/z/g;  # Zain
+  $line =~ s/\xD8\xB3/s/g;  # Seen
+  $line =~ s/\xD8\xB4/P/g;  # Sheen
+  $line =~ s/\xD8\xB5/S/g;  # Sad
+  $line =~ s/\xD8\xB6/D/g;  # Dad
+  $line =~ s/\xD8\xB7/T/g;  # Tah
+  $line =~ s/\xD8\xB8/Z/g;  # Zah
+  $line =~ s/\xD8\xB9/E/g;  # Ain
+  $line =~ s/\xD8\xBA/g/g;  # Ghain
+  $line =~ s/\xD9\x81/f/g;  # Feh
+  $line =~ s/\xD9\x82/q/g;  # Qaf
+  $line =~ s/\xD9\x83/k/g;  # Kaf
+  $line =~ s/\xD9\x84/l/g;  # Lam
+  $line =~ s/\xD9\x85/m/g;  # Meem
+  $line =~ s/\xD9\x86/n/g;  # Noon
+  $line =~ s/\xD9\x87/h/g;  # Heh
+  $line =~ s/\xD9\x88/w/g;  # Waw
+  $line =~ s/\xD9\x89/Y/g;  # Alef maksura
+  $line =~ s/\xD9\x8A/X/g;  # Yeh
+
+# letters modifiers
+  $line =~ s/\xD8\xA1//g;   # hamza
+  $line =~ s/\xD9\x80//g;   # Tatweel
+
+  $line =~ s/\xD9\x8B//g;   # fathatan
+  $line =~ s/\xD9\x8C//g;   # dammatan
+  $line =~ s/\xD9\x8D//g;   # kasratan
+  $line =~ s/\xD9\x8E//g;   # fatha
+  $line =~ s/\xD9\x8F//g;   # damma
+  $line =~ s/\xD9\x90//g;   # kasra
+  $line =~ s/\xD9\x91//g;   # shadda
+  $line =~ s/\xD9\x92//g;   # sukun
+  $line =~ s/\xD9\x93//g;   # maddah above
+  $line =~ s/\xD9\x94//g;   # hamza above
+  $line =~ s/\xD9\x95//g;   # hamza below
+
+  $line =~ s/\xD9\xB0//g;   # supersript alef
+  
+# digits
+  $line =~ s/\xD9\xA0/0/g;  # arabic-indic 0
+  $line =~ s/\xD9\xA1/1/g;  # arabic-indic 1
+  $line =~ s/\xD9\xA2/2/g;  # arabic-indic 2
+  $line =~ s/\xD9\xA3/3/g;  # arabic-indic 3
+  $line =~ s/\xD9\xA4/4/g;  # arabic-indic 4
+  $line =~ s/\xD9\xA5/5/g;  # arabic-indic 5
+  $line =~ s/\xD9\xA6/6/g;  # araboc-indic 6
+  $line =~ s/\xD9\xA7/7/g;  # arabic-indic 7
+  $line =~ s/\xD9\xA8/8/g;  # arabic-indic 8 
+  $line =~ s/\xD9\xA9/9/g;  # arabic-indic 9
+
+# archaic and extended arabic letters
+  $line =~ s/\xD9\xAE/b/g;  # archaic Beh
+  $line =~ s/\xD9\xAF/q/g;  # archaic Qaf
+  $line =~ s/\xD9\xB1/A/g;  # Alef wasla
+  $line =~ s/\xD9\xB2/A/g;  # Alef wavy hamza above
+  $line =~ s/\xD9\xB3/A/g;  # Alef wavy hamza below
+  $line =~ s/\xD9\xB4//g;   # high hamza
+  $line =~ s/\xD9\xB5/A/g;  # Alef high hamza
+  $line =~ s/\xD9\xB6/w/g;  # Waw high hamza
+  $line =~ s/\xD9\xB7//g;   # U hamza
+  $line =~ s/\xD9\xB8/y/g;  # Yeh high hamza
+  $line =~ s/\xD9\xB9//g;   # TThe
+
+# ponctuation
+  $line =~ s/\xD8\x84//g;  # unknown
+  $line =~ s/\xD8\x8C/ /g;  # comma
+  $line =~ s/\xD8\x9B/ /g;  # semicolon
+  $line =~ s/\xD8\x9F/ /g;  # question mark
+
+  $line =~ s/\xD9\xAA/ /g;  # percent sign
+  $line =~ s/\xD9\xAB//g;  # decimal separator
+  $line =~ s/\xD9\xAC//g;  # thousand separator
+  $line =~ s/\xD9\xAD/ /g;  # five pointed star
+
+  $line =~ s/\xD9\x80//g;  # underline
+  $line =~ s/\xE2\x89\xAA//g;  # ltlt
+  $line =~ s/\xE2\x89\xAB//g;  # gtgt
+  $line =~ s/ /\n/g;  # space
+  $line =~ s/\.//g;   # dot
+  $line =~ s/\"//g;   # "
+  $line =~ s/://g;    # :
+
+
+  if (/[<>;#]/) {
+   print $line;
+   }
+   else {
+        $line =~ s/[\x80-\xFF]//g;
+        if (length($line) > 1) {
+           print $line; 
+           };
+        };
+}
+ 

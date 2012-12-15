@@ -1,0 +1,72 @@
+/*  Spanish stemmer tring to remove inflectional suffixes */
+
+
+static char *removeSpanishAccent();
+
+char * spanish_stemming (word)
+char *word;
+{ 
+int len = strlen (word)-1;
+
+if (len > 3) {  
+   removeSpanishAccent(word);
+   if ((word[len]=='s') && (word[len-1]=='e') && (word[len-2]=='s') && (word[len-3]=='e')) {
+         /*  corteses -> cortés  */
+         word[len-1]='\0';
+         return(word);
+      }
+   if ((word[len]=='s') && (word[len-1]=='e') && (word[len-2]=='c')) {
+         word[len-2]='z';        /*  dos veces -> una vez  */
+         word[len-1]='\0';
+         return(word);
+      }
+   if (word[len]=='s') {  /*  ending with -os, -as  or -es */
+      if (word[len-1]=='o' || word[len-1]=='a' || word[len-1]=='e' ) {
+         word[len-1]='\0';  /*  remove -os, -as  or -es */
+         return (word);
+         }
+      }
+   if (word[len]=='o') {   /*  ending with  -o  */
+      word[len]='\0';  
+      return(word);
+      }
+   if (word[len]=='a') {   /*  ending with  -a  */
+      word[len]='\0';  
+      return(word);
+      }
+   if (word[len]=='e') {   /*  ending with  -e  */
+      word[len]='\0';  
+      return(word);
+      }
+   } /* end if (len > 3) */ 
+return(word);         
+}
+
+
+static char * removeSpanishAccent (word)
+char *word;
+{ 
+int len = strlen (word)-1;
+int i;
+
+   for(i=len; i>=0; i--) {
+      if ((word[i]=='à') || (word[i]=='á') || (word[i]=='â') || (word[i]=='ä')) {
+         word[i] = 'a';
+         }
+      if ((word[i]=='ò') || (word[i]=='ó') || (word[i]=='ô') || (word[i]=='ö')) {
+         word[i] = 'o';
+         }
+      if ((word[i]=='è') || (word[i]=='é') || (word[i]=='ê') || (word[i]=='ë')) {
+         word[i] = 'e';
+         }
+      if ((word[i]=='ù') || (word[i]=='ú') || (word[i]=='û') || (word[i]=='ü')) {
+         word[i] = 'u';
+         }
+      if ((word[i]=='ì') || (word[i]=='í') || (word[i]=='î') || (word[i]=='ï')) {
+         word[i] = 'i';
+         }
+      }
+   return(word);
+}
+
+

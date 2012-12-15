@@ -1,0 +1,9 @@
+This directory contains the original source code from the University of
+Neuchâtel for all of their stemmers.  It is intended to be stored in the
+Lingua::Stem::UniNE project repository, but not the packaged CPAN distribution,
+for the purpose of comparing with the UniNE-hosted files for updates.
+
+To download all the known stemmers from UniNE into the current directory, run
+the fetch-stemmers script.
+
+./fetch-stemmers

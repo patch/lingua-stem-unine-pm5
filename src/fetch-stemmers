@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+use 5.010;
+use strict;
+use warnings;
+use utf8;
+use LWP::Simple qw( getstore is_success );
+
+my $url = 'http://members.unine.ch/jacques.savoy/clef/';
+
+my @files = qw(
+    frenchStemmer.txt
+    frenchStemmerPlus.txt
+    germanStemmer.txt
+    germanStemmerPlus.txt
+    italianStemmer.txt
+    spanishStemmer.txt
+    portugueseStemmer.txt
+    finnishStemmer.txt
+    swedishStemmer.txt
+    arabicStemmer2.txt
+    arabicStemmer2.txt
+    russianStemmerPerl.txt
+    RussianLightJava.txt
+    RussianAggressiveJava.txt
+    hungarianStemmer.txt
+    bulgarianStemmer.txt
+    CzechStemmerLight.txt
+    CzechStemmerAgressive.txt
+    persianStemmerArabic.txt
+    persianStemmerUnicode.txt
+    HindiStemmerLight.java
+    MarathiStemmerLight.java
+    BengaliStemmerLight.java
+    convertARB.txt
+    convertUTF8Cyr.txt
+);
+
+for my $file (@files) {
+    my $status = getstore($url . $file, $file);
+
+    if ( is_success($status) ) {
+        say "$status: $file -- OK";
+    }
+    else {
+        say "$status: $file -- FAIL";
+    }
+
+    sleep 2;
+}

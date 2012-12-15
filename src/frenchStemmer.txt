@@ -1,0 +1,31 @@
+
+/* Remove plural and feminine form of French words /
+
+static char *  remove_french_plural (word)
+char *word;
+{ 
+int len = strlen (word)-1;
+
+if (len > 4) {
+   if (word[len]=='x') {
+      if (word[len-1]=='u' && word[len-2]=='a') {
+         word[len-1]='l';
+         }
+      word[len]='\0';
+      return(word);
+      }
+      else {
+         if (word[len]=='s')
+            {word[len]='\0';len--;}
+         if (word[len]=='r')
+            {word[len]='\0';len--;}
+         if (word[len]=='e')
+            {word[len]='\0';len--;}
+         if (word[len]=='é')
+            {word[len]='\0';len--;}
+         if (word[len] == word[len-1])
+             word[len]='\0';
+         }  /* end else */
+   } /* end if (len > 4) */ 
+return(word);         
+}

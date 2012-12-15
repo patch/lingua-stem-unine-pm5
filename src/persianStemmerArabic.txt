@@ -1,0 +1,162 @@
+﻿package com.dlj.ir.analysis.pe
+
+import java.util.Map;
+import java.util.WeakHashMap;
+
+/**
+ * Persian stemmer light-  
+ * Done by Ljiljana Doalmic(University of Neuchatel, www.unine.ch/info/clef/)
+ *         
+ * @author Ljiljana Dolamic. Email: ljiljana.dolamic@unine.ch 
+ */
+public class PersianStemmerLight {
+	/**
+	 * A cache of words and their stems
+	 */
+	static private Map<String, String> cache = new WeakHashMap<String, String>();
+	/**
+	 * A buffer of the current word being stemmed
+	 */
+	private StringBuilder sb = new StringBuilder();
+	/**
+	 * Default constructor
+	 */
+	public PersianStemmerLight() {
+	}
+
+	public String stem(String word) {
+		String result = cache.get(word);
+
+		if (result != null)
+			return result;
+
+		sb.delete(0, sb.length());
+
+		sb.append(word);
+
+		remove_kasra(sb);
+		
+		remove_suffix(sb);		
+		
+		remove_kasra(sb);
+
+		result = sb.toString();
+		cache.put(word, result);
+
+		return result;
+	}
+
+	private void remove_suffix(StringBuilder word) {
+		int len = word.length() - 1;
+		if (len > 6) {		
+			if (word.substring(len-3, len+1).equals("ترین")||
+					word.substring(len-3, len+1.equals("آباد")||
+					word.substring(len-3, len+1).equals("ترين"))
+			{
+				word.delete(len - 3, len + 1);
+				return;
+			}
+			if (word.substring(len-3, len+1).equals("گيري ")||
+					word.substring(len-3, len+1).equals("هايي")||
+					word.substring(len-3, len+1).equals("هایی")||
+					word.substring(len-3, len+1).equals("گیری")||
+					word.substring(len-3, len+1).equals("سازي")||
+					word.substring(len-3, len+1).equals("سازی")||
+					word.substring(len-3, len+1).equals("ريزي")||
+					word.substring(len-3, len+1).equals("ریزی")||
+					word.substring(len-3, len+1).equals("بندي")||
+					word.substring(len-3, len+1).equals("بندی")||
+					word.substring(len-3, len+1).equals("آباد ")||
+					word.substring(len-3, len+1).equals("باره"))
+			{
+				word.delete(len - 3, len + 1);
+				return;
+			}
+		} /* end if len > 6 */
+		if (len > 5) {			
+			if (word.substring(len-2, len+1).equals("هاي")||
+					word.substring(len-2, len+1).equals("های")||
+					word.substring(len-2, len+1).equals("اند")||
+					word.substring(len-2, len+1).equals("ايم")||
+					word.substring(len-2, len+1).equals("ایم")||
+					word.substring(len-2, len+1).equals("شان"))
+			{
+				word.delete(len - 2, len + 1);
+				return;
+			}
+		} /* end if len > 5 */		
+		if (len > 4) {	
+			if (word.substring( len-1, len+1).equals("ان"))
+			 {
+				 word.delete(len - 1, len + 1);
+				 normalize_1(word);
+				 return;
+			}
+			if (word.substring( len-1, len+1).equals("ها")||
+					word.substring( len-1, len+1).equals("ين")||
+					word.substring( len-1, len+1).equals("ين")||
+					word.substring( len-1, len+1).equals("ات")||
+					word.substring( len-1, len+1).equals(" هء")||
+					word.substring( len-1, len+1).equals("اش")||
+					word.substring( len-1, len+1).equals("تر")||
+					word.substring( len-1, len+1).equals("را")||
+					word.substring( len-1, len+1).equals("ون")||
+					word.substring( len-1, len+1).equals("ام"))
+			{
+				word.delete(len - 1, len + 1);
+				return;
+			}						
+		} /* end if len > 4 */
+		if (len > 2) {			
+			if (word.charAt(len)=='ه'||
+					word.charAt(len)=='ی'||  // Farsi yeh \u06CC
+					word.charAt(len)=='ي'||  // Arabic yeh \u064A
+					word.charAt(len)=='م'||
+					word.charAt(len)=='ت'||
+					word.charAt(len)=='ش') 
+			{				
+				word.deleteCharAt(len);
+				return;
+			}
+		}
+		return;
+	}
+
+	private void normalize_1(StringBuilder word) {
+		int len = word.length() - 1;		
+		if (len > 2) {			
+			if (word.charAt(len)=='ى'|| // Alef maksura \u0649
+					word.charAt(len)=='گ'||
+					word.charAt(len)=='م'||
+					word.charAt(len)=='ت'||
+					word.charAt(len)=='ر'||
+					word.charAt(len)=='ش') 
+			{				
+				word.deleteCharAt(len);
+				normalize_2(word);
+			}
+		}            
+		return;
+	}
+	private void remove_kasra(StringBuilder word) {
+		int len = word.length() - 1;
+		if (len > 3) {			
+			if (word.charAt(len) == '  ِ' )
+			 {
+				word.deleteCharAt(len);		
+				return;
+			}			
+		} /* end if len > 3 */		
+	}
+	private void normalize_2(StringBuilder word){
+		int len = word.length() - 1;  
+		if(len > 2){		
+			if (word.charAt(len) == 'ی' || word.charAt(len) == 'ي')
+			{
+				word.deleteCharAt(len );
+				return;
+			}		
+     	 	}
+	}
+}
+

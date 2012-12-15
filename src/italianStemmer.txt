@@ -1,0 +1,78 @@
+/*  Italian stemmer tring to remove inflectional suffixes */
+
+
+static char *removeItalianAccent();
+
+
+static char * italian_stemming (word)
+char *word;
+{ 
+int len = strlen (word)-1;
+
+if (len > 4) {
+   removeItalianAccent(word);
+   if (word[len]=='e') {  /*  ending with -ie or -he  */
+      if (word[len-1]=='i' || word[len-1]=='h') {
+         word[len-1]='\0';
+         return (word);
+         }
+      word[len]='\0';  /*  ending with -e  */
+      return(word);
+      }
+   if (word[len]=='i') {  /*  ending with -hi or -ii */
+      if ((word[len-1]=='h') || (word[len-1]=='i')) {
+         word[len-1]='\0';
+         return (word);
+         }
+      word[len]='\0';  /*  ending with -i  */
+      return(word);
+      }
+   if (word[len]=='a') {  /*  ending with -ia  */
+      if (word[len-1]=='i') {
+         word[len-1]='\0';
+         return (word);
+         }
+      word[len]='\0';  /*  ending with -a  */
+      return(word);
+      }
+   if (word[len]=='o') {  /*  ending with -io  */
+      if (word[len-1]=='i') {
+         word[len-1]='\0';
+         return (word);
+         }
+      word[len]='\0';  /*  ending with -o  */
+      return(word);
+      }
+
+   } /* end if (len > 4) */ 
+return(word);         
+}
+
+
+static char * removeItalianAccent(word)
+char *word;
+{ 
+int len = strlen (word)-1;
+int i;
+
+   for(i=len; i>=0; i--) {
+      if ((word[i]=='à') || (word[i]=='á') || (word[i]=='â') || (word[i]=='ä')) {
+         word[i] = 'a';
+         }
+      if ((word[i]=='ò') || (word[i]=='ó') || (word[i]=='ô') || (word[i]=='ö')) {
+         word[i] = 'o';
+         }
+      if ((word[i]=='è') || (word[i]=='é') || (word[i]=='ê') || (word[i]=='ë')) {
+         word[i] = 'e';
+         }
+      if ((word[i]=='ù') || (word[i]=='ú') || (word[i]=='û') || (word[i]=='ü')) {
+         word[i] = 'u';
+         }
+      if ((word[i]=='ì') || (word[i]=='í') || (word[i]=='î') || (word[i]=='ï')) {
+         word[i] = 'i';
+         }
+      }
+   return(word);
+}
+
+

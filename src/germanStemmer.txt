@@ -1,0 +1,74 @@
+static char *remove_german_plural();
+static char *removeAllAccent ();
+
+static char *  removeAllAccent (word)
+char *word;
+{ 
+int len = strlen (word)-1;
+int i;
+
+   for(i=len; i>=0; i--) {
+      if (word[i] == 'ä') {
+         word[i] = 'a';
+         }
+      if (word[i] == 'ö') {
+         word[i] = 'o';
+         }
+      if (word[i] == 'ü') {
+         word[i] = 'u';
+         }
+      }
+   return(word);
+}
+
+static char *  remove_german_plural (word)
+char *word;
+{ 
+int len = strlen (word)-1;
+
+if (len > 3) {
+   removeAllAccent(word);
+   if (len > 5) {
+      if ((word[len]=='n') && (word[len-1]=='e') && (word[len-2]=='n')) {  
+         word[len-2]='\0';  /*  ending with -nen  */
+         return(word);
+         }
+      }
+   if (len > 4) {
+      if ((word[len]=='n') && (word[len-1]=='e')) {  /*  ending with -en  */
+         word[len-1]='\0';  
+         return(word);
+         }
+      if ((word[len]=='e') && (word[len-1]=='s')) {  /*  ending with -se  */
+         word[len-1]='\0';  
+         return(word);
+         }
+      if ((word[len]=='s') && (word[len-1]=='e')) {  /*  ending with -es  */
+         word[len-1]='\0';  
+         return(word);
+         }
+      if ((word[len]=='r') && (word[len-1]=='e')) {  /*  ending with -er  */
+         word[len-1]='\0';  
+         return(word);
+         }
+      } /* end if len > 4 */
+   if (word[len]=='n') {  /*  ending with -n  */
+      word[len]='\0';  
+      return(word);
+      }
+   if (word[len]=='s') {  /*  ending with -s  */
+      word[len]='\0';  
+      return(word);
+      }
+   if (word[len]=='r') {  /*  ending with -r  */
+      word[len]='\0';  
+      return(word);
+      }
+   if (word[len]=='e') {  /*  ending with -r  */
+      word[len]='\0';  
+      return(word);
+      }
+   } /* end if (len > 4) */ 
+return(word);         
+}
+

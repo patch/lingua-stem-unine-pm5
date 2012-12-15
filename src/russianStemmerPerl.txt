@@ -1,0 +1,332 @@
+﻿#! /usr/bin/perl  -w
+# Light stemmer for the Russian language (to be viewed by selecting UTF-8 encoding)
+# It removes case endidngs from nouns and adjectives
+#
+# We assume that each character (in Cyrillic) needs two bytes
+#
+# done by Lj. Dolamic University of Neuchatel (www.unine.ch/info/clef/)
+
+while($line = <>){
+	chomp $line;
+	$line =~ s/^()+//;
+	$stem = RussianLightStemming($line);
+	if(length($line) > 0){
+		print "$line  --> $stem \n";
+	}
+	else{
+		print "\n";
+	}
+	
+}
+exit(0);
+
+sub RussianLightStemming {
+	my($line);
+	$line = $_[0];
+	
+	if(length($line) < 8){ # do  nothing with words having less then 4 characters
+		return($line);		
+	}
+	$line = remove_case($line);
+	
+	#normalization
+	
+	$line =~ s/нн$/н/;
+	$line =~ s/ь$//;	
+	return($line);
+}
+
+sub remove_case(){
+	my($word,$i);
+	$word =$_[0];
+	$i = length($word);
+	
+	
+	if($word =~ m/иями$/){
+		return(substr($word,0,$i-8))
+		
+	}
+	if($word =~ m/оями$/){
+		return(substr($word,0,$i-8))
+		
+	}
+	if($word =~ m/оиев$/){
+		return(substr($word,0,$i-8))
+		
+	}
+	if($word =~ m/иях$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	if($word =~ m/иям$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	
+	if($word =~ m/ями$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	if($word =~ m/ами$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	# adjectives
+	# hard and soft stem musculine and neuter, G
+	
+	if($word =~ m/его$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	# adjectives
+	# hard and soft stem musculine and neuter, D
+	if($word =~ m/ему$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	if($word =~ m/ери$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	# adjectives
+	# hard stem plural I
+	if($word =~ m/ими$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	if($word =~ m/иев$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	# adjectives
+	# hard  stem musculine and neuter, G
+	if($word =~ m/ого$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	# adjectives
+	# hard stem musculine and neuter, D
+	if($word =~ m/ому$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	# adjectives
+	# hard stem plural, I
+	if($word =~ m/ыми$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	if($word =~ m/оев$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	if($word =~ m/оям$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	if($word =~ m/оях$/){
+		return(substr($word,0,$i-6))
+		
+	}
+	# adjectives
+	# soft stem feminine, N
+	if($word =~ m/яя$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ях$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# soft stem feminine,A
+	if($word =~ m/юю$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard stem feminine,N
+	if($word =~ m/ая$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ах$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard and soft stem feminine,I
+	if($word =~ m/ею$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard stem plural, G, L
+	if($word =~ m/их$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ия$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard stem feminine, I
+	if($word =~ m/ию$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ою$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard stem feminine, A
+	if($word =~ m/ую$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ям$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ых$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ея$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ам$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard and soft stem neuter, N, G
+	if($word =~ m/ее$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard and soft stem feminine, G, D, L, I
+	if($word =~ m/ей$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard and soft stem musculine and neuter, L
+	if($word =~ m/ем$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ём$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ев$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ие$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard and soft stem musculine, N, G
+	if($word =~ m/ий$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard and soft stem musculine and neuter, I
+	# hard stem plural, D
+	if($word =~ m/им$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard stem neuter, N, G
+	if($word =~ m/ое$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard stem musculine , N
+	# hard stem feminine , G, D, L, I
+	if($word =~ m/ой$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard and soft stem musculine and neuter, L
+	if($word =~ m/ом$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ов$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard stem plural, G, L
+	if($word =~ m/ые$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard stem musculine, N
+	if($word =~ m/ый$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	# adjectives
+	# hard and soft stem musculine and neuter, I
+	# hard stem plural, D
+	if($word =~ m/ым$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ми$/){
+		return(substr($word,0,$i-4))
+		
+	}
+	if($word =~ m/ю$/){
+		return(substr($word,0,$i-2))
+		
+	}
+	if($word =~ m/й$/){
+		return(substr($word,0,$i-2))
+		
+	}
+	if($word =~ m/ы$/){
+		return(substr($word,0,$i-2))
+		
+	}
+	if($word =~ m/я$/){
+		return(substr($word,0,$i-2))
+		
+	}
+	if($word =~ m/а$/){
+		return(substr($word,0,$i-2))
+		
+	}
+	if($word =~ m/е$/){
+		return(substr($word,0,$i-2))
+		
+	}
+	if($word =~ m/и$/){
+		return(substr($word,0,$i-2))
+		
+	}
+	if($word =~ m/о$/){
+		return(substr($word,0,$i-2))
+		
+	}
+	if($word =~ m/у$/){
+		return(substr($word,0,$i-2))
+		
+	}
+	
+	
+}

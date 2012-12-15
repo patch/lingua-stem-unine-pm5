@@ -1,0 +1,163 @@
+﻿package com.dlj.ir.analysis.pe
+
+import java.util.Map;
+import java.util.WeakHashMap;
+
+/**
+ * Persian stemmer light-  
+ * Done by Ljiljana Doalmic(University of Neuchatel, www.unine.ch/info/clef/)
+ *         
+ * @author Ljiljana Dolamic. Email: ljiljana.dolamic@unine.ch 
+ */
+public class PersianStemmerLight {
+	/**
+	 * A cache of words and their stems
+	 */
+	static private Map<String, String> cache = new WeakHashMap<String, String>();
+	/**
+	 * A buffer of the current word being stemmed
+	 */
+	private StringBuilder sb = new StringBuilder();
+	/**
+	 * Default constructor
+	 */
+	public PersianStemmerLight() {
+	}
+
+	public String stem(String word) {
+		String result = cache.get(word);
+
+		if (result != null)
+			return result;
+
+		sb.delete(0, sb.length());
+
+		sb.append(word);
+
+		remove_kasra(sb);
+
+		remove_suffix(sb);		
+
+		remove_kasra(sb);
+
+		result = sb.toString();
+		cache.put(word, result);
+
+		return result;
+	}
+
+
+
+
+
+	private void remove_suffix(StringBuilder word) {
+		int len = word.length() - 1;
+		if (len > 6) {		
+			if (word.substring(len-3, len+1).equals("\u062A\u0631\u06CC\u0646")||
+					word.substring(len-3, len+1).equals("\u0622\u0628\u0627\u062F")
+					word.substring(len-3, len+1).equals("\u062A\u0631\u064A\u0646"))
+			{
+				word.delete(len - 3, len + 1);
+				return;
+			}
+			if (word.substring(len-3, len+1).equals("\u06AF\u064A\u0631\u064A")||
+					word.substring(len-3, len+1).equals("\u0647\u0627\u064A\u064A")||
+					word.substring(len-3, len+1).equals("\u0647\u0627\u06CC\u06CC")||
+					word.substring(len-3, len+1).equals("\u06AF\u06CC\u0631\u06CC")||
+					word.substring(len-3, len+1).equals("\u0633\u0627\u0632\u064A")||
+					word.substring(len-3, len+1).equals("\u0633\u0627\u0632\u06CC")||
+					word.substring(len-3, len+1).equals("\u0631\u064A\u0632\u064A")||
+					word.substring(len-3, len+1).equals("\u0631\u06CC\u0632\u06CC")||
+					word.substring(len-3, len+1).equals("\u0628\u0646\u062F\u064A")||
+					word.substring(len-3, len+1).equals("\u0628\u0646\u062F\u06CC")||
+					word.substring(len-3, len+1).equals("\u0622\u0628\u0627\u062F")||
+					word.substring(len-3, len+1).equals("\u0628\u0627\u0631\u0647"))
+			{
+				word.delete(len - 3, len + 1);
+				return;
+			}
+		} /* end if len > 6 */
+		if (len > 5) {
+			if (word.substring(len-2, len+1).equals("\u0647\u0627\u064A")||
+					word.substring(len-2, len+1).equals("\u0647\u0627\u06CC")||
+					word.substring(len-2, len+1).equals("\u0627\u0646\u062F")||
+					word.substring(len-2, len+1).equals("\u0627\u064A\u0645")||
+					word.substring(len-2, len+1).equals("\u0627\u06CC\u0645")||
+					word.substring(len-2, len+1).equals("\u0634\u0627\u0646"))
+			{
+				word.delete(len - 2, len + 1);
+				return;
+			}
+		} /* end if len > 5 */		
+		if (len > 4) {	
+			if (word.substring( len-1, len+1).equals("\u0627\u0646")) 
+			{
+				word.delete(len - 1, len + 1);
+				normalize_1(word);
+				return;
+			}
+			if (word.substring( len-1, len+1).equals("\u0647\u0627")||
+					word.substring( len-1, len+1).equals("\u06CC\u0646")||
+					word.substring( len-1, len+1).equals("\u064A\u0646")||
+					word.substring( len-1, len+1).equals("\u0627\u062A")||
+					word.substring( len-1, len+1).equals("\u0647\u0621")||
+					word.substring( len-1, len+1).equals("\u0627\u0634")||
+					word.substring( len-1, len+1).equals("\u062A\u0631")||
+					word.substring( len-1, len+1).equals("\u0631\u0627")||
+					word.substring( len-1, len+1).equals("\u0648\u0646")||
+					word.substring( len-1, len+1).equals("\u0627\u0645"))
+			{
+				word.delete(len - 1, len + 1);
+				return;
+			}						
+		} /* end if len > 4 */
+		if (len > 2) {			
+			if (word.charAt(len)=='\u0647'||
+					word.charAt(len)=='\u06CC'||
+					word.charAt(len)=='\u064A'||
+					word.charAt(len)=='\u0645'||
+					word.charAt(len)=='\u062A'||
+					word.charAt(len)=='\u0634') 
+			{				
+				word.deleteCharAt(len);
+				return;
+			}
+		}
+		return;
+	}
+	private void normalize_1(StringBuilder word) {
+		int len = word.length() - 1;		
+		if (len > 2) {			
+			if (word.charAt(len)=='\u0649'||
+					word.charAt(len)=='\u06AF'||
+					word.charAt(len)=='\u0645'||
+					word.charAt(len)=='\u062A'||
+					word.charAt(len)=='\u0631'||
+					word.charAt(len)=='\u0634') 
+			{				
+				word.deleteCharAt(len);
+				normalize_2(word);
+			}
+		}          
+		return;
+	}
+	private void remove_kasra(StringBuilder word) {
+		int len = word.length() - 1;
+		if (len > 3) {			
+			if (word.charAt(len) == '\u0650' ) {
+				word.deleteCharAt(len);		
+				return;
+			}			
+		} /* end if len > 3 */
+	}
+	private void normalize_2(StringBuilder word){
+		int len = word.length() - 1;  
+      		if(len > 2){		
+			if (word.charAt(len) == '\u06CC'||word.charAt(len) == '\u064A') 
+			{
+				word.deleteCharAt(len );
+				return;
+			}		
+  	   	 }
+	}
+}
