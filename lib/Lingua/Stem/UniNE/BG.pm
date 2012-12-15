@@ -17,6 +17,7 @@ sub BulgarianLightStemmer {
          $line = substr($line,0,$i-6);
          return($line);
          }
+     }
   if ($i < 8) {  # consider only words having 5 characters or more
    return($line);
    }
