@@ -3,7 +3,7 @@ package Lingua::Stem::UniNE::BG;
 use 5.008;
 use strict;
 use warnings;
-#use utf8;
+use utf8;
 use parent 'Exporter';
 
 our $VERSION   = '0.00_1';
@@ -14,15 +14,15 @@ sub stem_bg {
     $line = $_[0];
     $i = length($line);
 
-    if ($i > 10) {
+    if ($i > 5) {
         if ($line =~ m/ища$/) {
-            $line = substr($line, 0, $i - 6);
+            $line = substr($line, 0, $i - 3);
 
             return($line);
         }
     }
 
-    if ($i < 8) {  # consider only words having 5 characters or more
+    if ($i < 4) {  # consider only words having 5 characters or more
         return($line);
     }
 
@@ -30,30 +30,30 @@ sub stem_bg {
     $line = remove_plural($line);
     $i = length($line);
 
-    if ($i > 6) {
+    if ($i > 3) {
         if ($line =~ m/я$/) {  # final -(R) (masc)
-            $line = substr($line, 0, $i - 2);
+            $line = substr($line, 0, $i - 1);
         }
 
         # normalization (e.g., -a could be a definite article or plural form)
         if ($line =~ m/[аое]$/) {  # final -[aoe]
-            $line = substr($line, 0, $i - 2);
+            $line = substr($line, 0, $i - 1);
         }
     }
 
     # rewritting rule -eH into -H
     $i = length($line);
 
-    if ($i > 8) {
+    if ($i > 4) {
         if ($line =~ m/ен$/) {  # final -eH -> H
             $line =~ s/ен$/н/;
-            $i -= 2;
+            $i -= 1;
         }
     }
 
     # rewritting rule -...b. into -....
-    if ( ($i > 10) && (substr($line,$i-4,2) eq "ъ") ) {
-        substr($line, $i - 4, 4) = substr($line, $i - 2, 2);
+    if ( ($i > 5) && (substr($line, $i - 2, 1) eq "ъ") ) {
+        substr($line, $i - 2, 2) = substr($line, $i - 1, 1);
     };
 
     return($line);
@@ -65,35 +65,35 @@ sub remove_article {
     $i = length($word);
 
     # definite article with adjectives and masc
-    if ( ($i > 12) && ($word =~ m/ият$/) ) {  # final -H(R)T
-        return( substr($word, 0, $i - 6) );
+    if ( ($i > 6) && ($word =~ m/ият$/) ) {  # final -H(R)T
+        return( substr($word, 0, $i - 3) );
     }
 
-    if ($i > 10) {
+    if ($i > 5) {
         if ($word =~ m/ия$/) {  # final -H(R)
-            return( substr($word, 0, $i - 4) );
+            return( substr($word, 0, $i - 2) );
         }
 
         # definite article (the) for nouns
         if ($word =~ m/та$/) {  # final -Ta (art for femi)
-            return( substr($word, 0, $i - 4) );
+            return( substr($word, 0, $i - 2) );
         }
 
         if ($word =~ m/ът$/) {  # final -bT (art for masc)
-            return( substr($word, 0, $i - 4) );
+            return( substr($word, 0, $i - 2) );
         }
 
         if ($word =~ m/то$/) {  # final -To (art for neutral)
-            return( substr($word, 0, $i - 4) );
+            return( substr($word, 0, $i - 2) );
         }
 
         if ($word =~ m/те$/) {  # final -Te (art in plural)
-            return( substr($word, 0, $i - 4) );
+            return( substr($word, 0, $i - 2) );
         }
     }
 
-    if ( ($i > 8) && ($word =~ m/ят$/) ) {  # final -(R)T (art for masc)
-        return( substr($word, 0, $i - 4) );
+    if ( ($i > 4) && ($word =~ m/ят$/) ) {  # final -(R)T (art for masc)
+        return( substr($word, 0, $i - 2) );
     }
 
     return($word);
@@ -105,9 +105,9 @@ sub remove_plural {
     $i = length($word);
 
     # specific plural rules for some words (masc)
-    if ($i > 12) { # for words having more than 6 characters
+    if ($i > 6) {  # for words having more than 6 characters
         if ($word =~ m/ове$/) {  # final -OBe
-            return( substr($word, 0, $i - 6) );
+            return( substr($word, 0, $i - 3) );
         }
 
         if ($word =~ m/еве$/) {  # final -eBe --> N
@@ -123,9 +123,9 @@ sub remove_plural {
         }
     }
 
-    if ($i > 10) {  # for words having more than 5 characters
+    if ($i > 5) {  # for words having more than 5 characters
         if ($word =~ m/ища$/) {  # final -HWa
-            return( substr($word, 0, $i - 6) );
+            return( substr($word, 0, $i - 3) );
         }
 
         if ($word =~ m/зи$/) {  # final -(e)H --> T
@@ -134,15 +134,15 @@ sub remove_plural {
             return($word);
         }
 
-        if ($word =~ m/е..и$/) {  # rewritting rule
-            substr($word, $i - 6, 2) = "я";
-            substr($word, $i - 2, 2) = "";
+        if ($word =~ m/е.и$/) {  # rewritting rule
+            substr($word, $i - 3, 1) = "я";
+            substr($word, $i - 1, 1) = "";
 
             return($word);
         }
 
         if ($word =~ m/та$/) {  # final -Ta
-            return( substr($word, 0, $i - 4) );
+            return( substr($word, 0, $i - 2) );
         }
 
         if ($word =~ m/ци$/) {  # final -UH --> k
@@ -152,7 +152,7 @@ sub remove_plural {
         }
     }
 
-    if ($i > 8) {  # for words having more than 4 characters
+    if ($i > 4) {  # for words having more than 4 characters
         if ($word =~ m/си$/) {  # final -cH --> x
             $word =~ s/си$/х/;
 
