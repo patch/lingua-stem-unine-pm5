@@ -3,7 +3,7 @@ package Lingua::Stem::UniNE::BG;
 use 5.008;
 use strict;
 use warnings;
-use utf8;
+#use utf8;
 use parent 'Exporter';
 
 our $VERSION   = '0.00_1';

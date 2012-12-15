@@ -1,7 +1,9 @@
 use strict;
 use warnings;
 use utf8;
+#use open qw( :encoding(UTF-8) :std );
 use Test::More tests => 200;
+use Encode qw( encode );
 use Lingua::Stem::UniNE::BG qw( stem_bg );
 
 my @singles = qw(
@@ -82,11 +84,13 @@ my @pairs = (
     [ жилни         => 'жилн'         ], [ жилна         => 'жилн'         ],
 );
 
-for my $word (@singles) {
+#for my $word (@singles) {
+for my $word (map { encode('UTF-8', $_) } @singles) {
     is stem_bg($word), $word, "$word stems to itself";
 }
 
 for my $pair (@pairs) {
-    my ($word, $stem) = @$pair;
+    #my ($word, $stem) =  @$pair;
+    my ($word, $stem) = map { encode('UTF-8', $_) } @$pair;
     is stem_bg($word), $stem, "$word stems to $stem";
 }
