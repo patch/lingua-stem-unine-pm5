@@ -23,20 +23,31 @@ This document describes Lingua::Stem::UniNE::CS version 0.00_1.
 
 =head1 SYNOPSIS
 
-    ...
+    use Lingua::Stem::UniNE::BG qw( stem_cs );
+
+    my $stem = stem_cs($word);
 
 =head1 DESCRIPTION
 
-Removes case endings from nouns and adjectives, possesive adjective endings from
-names, and takes care of palatalization.
+This is a light stemmer for the Czech language.  It removes case endings from
+nouns and adjectives, possesive adjective endings from names, and takes care of
+palatalization.
 
 =head1 SEE ALSO
 
-L<http://members.unine.ch/jacques.savoy/clef/CzechStemmerLight.txt>
+=over
+
+=item * L<Lingua::Stem::UniNE> — The collection of University of Neuchâtel
+stemmers that includes this module.
+
+=item * L<Czech stemmer in Java|http://members.unine.ch/jacques.savoy/clef/CzechStemmerLight.txt>
+— The original implementation from which this module was ported.
+
+=back
 
 =head1 AUTHORS
 
-Dolamic Ljiljana, University of Neuchâtel
+Ljiljana Dolamic <Ljiljana.Dolamic@unine.ch>, University of Neuchâtel
 
 Nick Patch <patch@cpan.org>
 

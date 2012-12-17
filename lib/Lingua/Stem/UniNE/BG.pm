@@ -122,19 +122,29 @@ This document describes Lingua::Stem::UniNE::BG version 0.00_1.
 
 =head1 SYNOPSIS
 
-    ...
+    use Lingua::Stem::UniNE::BG qw( stem_bg );
+
+    my $stem = stem_bg($word);
 
 =head1 DESCRIPTION
 
-...
+This is a light stemmer for the Bulgarian language.
 
 =head1 SEE ALSO
 
-L<http://members.unine.ch/jacques.savoy/clef/bulgarianStemmer.txt>
+=over
+
+=item * L<Lingua::Stem::UniNE> — The collection of University of Neuchâtel
+stemmers that includes this module.
+
+=item * L<Bulgarian stemmer as Perl script|http://members.unine.ch/jacques.savoy/clef/bulgarianStemmer.txt>
+— The original implementation from which this module was ported.
+
+=back
 
 =head1 AUTHORS
 
-Jacques Savoy, University of Neuchâtel
+Jacques Savoy <Jacques.Savoy@unine.ch>, University of Neuchâtel
 
 Nick Patch <patch@cpan.org>
 

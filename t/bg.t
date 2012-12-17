@@ -5,7 +5,12 @@ use open qw( :encoding(UTF-8) :std );
 use Test::More tests => 200;
 use Lingua::Stem::UniNE::BG qw( stem_bg );
 
-my @singles = qw(
+# The words used in these tests are from Hermit Dave’s Bulgarian frequency word
+# list at http://invokeit.wordpress.com/frequency-word-lists/ and provided under
+# the Creative Commons Attribution–ShareAlike 3.0 license (CC BY-SA 3.0).
+
+# the 50 most common and 50 least common Bulgarian words that stem to themselves
+my @self_stems = qw(
     да е не се и
     на си ще за ли
     в ти че от ми
@@ -29,7 +34,8 @@ my @singles = qw(
     изпращял делаувер собтвеност уилингтон нмаерим
 );
 
-my @pairs = (
+my @word_stem_pairs = (
+    # the 50 most common Bulgarian words that do not stem to themselves
     [ това      => 'тов'      ], [ какво     => 'какв'     ],
     [ добре     => 'добр'     ], [ трябва    => 'трябв'    ],
     [ няма      => 'ням'      ], [ така      => 'так'      ],
@@ -56,6 +62,7 @@ my @pairs = (
     [ кажа      => 'каж'      ], [ бъде      => 'бъд'      ],
     [ години    => 'годин'    ], [ както     => 'какт'     ],
 
+    # the 50 least common Bulgarian words that do not stem to themselves
     [ недоразомение => 'недоразомени' ], [ банери        => 'баняр'        ],
     [ корато        => 'кор'          ], [ играине       => 'играин'       ],
     [ валентинио    => 'валентини'    ], [ кабаретен     => 'кабаретн'     ],
@@ -83,11 +90,11 @@ my @pairs = (
     [ жилни         => 'жилн'         ], [ жилна         => 'жилн'         ],
 );
 
-for my $word (@singles) {
+for my $word (@self_stems) {
     is stem_bg($word), $word, "$word stems to itself";
 }
 
-for my $pair (@pairs) {
+for my $pair (@word_stem_pairs) {
     my ($word, $stem) = @$pair;
     is stem_bg($word), $stem, "$word stems to $stem";
 }
