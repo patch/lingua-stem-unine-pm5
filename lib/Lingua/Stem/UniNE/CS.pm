@@ -99,12 +99,11 @@ sub palatalize {
     my ($word) = @_;
     my $length = length $word;
 
-    # XXX: should the last replacement be -sk instead of -šsk?
     return $word
-        if $word =~ s/[cč][ei]$/k/        # -ce -ci -če -či → -k
-        || $word =~ s/[zž][ei]$/h/        # -ze -zi -že -ži → -h
-        || $word =~ s/čt[éěi]$/ck/        # -čté -čtě -čti  → -ck
-        || $word =~ s/(?<=š)t[éěi]$/sk/;  # -šté -ště -šti  → -šsk
+        if $word =~ s/[cč][ei]$/k/   # -ce -ci -če -či → -k
+        || $word =~ s/[zž][ei]$/h/   # -ze -zi -že -ži → -h
+        || $word =~ s/čt[éěi]$/ck/   # -čté -čtě -čti  → -ck
+        || $word =~ s/št[éěi]$/sk/;  # -šté -ště -šti  → -sk
 
     chop $word;
 
