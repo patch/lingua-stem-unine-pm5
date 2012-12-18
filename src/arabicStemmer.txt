@@ -1,0 +1,177 @@
+/*  Arabic stemmer tring to remove common prefixes and suffixes */
+
+static char *removeArabicSuffix();
+static char *removeArabicPrefix();
+
+
+/* For the Arabic language */
+
+char *arabic_stemming(word)
+char *word;
+{ 
+   removeArabicSuffix(word);
+   removeArabicPrefix(word);
+   return(word);
+}
+
+
+static char *removeArabicSuffix(word)
+char *word;
+{ 
+int len = strlen (word)-1;
+
+if (len > 4) {   
+              /* -{kt}m    */
+   if (((word[len-1]=='k') || (word[len-1]=='t')) && (word[len]=='m')) {  
+      word[len-1]='\0'; 
+      return(word); 
+      }
+              /* -A{tn}    */
+   if ((word[len-1]=='A') && ((word[len]=='t') || (word[len]=='n'))) {  
+      word[len-1]='\0'; 
+      return(word); 
+      }
+              /* -w{nh}    */
+   if ((word[len-1]=='w') && ((word[len]=='n') || (word[len]=='h'))) {  
+      word[len-1]='\0'; 
+      return(word); 
+      }
+              /* -h{nm}    */
+   if ((word[len-1]=='h') && ((word[len]=='n') || (word[len]=='m'))) {  
+      word[len-1]='\0'; 
+      return(word); 
+      }
+              /* -yp    */
+   if ((word[len-1]=='y') && (word[len]=='p')) {  
+      word[len-1]='\0'; 
+      return(word); 
+      }
+              /* -{wthn}A    */
+   if (((word[len-1]=='w') || (word[len-1]=='t') || (word[len]=='h') ||
+        (word[len-1]=='n')) && (word[len]=='A')) {  
+      word[len-1]='\0'; 
+      return(word); 
+      }
+              /* -t{kyh}    */
+   if ((word[len-1]=='t') && ((word[len]=='k') || (word[len]=='y') ||
+       (word[len]=='h'))) {  
+      word[len-1]='\0'; 
+      return(word); 
+      }
+              /* -y{nh}    */
+   if ((word[len-1]=='y') && ((word[len]=='n') || (word[len]=='h'))) {  
+      word[len-1]='\0'; 
+      return(word); 
+      }
+   }  /* end if len > 4 */
+
+if (len > 3) {   
+             /* -{pahytkA}  -> -  */
+   if ((word[len]=='p') || (word[len]=='a') || (word[len]=='h') ||
+       (word[len]=='y') || (word[len]=='t') || (word[len]=='k') ||
+       (word[len]=='A')) {
+      word[len]='\0';
+      return(word);  
+      }
+   }  /* end if len > 3 */
+
+return(word);
+}
+
+
+static char *removeArabicPrefix(word)
+char *word;
+{ 
+int pos;
+int len = strlen (word)-1;
+
+if (len > 5) {   
+              /* {wfb}Al-- -> --    */
+   if (((word[0]=='w') || (word[0]=='f') || (word[0]=='b')) && 
+        ((word[1]=='A') && (word[2]=='l'))) {  
+      pos = 0;
+      while (word[pos+3] != '\0') {
+         word[pos] = word[pos+3];
+         pos++;
+         }
+      word[pos]= '\0';
+      return(word);
+      }  
+   }  /* end if len > 5 */
+
+if (len > 4) {   
+              /* {Al}l-- -> --    */
+   if (((word[0]=='A') || (word[0]=='l')) && (word[1]=='l')) {
+      pos = 0;
+      while (word[pos+2] != '\0') {
+         word[pos] = word[pos+2];
+         pos++;
+         }
+      word[pos]= '\0';
+      return(word);
+      }  
+              /* {bylmtwsn}t-- -> --    */
+   if (((word[0]=='b') || (word[0]=='y') || (word[0]=='l') ||
+        (word[0]=='m') || (word[0]=='t') || (word[0]=='w') ||
+        (word[0]=='s') || (word[0]=='n')) && (word[1]=='t')) {  
+      pos = 0;
+      while (word[pos+2] != '\0') {
+         word[pos] = word[pos+2];
+         pos++;
+         }
+      word[pos]= '\0';
+      return(word);
+      }  
+              /* {blwkf}m-- -> --    */
+   if (((word[0]=='b') || (word[0]=='l') || (word[0]=='w') ||
+        (word[0]=='k') || (word[0]=='f')) && (word[1]=='m')) {  
+      pos = 0;
+      while (word[pos+2] != '\0') {
+         word[pos] = word[pos+2];
+         pos++;
+         }
+      word[pos]= '\0';
+      return(word);
+      }  
+              /* {wflb}A-- -> --    */
+   if (((word[0]=='w') || (word[0]=='f') || (word[0]=='l') ||
+        (word[0]=='b')) && (word[1]=='A')) {  
+      pos = 0;
+      while (word[pos+2] != '\0') {
+         word[pos] = word[pos+2];
+         pos++;
+         }
+      word[pos]= '\0';
+      return(word);
+      }  
+              /* {wlsf}y-- -> --    */
+   if (((word[0]=='w') || (word[0]=='l') || (word[0]=='s') ||
+        (word[0]=='f')) && (word[1]=='y')) {  
+      pos = 0;
+      while (word[pos+2] != '\0') {
+         word[pos] = word[pos+2];
+         pos++;
+         }
+      word[pos]= '\0';
+      return(word);
+      }  
+   }  /* end if len > 4 */
+
+if (len > 3) {   
+             /* {tymbnlkwAf}--  -> --  */
+   if ((word[0]=='t') || (word[0]=='y') || (word[0]=='m') || (word[0]=='b') ||
+       (word[0]=='n') || (word[0]=='l') || (word[0]=='k') || (word[0]=='w') ||
+       (word[0]=='A') || (word[0]=='f')) {
+      pos = 0;
+      while (word[pos] != '\0') {
+         word[pos] = word[pos+1];
+         pos++;
+         }
+      return(word);  
+      }
+   }  /* end if len > 3 */
+
+return(word);
+}
+
+

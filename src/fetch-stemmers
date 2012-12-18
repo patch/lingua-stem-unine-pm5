@@ -17,8 +17,9 @@ my @files = qw(
     portugueseStemmer.txt
     finnishStemmer.txt
     swedishStemmer.txt
+    arabicStemmer.txt
     arabicStemmer2.txt
-    arabicStemmer2.txt
+    arabicStemmer3.txt
     russianStemmerPerl.txt
     RussianLightJava.txt
     RussianAggressiveJava.txt
