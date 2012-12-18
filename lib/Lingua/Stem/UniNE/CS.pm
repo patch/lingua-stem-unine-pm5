@@ -145,7 +145,17 @@ palatalization.
 stemmers that includes this module.
 
 =item * L<Czech stemmer in Java|http://members.unine.ch/jacques.savoy/clef/CzechStemmerLight.txt>
-— The original implementation from which this module was ported.
+by Ljiljana Dolamic — The original implementation from which this module was
+ported.
+
+=item * L<Czech stemmer in Snowball|http://snowball.tartarus.org/otherapps/oregan/intro.html>
+by Jimmy O’Regan — An implementation hosted on the Snowball site but not
+included in the official distribution and therefore not included in
+L<Lingua::Stem::Snowball>.
+
+=item * L<Indexing and stemming approaches for the Czech language|http://dl.acm.org/citation.cfm?id=1598600>
+by Ljiljana Dolamic and Jacques Savoy — Article defining the algorithm
+implemented by this module.
 
 =back
 

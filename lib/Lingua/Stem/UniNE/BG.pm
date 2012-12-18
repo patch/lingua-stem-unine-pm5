@@ -138,7 +138,12 @@ This is a light stemmer for the Bulgarian language.
 stemmers that includes this module.
 
 =item * L<Bulgarian stemmer as Perl script|http://members.unine.ch/jacques.savoy/clef/bulgarianStemmer.txt>
-— The original implementation from which this module was ported.
+by Jacques Savoy — The original implementation from which this module was
+ported.
+
+=item * L<Searching Strategies for the Bulgarian Language|http://dl.acm.org/citation.cfm?id=1598600>
+(PDF) by Jacques Savoy — Article defining the algorithm implemented by this
+module.
 
 =back
 
