@@ -4,6 +4,7 @@ use 5.008;
 use strict;
 use warnings;
 use utf8;
+use charnames ':full';
 use parent 'Exporter';
 
 our $VERSION   = '0.00_1';
@@ -24,7 +25,7 @@ sub remove_kasra {
 
     return $word
         if length $word > 4
-        && $word =~ s{ \x{0650} $}{}x;  # ARABIC KASRA
+        && $word =~ s{ \N{ARABIC KASRA} $}{}x;
 
     return $word;
 }
