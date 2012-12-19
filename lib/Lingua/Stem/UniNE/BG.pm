@@ -147,15 +147,16 @@ module.
 
 =back
 
-=head1 AUTHORS
+=head1 ACKNOWLEDGEMENTS
 
-Jacques Savoy <Jacques.Savoy@unine.ch>, University of Neuchâtel
+Jacques Savoy of the University of Neuchâtel authored the algorithm for this
+stemmer and wrote the original implementation as a Perl script.
+
+=head1 AUTHOR
 
 Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
-
-© 2005 Jacques Savoy
 
 © 2012 Nick Patch
 

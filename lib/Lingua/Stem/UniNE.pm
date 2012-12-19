@@ -70,17 +70,16 @@ adjectives).
 
 =back
 
-=head1 AUTHORS
+=head1 ACKNOWLEDGEMENTS
 
-Jacques Savoy <Jacques.Savoy@unine.ch>, University of Neuchâtel
+The stemmers included are based on the algorithms and original implementations
+by Jacques Savoy and Ljiljana Dolamic of the University of Neuchâtel.
 
-Ljiljana Dolamic <Ljiljana.Dolamic@unine.ch>, University of Neuchâtel
+=head1 AUTHOR
 
 Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
-
-© 2005 Jacques Savoy
 
 © 2012 Nick Patch
 

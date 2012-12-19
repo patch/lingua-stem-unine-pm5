@@ -122,15 +122,17 @@ ported.
 
 =back
 
-=head1 AUTHORS
+=head1 ACKNOWLEDGEMENTS
 
-Ljiljana Dolamic <Ljiljana.Dolamic@unine.ch>, University of Neuchâtel
+Ljiljana Dolamic of the University of Neuchâtel wrote the original
+implementation of this stemmer in Java and authored the algorithm along with
+Jacques Savoy, also of UniNE.
+
+=head1 AUTHOR
 
 Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
-
-© 2005 Jacques Savoy
 
 © 2012 Nick Patch
 
