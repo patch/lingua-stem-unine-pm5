@@ -31,9 +31,10 @@ This document describes Lingua::Stem::UniNE version 0.00_1.
 
 =head1 DESCRIPTION
 
-This is a collection of stemmers for multiple languages based on algorithms and
-code by Jacques Savoy and the University of Neuchâtel.  Currently only the
-L<Bulgarian|Lingua::Stem::UniNE::BG> stemmer is implemented.  Work is ongoing
+This is a collection of stemmers for multiple languages based on algorithms by
+Jacques Savoy et al. of the University of Neuchâtel.  Currently only the
+L<Bulgarian|Lingua::Stem::UniNE::BG>, L<Czech|Lingua::Stem::UniNE::CS>, and
+L<Persian|Lingua::Stem::UniNE::FA> stemmers are implemented.  Work is ongoing
 for Arabic, Bengali, Czech, Finnish, French, German, Hindi, Hungarian, Italian,
 Persian, Portuguese, Marathi, Russian, Spanish, and Swedish.  The top priority
 is languages for which there are no stemmers available on CPAN.
