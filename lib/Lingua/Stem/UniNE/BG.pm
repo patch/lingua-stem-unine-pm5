@@ -5,12 +5,17 @@ use strict;
 use warnings;
 use utf8;
 use parent 'Exporter';
+use Unicode::CaseFold qw( fc );
+use Unicode::Normalize qw( NFC );
 
 our $VERSION   = '0.00_1';
 our @EXPORT_OK = qw( stem_bg );
 
 sub stem_bg {
     my ($word) = @_;
+
+    $word = NFC fc $word;
+
     my $length = length $word;
 
     return $word

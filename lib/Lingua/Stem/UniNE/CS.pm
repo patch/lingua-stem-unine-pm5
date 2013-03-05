@@ -5,6 +5,8 @@ use strict;
 use warnings;
 use utf8;
 use parent 'Exporter';
+use Unicode::CaseFold qw( fc );
+use Unicode::Normalize qw( NFC );
 
 our $VERSION   = '0.00_1';
 our @EXPORT_OK = qw( stem_cs );
@@ -12,7 +14,7 @@ our @EXPORT_OK = qw( stem_cs );
 sub stem_cs {
     my ($word) = @_;
 
-    $word = lc $word;
+    $word = NFC fc $word;
     $word = remove_case($word);
     $word = remove_possessives($word);
 
