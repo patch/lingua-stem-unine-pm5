@@ -9,7 +9,7 @@ use parent 'Exporter';
 our $VERSION   = '0.00_1';
 our @EXPORT_OK = qw( stem_cs );
 
-sub stem_bg {
+sub stem_cs {
     my ($word) = @_;
 
     $word = lc $word;
@@ -21,23 +21,6 @@ sub stem_bg {
 
 # remove case endings from nouns and adjectives
 sub remove_case {
-    my ($word) = @_;
-    my $length = length $word;
-
-    return $word
-        if $length < 6;
-
-    return $word
-        if $word =~ s/[oů]v$//;  # -ov -ův
-
-    return palatalize($word)
-        if $word =~ s/(?<=i)n$//;  # -in → -i
-
-    return $word;
-}
-
-# remove possesive endings from names -ov- and -in-
-sub remove_possessives {
     my ($word) = @_;
     my $length = length $word;
 
@@ -95,9 +78,24 @@ sub remove_possessives {
     return $word;
 }
 
+# remove possesive endings from names -ov- and -in-
+sub remove_possessives {
+    my ($word) = @_;
+
+    return $word
+        if length $word < 6;
+
+    return $word
+        if $word =~ s/[oů]v$//;  # -ov -ův
+
+    return palatalize($word)
+        if $word =~ s/(?<=i)n$//;  # -in → -i
+
+    return $word;
+}
+
 sub palatalize {
     my ($word) = @_;
-    my $length = length $word;
 
     return $word
         if $word =~ s/[cč][ei]$/k/   # -ce -ci -če -či → -k
