@@ -26,53 +26,57 @@ sub remove_case {
 
     if ($length > 7) {
         return $word
-            if $word =~ s/atech$//;  # -atech
+            if $word =~ s{ atech $}{}x;  # -atech
     }
 
     if ($length > 6) {
-        return palatalize($word)
-            if $word =~ s/(?<=ě)tem$//;  # -ětem → -ě
-
         return $word
-            if $word =~ s/atům$//;  # -atům
+            if $word =~ s{ atům $}{}x;  # -atům
+
+        return palatalize($word)
+            if $word =~ s{ (?<= ě ) tem $}{}x;  # -ětem → -ě
     }
 
     if ($length > 5) {
-        return palatalize($word)
-            if $word =~ s/(?<=[eií])ch$//  # -ech -ich -ích → -e -i -í
-            || $word =~ s/(?<=[éií])ho$//  # -ého -iho -ího → -é -i -í
-            || $word =~ s/(?<=[eěí])mi$//  # -emi -ěmi -ími → -e -ě -í
-            || $word =~ s/(?<=[éi])mu$//   # -ému -imu      → -é -i
-            || $word =~ s/(?<=ě)t[ei]$//;  # -ěte -ěti      → -ě
+        return $word if $word =~ s{ (?:
+              ými     # -ými
+            | am[ai]  # -ama -ami
+            | at[ay]  # -ata -aty
+            | ov[éi]  # -ové -ovi
+            | [áý]ch  # -ách -ých
+        ) $}{}x;
 
-        return $word
-            if $word =~ s/[áý]ch$//  # -ách -ých
-            || $word =~ s/am[ai]$//  # -ama -ami
-            || $word =~ s/at[ay]$//  # -ata -aty
-            || $word =~ s/ov[éi]$//  # -ové -ovi
-            || $word =~ s/ými$//;    # -ými
+        return palatalize($word) if $word =~ s{ (?:
+              (?<= ě     ) t[ei]  # -ěte -ěti      → -ě
+            | (?<= [éi]  ) m      # -ému -imu      → -é -i
+            | (?<= [eií] ) ch     # -ech -ich -ích → -e -i -í
+            | (?<= [eěí] ) mi     # -emi -ěmi -ími → -e -ě -í
+            | (?<= [éií] ) ho     # -ého -iho -ího → -é -i -í
+        ) $}{}x;
     }
 
     if ($length > 4) {
-        return palatalize($word)
-            if $word =~ s/(?<=e)m$//  # -em → -e
-            || $word =~ s/es$//       # -es
-            || $word =~ s/[éí]m$//;   # -ém -ím
+        return $word if $word =~ s{ (?:
+              at      # -at
+            | mi      # -mi
+            | us      # -us
+            | o[su]   # -os -ou
+            | [áůý]m  # -ám -ům -ým
+        ) $}{}x;
 
-        return $word
-            if $word =~ s/[áůý]m$//  # -ám -ům -ým
-            || $word =~ s/at$//      # -at
-            || $word =~ s/o[su]$//   # -os -ou
-            || $word =~ s/us$//      # -us
-            || $word =~ s/mi$//;     # -mi
+        return palatalize($word) if $word =~ s{ (?:
+              es          # -es
+            | [éí]m       # -ém -ím
+            | (?<= e ) m  # -em → -e
+        ) $}{}x;
     }
 
     if ($length > 3) {
-        return palatalize($word)
-            if $word =~ m/[eěií]$/;  # -e -ě -i -í
-
         return $word
-            if $word =~ s/[aáéouůyý]$//;  # -a -á -é -o -u -ů -y -ý
+            if $word =~ s{ [aáéouůyý] $}{}x;  # -a -á -é -o -u -ů -y -ý
+
+        return palatalize($word)
+            if $word =~ m{ [eěií] $}x;  # -e -ě -i -í
     }
 
     return $word;
@@ -86,10 +90,10 @@ sub remove_possessives {
         if length $word < 6;
 
     return $word
-        if $word =~ s/[oů]v$//;  # -ov -ův
+        if $word =~ s{ [oů]v $}{}x;  # -ov -ův
 
     return palatalize($word)
-        if $word =~ s/(?<=i)n$//;  # -in → -i
+        if $word =~ s{ (?<= i ) n $}{}x;  # -in → -i
 
     return $word;
 }
@@ -98,10 +102,10 @@ sub palatalize {
     my ($word) = @_;
 
     return $word
-        if $word =~ s/[cč][ei]$/k/   # -ce -ci -če -či → -k
-        || $word =~ s/[zž][ei]$/h/   # -ze -zi -že -ži → -h
-        || $word =~ s/čt[éěi]$/ck/   # -čté -čtě -čti  → -ck
-        || $word =~ s/št[éěi]$/sk/;  # -šté -ště -šti  → -sk
+        if $word =~ s{ čt[éěi]  $}{ck}x  # -čté -čtě -čti  → -ck
+        || $word =~ s{ št[éěi]  $}{sk}x  # -šté -ště -šti  → -sk
+        || $word =~ s{ [cč][ei] $}{k}x   # -ce -ci -če -či → -k
+        || $word =~ s{ [zž][ei] $}{h}x;  # -ze -zi -že -ži → -h
 
     chop $word;
 
