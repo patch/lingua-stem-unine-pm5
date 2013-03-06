@@ -46,7 +46,7 @@ sub stem_bg {
     }
 
     if ($length > 5) {
-        $word =~ s{ ъ (?= . $) }{}x;  # -b� → -�
+        $word =~ s{ ъ (?= \p{Cyrl} $) }{}x;  # -b� → -�
     };
 
     return $word;
@@ -96,10 +96,10 @@ sub remove_plural {
 
     if ($length > 5) {
         return $word
-            if $word =~ s{ зи             $}{г}x    # -(e)H → -T
-            || $word =~ s{ е ( . ) и      $}{я$1}x  # -e�H  → -(R)�
-            || $word =~ s{ ци             $}{к}x    # -UH   → -k
-            || $word =~ s{ (?: та | ища ) $}{}x;    # -Ta -HWa
+            if $word =~ s{ зи               $}{г}x    # -(e)H → -T
+            || $word =~ s{ е ( \p{Cyrl} ) и $}{я$1}x  # -e�H  → -(R)�
+            || $word =~ s{ ци               $}{к}x    # -UH   → -k
+            || $word =~ s{ (?: та | ища )   $}{}x;    # -Ta -HWa
     }
 
     if ($length > 4) {
