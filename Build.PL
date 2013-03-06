@@ -14,8 +14,10 @@ my $builder = Module::Build->new(
         'Test::More' => 0.41,  # diag()
     },
     requires => {
-        'perl'   => '5.8.0',  # minimum Unicode support
-        'parent' => 0,
+        'perl'               => '5.8.0',  # minimum Unicode support
+        'parent'             => 0,
+        'Unicode::CaseFold'  => 0,
+        'Unicode::Normalize' => 0,
     },
     meta_merge => {
         resources => {

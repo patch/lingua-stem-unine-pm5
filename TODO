@@ -6,6 +6,7 @@ Lingua::Stem::UniNE to-do list
   * Uralic: Finnish, Hungarian
   * Italic: French, Italian, Portuguese, Spanish
   * Others: German, Russian, Swedish
+* Add aggressive option: Czech
 * Design API
 * More tests
 * Should it be Lingua::Stem::UniNE or ::Savoy? (contact Jacques Savoy)
