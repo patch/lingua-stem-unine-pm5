@@ -52,7 +52,7 @@ sub remove_case {
         return palatalize($word)
             if $word =~ s{ (?:
                   (?<= ě     ) t[ei]  # -ěte -ěti      → -ě
-                | (?<= [éi]  ) m      # -ému -imu      → -é -i
+                | (?<= [éi]  ) mu     # -ému -imu      → -é -i
                 | (?<= [eií] ) ch     # -ech -ich -ích → -e -i -í
                 | (?<= [eěí] ) mi     # -emi -ěmi -ími → -e -ě -í
                 | (?<= [éií] ) ho     # -ého -iho -ího → -é -i -í
