@@ -41,14 +41,16 @@ sub remove_suffix {
     if ($length > 7) {
         return $word
             if $word =~ s{ (?:
-                ترین | آباد | ترين | گيري | هايي | هایی | گیری | سازي |
-                سازی | ريزي | ریزی | بندي | بندی | آباد | باره
+                ﻩﺍیی | ﺂﺑﺍﺩ | ﺐﻧﺩی | ﺕﺭیﻥ | ﺭیﺯی | ﺱﺍﺯی | گیﺭی | 
+                گﻱﺮﻳ | ﺕﺮﻴﻧ | ﺏﺍﺮﻫ | ﺐﻧﺪﻳ | ﺱﺍﺰﻳ | ﺮﻳﺰﻳ | ﻩﺎﻴﻳ
             ) $}{}x;
     }
 
     if ($length > 6) {
         return $word
-            if $word =~ s{ (?: هاي | های | اند | ايم | ایم | شان ) $}{}x;
+            if $word =~ s{ (?:
+                ایم | اند | ايم | شان | های | هاي
+            ) $}{}x;
     }
 
     if ($length > 5) {
@@ -57,13 +59,13 @@ sub remove_suffix {
 
         return $word
             if $word =~ s{ (?:
-                ها | ين | ين | ات | هء | اش | تر | را | ون | ام
+                ات | اش | ام | تر | را | هء | ها | ون | ين
             ) $}{}x;
     }
 
     if ($length > 3) {
         return $word
-            if $word =~ s{ (?: ه | ی | ي | م | ت | ش ) $}{}x;
+            if $word =~ s{ (?: ی | ت | ش | م | ه | ي ) $}{}x;
     }
 
     return $word;
@@ -75,7 +77,7 @@ sub normalize {
     return $word
         if length $word < 4;
 
-    if ($word =~ s{ (?: ى | گ | م | ت | ر | ش ) $}{}x) {
+    if ($word =~ s{ (?: ت | ر | ش | گ | م | ى ) $}{}x) {
         return $word
             if length $word < 4;
 
