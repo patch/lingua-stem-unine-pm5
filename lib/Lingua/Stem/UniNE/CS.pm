@@ -108,8 +108,8 @@ sub palatalize {
     my ($word) = @_;
 
     return $word
-        if $word =~ s{ čt[éěi]  $}{ck}x  # -čté -čtě -čti  → -ck
-        || $word =~ s{ št[éěi]  $}{sk}x  # -šté -ště -šti  → -sk
+        if $word =~ s{ čt[ěií]  $}{ck}x  # -čtě -čti -čtí  → -ck
+        || $word =~ s{ št[ěií]  $}{sk}x  # -ště -šti -ští  → -sk
         || $word =~ s{ [cč][ei] $}{k}x   # -ce -ci -če -či → -k
         || $word =~ s{ [zž][ei] $}{h}x;  # -ze -zi -že -ži → -h
 
