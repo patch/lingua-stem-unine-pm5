@@ -26,9 +26,10 @@ sub stem_fa {
 sub remove_kasra {
     my ($word) = @_;
 
-    return $word
-        if length $word > 4
-        && $word =~ s{ \N{ARABIC KASRA} $}{}x;
+    if (length $word > 4) {
+        return $word
+            if $word =~ s{ \N{ARABIC KASRA} $}{}x;
+    }
 
     return $word;
 }
@@ -51,7 +52,7 @@ sub remove_suffix {
     }
 
     if ($length > 5) {
-        return normalize1($word)
+        return normalize($word)
             if $word =~ s{ ان $}{}x;
 
         return $word
@@ -68,22 +69,18 @@ sub remove_suffix {
     return $word;
 }
 
-sub normalize1 {
-    my ($word) = @_;
-
-    return normalize2($word)
-        if length $word > 3
-        && $word =~ s{ (?: ى | گ | م | ت | ر | ش ) $}{}x;
-
-    return $word;
-}
-
-sub normalize2 {
+sub normalize {
     my ($word) = @_;
 
     return $word
-        if length $word > 3
-        && $word =~ s{ (?: ی | ي ) $}{}x;
+        if length $word < 4;
+
+    if ($word =~ s{ (?: ى | گ | م | ت | ر | ش ) $}{}x) {
+        return $word
+            if length $word < 4;
+
+        $word =~ s{ (?: ی | ي ) $}{}x;
+    }
 
     return $word;
 }

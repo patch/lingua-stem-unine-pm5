@@ -21,9 +21,10 @@ sub stem_bg {
     return $word
         if $length < 4;
 
-    return $word
-        if $length > 5
-        && $word =~ s{ ища $}{}x;  # -HWa
+    if ($length > 5) {
+        return $word
+            if $word =~ s{ ища $}{}x;  # -HWa
+    }
 
     $word = remove_article($word);
     $word = remove_plural($word);
@@ -62,14 +63,15 @@ sub remove_article {
     }
 
     if ($length > 5) {
-        return $word if $word =~ s{ (?:
-              ия  # -H(R)
-                  # definite article for nouns:
-            | ът  # -bT (art for masc)
-            | та  # -Ta (art for femi)
-            | то  # -To (art for neutral)
-            | те  # -Te (art in plural)
-        ) $}{}x;
+        return $word
+            if $word =~ s{ (?:
+                  ия  # -H(R)
+                      # definite article for nouns:
+                | ът  # -bT (art for masc)
+                | та  # -Ta (art for femi)
+                | то  # -To (art for neutral)
+                | те  # -Te (art in plural)
+            ) $}{}x;
     }
 
     if ($length > 4) {

@@ -40,37 +40,41 @@ sub remove_case {
     }
 
     if ($length > 5) {
-        return $word if $word =~ s{ (?:
-              ými     # -ými
-            | am[ai]  # -ama -ami
-            | at[ay]  # -ata -aty
-            | ov[éi]  # -ové -ovi
-            | [áý]ch  # -ách -ých
-        ) $}{}x;
+        return $word
+            if $word =~ s{ (?:
+                  ými     # -ými
+                | am[ai]  # -ama -ami
+                | at[ay]  # -ata -aty
+                | ov[éi]  # -ové -ovi
+                | [áý]ch  # -ách -ých
+            ) $}{}x;
 
-        return palatalize($word) if $word =~ s{ (?:
-              (?<= ě     ) t[ei]  # -ěte -ěti      → -ě
-            | (?<= [éi]  ) m      # -ému -imu      → -é -i
-            | (?<= [eií] ) ch     # -ech -ich -ích → -e -i -í
-            | (?<= [eěí] ) mi     # -emi -ěmi -ími → -e -ě -í
-            | (?<= [éií] ) ho     # -ého -iho -ího → -é -i -í
-        ) $}{}x;
+        return palatalize($word)
+            if $word =~ s{ (?:
+                  (?<= ě     ) t[ei]  # -ěte -ěti      → -ě
+                | (?<= [éi]  ) m      # -ému -imu      → -é -i
+                | (?<= [eií] ) ch     # -ech -ich -ích → -e -i -í
+                | (?<= [eěí] ) mi     # -emi -ěmi -ími → -e -ě -í
+                | (?<= [éií] ) ho     # -ého -iho -ího → -é -i -í
+            ) $}{}x;
     }
 
     if ($length > 4) {
-        return $word if $word =~ s{ (?:
-              at      # -at
-            | mi      # -mi
-            | us      # -us
-            | o[su]   # -os -ou
-            | [áůý]m  # -ám -ům -ým
-        ) $}{}x;
+        return $word
+            if $word =~ s{ (?:
+                  at      # -at
+                | mi      # -mi
+                | us      # -us
+                | o[su]   # -os -ou
+                | [áůý]m  # -ám -ům -ým
+            ) $}{}x;
 
-        return palatalize($word) if $word =~ s{ (?:
-              es          # -es
-            | [éí]m       # -ém -ím
-            | (?<= e ) m  # -em → -e
-        ) $}{}x;
+        return palatalize($word)
+            if $word =~ s{ (?:
+                  es          # -es
+                | [éí]m       # -ém -ím
+                | (?<= e ) m  # -em → -e
+            ) $}{}x;
     }
 
     if ($length > 3) {
