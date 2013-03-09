@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use utf8;
 use open qw( :encoding(UTF-8) :std );
-use Test::More tests => 24;
+use Test::More tests => 27;
 use Lingua::Stem::UniNE::CS qw( stem_cs );
 
 is stem_cs('zvířatech'), 'zvíř',   'remove -atech';
@@ -30,3 +30,7 @@ is stem_cs('ostatními'), 'ostatn', 'remove -mi from -ími';
 is stem_cs('jiného'),    'jin',    'remove -ho from -ého';
 note 'no test for: ',              'remove -ho from -iho';
 is stem_cs('jejího'),    'jej',    'remove -ho from -ího';
+
+is stem_cs('pracovat'),  'prac',   'remove -ov';
+is stem_cs('králův'),    'král',   'remove -ův';
+is stem_cs('většina'),   'větš',   'remove -in from -i';
