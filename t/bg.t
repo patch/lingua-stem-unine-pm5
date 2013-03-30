@@ -1,6 +1,6 @@
+use utf8;
 use strict;
 use warnings;
-use utf8;
 use open qw( :encoding(UTF-8) :std );
 use Test::More tests => 200;
 use Lingua::Stem::UniNE::BG qw( stem_bg );

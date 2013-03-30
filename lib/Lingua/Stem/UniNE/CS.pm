@@ -1,9 +1,9 @@
 package Lingua::Stem::UniNE::CS;
 
-use 5.008;
+use v5.8;
+use utf8;
 use strict;
 use warnings;
-use utf8;
 use parent 'Exporter';
 use Unicode::CaseFold qw( fc );
 use Unicode::Normalize qw( NFC );
@@ -130,7 +130,7 @@ Lingua::Stem::UniNE::CS - Czech stemmer
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE::CS version 0.00_1.
+This document describes Lingua::Stem::UniNE::CS v0.00_1.
 
 =head1 SYNOPSIS
 

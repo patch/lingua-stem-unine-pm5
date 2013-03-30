@@ -16,6 +16,9 @@ my $builder = Module::Build->new(
     requires => {
         'perl'               => '5.8.0',  # minimum Unicode support
         'parent'             => 0,
+        'strict'             => 0,
+        'utf8'               => 0,
+        'warnings'           => 0,
         'Unicode::CaseFold'  => 0,
         'Unicode::Normalize' => 0,
     },

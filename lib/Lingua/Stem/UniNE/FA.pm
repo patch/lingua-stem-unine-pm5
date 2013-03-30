@@ -1,9 +1,9 @@
 package Lingua::Stem::UniNE::FA;
 
-use 5.008;
+use v5.8;
+use utf8;
 use strict;
 use warnings;
-use utf8;
 use charnames ':full';
 use parent 'Exporter';
 use Unicode::CaseFold qw( fc );
@@ -99,7 +99,7 @@ Lingua::Stem::UniNE::FA - Persian stemmer
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE::FA version 0.00_1.
+This document describes Lingua::Stem::UniNE::FA v0.00_1.
 
 =head1 SYNOPSIS
 

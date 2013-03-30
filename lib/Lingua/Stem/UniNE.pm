@@ -1,9 +1,9 @@
 package Lingua::Stem::UniNE;
 
-use 5.008;
+use v5.8;
+use utf8;
 use strict;
 use warnings;
-use utf8;
 
 our $VERSION = '0.00_1';
 
@@ -19,7 +19,7 @@ Lingua::Stem::UniNE - University of Neuchâtel stemmers
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE version 0.00_1.
+This document describes Lingua::Stem::UniNE v0.00_1.
 
 =head1 SYNOPSIS
 
