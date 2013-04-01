@@ -32,11 +32,11 @@ This document describes Lingua::Stem::UniNE v0.00_1.
 =head1 DESCRIPTION
 
 This is a collection of stemmers for multiple languages based on algorithms by
-Jacques Savoy et al. of the University of Neuchâtel.  Currently only the
-L<Bulgarian|Lingua::Stem::UniNE::BG>, L<Czech|Lingua::Stem::UniNE::CS>, and
-L<Persian|Lingua::Stem::UniNE::FA> stemmers are implemented.  Work is ongoing
-for Arabic, Bengali, Czech, Finnish, French, German, Hindi, Hungarian, Italian,
-Persian, Portuguese, Marathi, Russian, Spanish, and Swedish.  The top priority
+Jacques Savoy et al. of the University of Neuchâtel.  The languages currently
+implemented are L<Bulgarian|Lingua::Stem::UniNE::BG>,
+L<Czech|Lingua::Stem::UniNE::CS>, and L<Persian|Lingua::Stem::UniNE::FA>.  Work
+is ongoing for Arabic, Bengali, Finnish, French, German, Hindi, Hungarian,
+Italian, Portuguese, Marathi, Russian, Spanish, and Swedish.  The top priority
 is languages for which there are no stemmers available on CPAN.
 
 =over
@@ -65,9 +65,9 @@ adjectives).
 
 =item * L<IR Multilingual Resources at UniNE|http://members.unine.ch/jacques.savoy/clef/>
 
-=item * L<Lingua::Stem>
-
 =item * L<Lingua::Stem::Snowball>
+
+=item * L<Lingua::Stem>
 
 =back
 

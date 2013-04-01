@@ -13,12 +13,12 @@ SYNOPSIS
 
 DESCRIPTION
     This is a collection of stemmers for multiple languages based on
-    algorithms by Jacques Savoy et al. of the University of Neuchâtel.
-    Currently only the Bulgarian, Czech, and Persian stemmers are
-    implemented. Work is ongoing for Arabic, Bengali, Czech, Finnish,
-    French, German, Hindi, Hungarian, Italian, Persian, Portuguese, Marathi,
-    Russian, Spanish, and Swedish. The top priority is languages for which
-    there are no stemmers available on CPAN.
+    algorithms by Jacques Savoy et al. of the University of Neuchâtel. The
+    languages currently implemented are Bulgarian, Czech, and Persian. Work
+    is ongoing for Arabic, Bengali, Finnish, French, German, Hindi,
+    Hungarian, Italian, Portuguese, Marathi, Russian, Spanish, and Swedish.
+    The top priority is languages for which there are no stemmers available
+    on CPAN.
 
     Comments on stemmers from UniNE
         In proposing stemmers for other languages than English, we think
@@ -40,9 +40,9 @@ DESCRIPTION
 SEE ALSO
     *   <IR Multilingual Resources at UniNE>
 
-    *   Lingua::Stem
-
     *   Lingua::Stem::Snowball
+
+    *   Lingua::Stem
 
 ACKNOWLEDGEMENTS
     The stemmers included are based on the algorithms and original
