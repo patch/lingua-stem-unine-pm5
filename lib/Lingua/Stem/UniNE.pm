@@ -25,9 +25,26 @@ This document describes Lingua::Stem::UniNE v0.00_1.
 
     use Lingua::Stem::UniNE;
 
-    my $stemmer = Lingua::Stem::UniNE->new('bg');
+    # create Bulgarian stemmer
+    $stemmer = Lingua::Stem::UniNE->new(language => 'bg');
 
-    my @stems = $stemmer->stem(@words);
+    # get stem for a word
+    $stem = $stemmer->stem($word);
+
+    # get list of stems for a list of words
+    @stems = $stemmer->stem(@stems);
+
+    # replace words in array reference with stems
+    $stemmer->stem(\@stems);
+
+	# get supported languages
+    @languages = $stemmer->languages;
+
+	# get current language
+    $language = $stemmer->language;
+
+	# change language to Persian
+    $stemmer->language('fa');
 
 =head1 DESCRIPTION
 
@@ -67,7 +84,7 @@ adjectives).
 
 =item * L<Lingua::Stem::Snowball>
 
-=item * L<Lingua::Stem>
+=item * L<Lingua::Stem::Any>
 
 =back
 
