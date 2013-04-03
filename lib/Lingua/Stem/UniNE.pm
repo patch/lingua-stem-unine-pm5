@@ -2,10 +2,49 @@ package Lingua::Stem::UniNE;
 
 use v5.8;
 use utf8;
-use strict;
-use warnings;
+use Moo;
+no strict 'refs';
+use Lingua::Stem::UniNE::BG;
+use Lingua::Stem::UniNE::CS;
+use Lingua::Stem::UniNE::FA;
 
 our $VERSION = '0.00_1';
+
+has language => (
+    is => 'rw',
+);
+
+sub languages {
+    my @languages = qw( bg cs fa );
+    return @languages;
+}
+
+sub stem {
+    my $self = shift;
+    my $stemmer;
+
+    if ($self->language) {
+        $stemmer = \&{'Lingua::Stem::UniNE::' . uc($self->language) . '::stem'};
+    }
+
+    if (@_ == 1 && ref $_[0] eq 'ARRAY') {
+        my ($words) = @_;
+
+        return unless $self->language;
+
+        for my $word (@$words) {
+            $word = $stemmer->($word);
+        }
+
+        return;
+    }
+    else {
+        my @words = @_;
+        my @stems = $self->language ? map { $stemmer->($_) } @words : @words;
+
+        return wantarray ? @stems : pop @stems;
+    }
+}
 
 1;
 

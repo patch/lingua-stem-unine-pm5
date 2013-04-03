@@ -11,7 +11,6 @@ my $builder = Module::Build->new(
         'Module::Build' => 0.36,
     },
     build_requires => {
-        'Test::Deep' => 0,
         'Test::More' => 0.82,  # note()
     },
     requires => {
@@ -20,6 +19,7 @@ my $builder = Module::Build->new(
         'strict'             => 0,
         'utf8'               => 0,
         'warnings'           => 0,
+        'Moo'                => 0,
         'Unicode::CaseFold'  => 0,
         'Unicode::Normalize' => 0,
     },

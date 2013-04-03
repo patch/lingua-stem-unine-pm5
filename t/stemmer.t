@@ -3,7 +3,6 @@ use strict;
 use warnings;
 use open qw( :encoding(UTF-8) :std );
 use Test::More tests => 21;
-use Test::Deep;
 use Lingua::Stem::UniNE;
 
 my ($stemmer, @words, @words_copy);
@@ -14,8 +13,8 @@ can_ok $stemmer, qw( stem language languages );
 
 is $stemmer->language, 'cs', 'language read-accessor';
 
+is_deeply [$stemmer->languages], [qw( bg cs fa )], 'supported language codes';
 is scalar $stemmer->languages, 3, 'supported number of languages';
-cmp_deeply [$stemmer->languages], qr/^[a-z]{2}$/, 'supported language codes';
 
 @words = @words_copy = qw( že dobře ještě );
 is_deeply [$stemmer->stem(@words)], [qw( že dobř jesk )], 'list of words';
@@ -31,8 +30,8 @@ is_deeply [$stemmer->stem()],         [],      'empty list in list context';
 
 is $stemmer->stem('работа'), 'работа', 'only stem for current language';
 
-$stemmer->language('fa');
-is $stemmer->language,       'fa',  'language changed via write-accessor';
+$stemmer->language('bg');
+is $stemmer->language,       'bg',  'language changed via write-accessor';
 is $stemmer->stem('работа'), 'раб', 'language change confirmed by stemming';
 
 $stemmer = new_ok 'Lingua::Stem::UniNE', [], 'instantiate with no language';
