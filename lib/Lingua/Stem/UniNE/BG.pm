@@ -133,29 +133,22 @@ This document describes Lingua::Stem::UniNE::BG v0.00_1.
 
 =head1 DESCRIPTION
 
-This is a light stemmer for the Bulgarian language.
+A stemmer for the Bulgarian language.
 
 =head1 SEE ALSO
 
-=over
+L<Lingua::Stem::UniNE> provides a stemming object with access to all of the
+implemented University of Neuchâtel stemmers including this one.
 
-=item * L<Lingua::Stem::UniNE> — The collection of University of Neuchâtel
-stemmers that includes this module.
-
-=item * L<Bulgarian stemmer as Perl script|http://members.unine.ch/jacques.savoy/clef/bulgarianStemmer.txt>
-by Jacques Savoy — The original implementation from which this module was
-ported.
-
-=item * L<Searching Strategies for the Bulgarian Language|http://dl.acm.org/citation.cfm?id=1598600>
-(PDF) by Jacques Savoy — Article defining the algorithm implemented by this
-module.
-
-=back
+This stemming algorithm was defined in
+L<Searching Strategies for the Bulgarian Language|http://dl.acm.org/citation.cfm?id=1298736>
+(PDF) by Jacques Savoy and originally implemented by him as a
+L<Perl script|http://members.unine.ch/jacques.savoy/clef/bulgarianStemmer.txt>.
 
 =head1 ACKNOWLEDGEMENTS
 
-Jacques Savoy of the University of Neuchâtel authored the algorithm for this
-stemmer and wrote the original implementation as a Perl script.
+Jacques Savoy of the University of Neuchâtel authored the original stemming
+algorithm that was implemented in this module.
 
 =head1 AUTHOR
 
@@ -163,7 +156,7 @@ Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-© 2012 Nick Patch
+© 2012–2013 Nick Patch
 
 This library is free software; you can redistribute it and/or modify it under
-the terms of the BSD License.
+the same terms as Perl itself.

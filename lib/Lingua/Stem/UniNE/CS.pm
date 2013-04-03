@@ -140,37 +140,28 @@ This document describes Lingua::Stem::UniNE::CS v0.00_1.
 
 =head1 DESCRIPTION
 
-This is a light stemmer for the Czech language.  It removes case endings from
-nouns and adjectives, possesive adjective endings from names, and takes care of
+A light stemmer for the Czech language that removes case endings from nouns and
+adjectives, possessive adjective endings from names, and takes care of
 palatalization.
 
 =head1 SEE ALSO
 
-=over
+L<Lingua::Stem::UniNE> provides a stemming object with access to all of the
+implemented University of Neuchâtel stemmers including this one.
 
-=item * L<Lingua::Stem::UniNE> — The collection of University of Neuchâtel
-stemmers that includes this module.
+This stemming algorithm was defined in
+L<Indexing and stemming approaches for the Czech language|http://dl.acm.org/citation.cfm?id=1598600>
+(PDF) by Ljiljana Dolamic and Jacques Savoy and originally implemented by
+Ljiljana Dolamic in L<Java|http://members.unine.ch/jacques.savoy/clef/CzechStemmerLight.txt>.
 
-=item * L<Czech stemmer in Java|http://members.unine.ch/jacques.savoy/clef/CzechStemmerLight.txt>
-by Ljiljana Dolamic — The original implementation from which this module was
-ported.
-
-=item * L<Czech stemmer in Snowball|http://snowball.tartarus.org/otherapps/oregan/intro.html>
-by Jimmy O’Regan — An implementation hosted on the Snowball site but not
-included in the official distribution and therefore not included in
-L<Lingua::Stem::Snowball>.
-
-=item * L<Indexing and stemming approaches for the Czech language|http://dl.acm.org/citation.cfm?id=1598600>
-by Ljiljana Dolamic and Jacques Savoy — Article defining the algorithm
-implemented by this module.
-
-=back
+A L<Czech stemmer for Snowball|http://snowball.tartarus.org/otherapps/oregan/intro.html>
+by Jimmy O’Regan is available on the Snowball site but not included in the
+official distribution and therefore not included in L<Lingua::Stem::Snowball>.
 
 =head1 ACKNOWLEDGEMENTS
 
-Ljiljana Dolamic of the University of Neuchâtel wrote the original
-implementation of this stemmer in Java and authored the algorithm along with
-Jacques Savoy, also of UniNE.
+Ljiljana Dolamic and Jacques Savoy of the University of Neuchâtel authored the
+original stemming algorithm that was implemented in this module.
 
 =head1 AUTHOR
 
@@ -178,7 +169,7 @@ Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-© 2012 Nick Patch
+© 2012–2013 Nick Patch
 
 This library is free software; you can redistribute it and/or modify it under
-the terms of the BSD License.
+the same terms as Perl itself.

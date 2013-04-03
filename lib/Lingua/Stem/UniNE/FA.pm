@@ -109,26 +109,20 @@ This document describes Lingua::Stem::UniNE::FA v0.00_1.
 
 =head1 DESCRIPTION
 
-This is a light stemmer for the Persian (Farsi) language.
+A stemmer for the Persian (Farsi) language.
 
 =head1 SEE ALSO
 
-=over
+L<Lingua::Stem::UniNE> provides a stemming object with access to all of the
+implemented University of Neuchâtel stemmers including this one.
 
-=item * L<Lingua::Stem::UniNE> — The collection of University of Neuchâtel
-stemmers that includes this module.
-
-=item * L<Persian stemmer in Java|http://members.unine.ch/jacques.savoy/clef/persianStemmerArabic.txt>
-by Ljiljana Dolamic — The original implementation from which this module was
-ported.
-
-=back
+This stemming algorithm was originally implemented by Ljiljana Dolamic in
+L<Java|http://members.unine.ch/jacques.savoy/clef/persianStemmerArabic.txt>.
 
 =head1 ACKNOWLEDGEMENTS
 
-Ljiljana Dolamic of the University of Neuchâtel wrote the original
-implementation of this stemmer in Java and authored the algorithm along with
-Jacques Savoy, also of UniNE.
+Ljiljana Dolamic and Jacques Savoy of the University of Neuchâtel authored the
+original stemming algorithm that was implemented in this module.
 
 =head1 AUTHOR
 
@@ -136,7 +130,7 @@ Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-© 2012 Nick Patch
+© 2012–2013 Nick Patch
 
 This library is free software; you can redistribute it and/or modify it under
-the terms of the BSD License.
+the same terms as Perl itself.

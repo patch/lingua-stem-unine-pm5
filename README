@@ -41,6 +41,7 @@ DESCRIPTION
         They are in the two-letter ISO 639-1 format and are case-insensitive
         but are always returned in lowercase when requested.
 
+            # instantiate a stemmer object
             $stemmer = Lingua::Stem::UniNE->new(language => $language);
 
             # get current language
@@ -49,14 +50,16 @@ DESCRIPTION
             # change language
             $stemmer->language($language);
 
-        Country codes such as "cz" for the Czech Republic are not supported,
-        nor are IETF language tags such as "pt-PT" or "pt-BR".
+        A stemmer object can be instantiated without a language, but it will
+        return words as-is without stemming until a language is set. Country
+        codes such as "cz" for the Czech Republic are not supported, nor are
+        IETF language tags such as "pt-PT" or "pt-BR".
 
   Methods
     stem
         When a list of strings is provided, each string is stemmed and a
         list of stems is returned. The list returned will always have the
-        same number of elements as the list provided.
+        same number of elements in the same order as the list provided.
 
             @stems = $stemmer->stem(@words);
 
@@ -77,6 +80,8 @@ DESCRIPTION
         lowercase letters.
 
             @languages = $stemmer->languages;
+
+        In scalar context it returns the number of supported languages.
 
 SEE ALSO
     IR Multilingual Resources at UniNE
@@ -106,8 +111,8 @@ AUTHOR
     Nick Patch <patch@cpan.org>
 
 COPYRIGHT AND LICENSE
-    © 2012 Nick Patch
+    © 2012–2013 Nick Patch
 
     This library is free software; you can redistribute it and/or modify it
-    under the terms of the BSD License.
+    under the same terms as Perl itself.
 

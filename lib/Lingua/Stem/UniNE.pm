@@ -64,6 +64,7 @@ The following language codes are currently supported.
 They are in the two-letter ISO 639-1 format and are case-insensitive but are
 always returned in lowercase when requested.
 
+    # instantiate a stemmer object
     $stemmer = Lingua::Stem::UniNE->new(language => $language);
 
     # get current language
@@ -72,8 +73,10 @@ always returned in lowercase when requested.
     # change language
     $stemmer->language($language);
 
-Country codes such as C<cz> for the Czech Republic are not supported, nor are
-IETF language tags such as C<pt-PT> or C<pt-BR>.
+A stemmer object can be instantiated without a language, but it will return
+words as-is without stemming until a language is set.  Country codes such as
+C<cz> for the Czech Republic are not supported, nor are IETF language tags such
+as C<pt-PT> or C<pt-BR>.
 
 =back
 
@@ -84,8 +87,8 @@ IETF language tags such as C<pt-PT> or C<pt-BR>.
 =item stem
 
 When a list of strings is provided, each string is stemmed and a list of stems
-is returned.  The list returned will always have the same number of elements as
-the list provided.
+is returned.  The list returned will always have the same number of elements in
+the same order as the list provided.
 
     @stems = $stemmer->stem(@words);
 
@@ -106,6 +109,8 @@ supported.
 Returns a list of supported two-letter language codes using lowercase letters.
 
     @languages = $stemmer->languages;
+
+In scalar context it returns the number of supported languages.
 
 =back
 
@@ -138,7 +143,7 @@ Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-© 2012 Nick Patch
+© 2012–2013 Nick Patch
 
 This library is free software; you can redistribute it and/or modify it under
-the terms of the BSD License.
+the same terms as Perl itself.
