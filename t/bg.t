@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use open qw( :encoding(UTF-8) :std );
 use Test::More tests => 200;
-use Lingua::Stem::UniNE::BG qw( stem_bg );
+use Lingua::Stem::UniNE::BG qw( stem );
 
 # The words used in these tests are from Hermit Dave’s Bulgarian frequency word
 # list at http://invokeit.wordpress.com/frequency-word-lists/ and provided under
@@ -91,10 +91,10 @@ my @word_stem_pairs = (
 );
 
 for my $word (@self_stems) {
-    is stem_bg($word), $word, "$word stems to itself";
+    is stem($word), $word, "$word stems to itself";
 }
 
 for my $pair (@word_stem_pairs) {
     my ($word, $stem) = @$pair;
-    is stem_bg($word), $stem, "$word stems to $stem";
+    is stem($word), $stem, "$word stems to $stem";
 }

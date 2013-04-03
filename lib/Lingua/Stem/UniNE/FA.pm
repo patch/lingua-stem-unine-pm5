@@ -10,9 +10,11 @@ use Unicode::CaseFold qw( fc );
 use Unicode::Normalize qw( NFC );
 
 our $VERSION   = '0.00_1';
-our @EXPORT_OK = qw( stem_fa );
+our @EXPORT_OK = qw( stem stem_fa );
 
-sub stem_fa {
+*stem_fa = \&stem;
+
+sub stem {
     my ($word) = @_;
 
     $word = NFC fc $word;
@@ -106,6 +108,9 @@ This document describes Lingua::Stem::UniNE::FA v0.00_1.
     use Lingua::Stem::UniNE::FA qw( stem_fa );
 
     my $stem = stem_fa($word);
+
+    # alternate syntax
+    $stem = Lingua::Stem::UniNE::FA::stem($word);
 
 =head1 DESCRIPTION
 
