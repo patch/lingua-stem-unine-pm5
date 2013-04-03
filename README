@@ -19,15 +19,6 @@ SYNOPSIS
         # replace words in array reference with stems
         $stemmer->stem(\@words);
 
-        # get supported languages
-        @languages = $stemmer->languages;
-
-        # get current language
-        $language = $stemmer->language;
-
-        # change language to Persian
-        $stemmer->language('fa');
-
 DESCRIPTION
     This module contains a collection of stemmers for multiple languages
     based on stemming algorithms provided by Jacques Savoy of the University
@@ -84,6 +75,8 @@ DESCRIPTION
     languages
         Returns a list of supported two-letter language codes using
         lowercase letters.
+
+            @languages = $stemmer->languages;
 
 SEE ALSO
     IR Multilingual Resources at UniNE

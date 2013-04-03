@@ -37,15 +37,6 @@ This document describes Lingua::Stem::UniNE v0.00_1.
     # replace words in array reference with stems
     $stemmer->stem(\@words);
 
-    # get supported languages
-    @languages = $stemmer->languages;
-
-    # get current language
-    $language = $stemmer->language;
-
-    # change language to Persian
-    $stemmer->language('fa');
-
 =head1 DESCRIPTION
 
 This module contains a collection of stemmers for multiple languages based on
@@ -113,6 +104,8 @@ supported.
 =item languages
 
 Returns a list of supported two-letter language codes using lowercase letters.
+
+    @languages = $stemmer->languages;
 
 =back
 
