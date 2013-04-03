@@ -28,70 +28,116 @@ This document describes Lingua::Stem::UniNE v0.00_1.
     # create Bulgarian stemmer
     $stemmer = Lingua::Stem::UniNE->new(language => 'bg');
 
-    # get stem for a word
+    # get stem for word
     $stem = $stemmer->stem($word);
 
-    # get list of stems for a list of words
-    @stems = $stemmer->stem(@stems);
+    # get list of stems for list of words
+    @stems = $stemmer->stem(@words);
 
     # replace words in array reference with stems
-    $stemmer->stem(\@stems);
+    $stemmer->stem(\@words);
 
-	# get supported languages
+    # get supported languages
     @languages = $stemmer->languages;
 
-	# get current language
+    # get current language
     $language = $stemmer->language;
 
-	# change language to Persian
+    # change language to Persian
     $stemmer->language('fa');
 
 =head1 DESCRIPTION
 
-This is a collection of stemmers for multiple languages based on algorithms by
-Jacques Savoy et al. of the University of Neuchâtel.  The languages currently
-implemented are L<Bulgarian|Lingua::Stem::UniNE::BG>,
+This module contains a collection of stemmers for multiple languages based on
+stemming algorithms provided by Jacques Savoy of the University of Neuchâtel.
+The languages currently implemented are L<Bulgarian|Lingua::Stem::UniNE::BG>,
 L<Czech|Lingua::Stem::UniNE::CS>, and L<Persian|Lingua::Stem::UniNE::FA>.  Work
 is ongoing for Arabic, Bengali, Finnish, French, German, Hindi, Hungarian,
 Italian, Portuguese, Marathi, Russian, Spanish, and Swedish.  The top priority
 is languages for which there are no stemmers available on CPAN.
 
+=head2 Attributes
+
 =over
 
-=item B<Comments on stemmers from UniNE>
+=item language
 
-In proposing stemmers for other languages than English, we think that a “light”
-stemmer (removing inflections only for noun and adjectives) presents some
-advantages.  Our stemming procedure for French is described in (Savoy, 1999).
-In Italian, the main inflectional rule is to modify the final character (e.g.,
-«-o», «-a» or «-e») into another (e.g., «-i», «-e»).  As a second rule, Italian
-morphology may also alter the final two letters (e.g., «-io» in «-o», «-co» in
-«-chi», «-ga» in «-ghe»).  In German, a few rules may be applied to obtain the
-plural form of words (e.g., “Frau” into “Frauen” (woman), “Bild” into “Bilder”
-(picture), “Sohn” into “Söhne” (son), “Apfel” into “Äpfel” (apple)), but the
-suggested algorithms do not account for person and tense variations, or for the
-morphological variations used by verbs (we think that indexing verbs for
-Italian, French or German is not of primary importance compared to nouns and
-adjectives).
+The following language codes are currently supported.
+
+    ┌───────────┬────┐
+    │ Bulgarian │ bg │
+    │ Czech     │ cs │
+    │ Persian   │ fa │
+    └───────────┴────┘
+
+They are in the two-letter ISO 639-1 format and are case-insensitive but are
+always returned in lowercase when requested.
+
+    $stemmer = Lingua::Stem::UniNE->new(language => $language);
+
+    # get current language
+    $language = $stemmer->language;
+
+    # change language
+    $stemmer->language($language);
+
+Country codes such as C<cz> for the Czech Republic are not supported, nor are
+IETF language tags such as C<pt-PT> or C<pt-BR>.
+
+=back
+
+=head2 Methods
+
+=over
+
+=item stem
+
+When a list of strings is provided, each string is stemmed and a list of stems
+is returned.  The list returned will always have the same number of elements as
+the list provided.
+
+    @stems = $stemmer->stem(@words);
+
+    # get the stem for a single word
+    $stem = $stemmer->stem($word);
+
+When an array reference is provided, each element is stemmed and replaced with
+the resulting stem.
+
+    $stemmer->stem(\@words);
+
+The words should be provided as character strings and the stems are returned as
+character strings.  Byte strings in arbitrary character encodings are not
+supported.
+
+=item languages
+
+Returns a list of supported two-letter language codes using lowercase letters.
 
 =back
 
 =head1 SEE ALSO
 
-=over
+L<IR Multilingual Resources at UniNE|http://members.unine.ch/jacques.savoy/clef/>
+provides the original stemming algorithms that were implemented in this module.
 
-=item * L<IR Multilingual Resources at UniNE|http://members.unine.ch/jacques.savoy/clef/>
+L<Lingua::Stem::Snowball> provides alternate stemming algorithms for Finnish,
+French, German, Hungarian, Italian, Portuguese, Russian, Spanish, and Swedish,
+as well as other languages.
 
-=item * L<Lingua::Stem::Snowball>
-
-=item * L<Lingua::Stem::Any>
-
-=back
+L<Lingua::Stem::Any> provides a consistent unified interface for
+Lingua::Stem::UniNE, Lingua::Stem::Snowball, and other stemming modules on CPAN.
 
 =head1 ACKNOWLEDGEMENTS
 
-The stemmers included are based on the algorithms and original implementations
-by Jacques Savoy and Ljiljana Dolamic of the University of Neuchâtel.
+L<Jacques Savoy|http://members.unine.ch/jacques.savoy/> and Ljiljana Dolamic of
+the University of Neuchâtel authored the original stemming algorithms that were
+implemented in this module.
+
+This module is brought to you by L<Shutterstock|http://www.shutterstock.com/>
+(L<@ShutterTech|https://twitter.com/ShutterTech>).  Additional open source
+projects from Shutterstock can be found at
+L<code.shutterstock.com|http://code.shutterstock.com/>.
 
 =head1 AUTHOR
 
