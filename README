@@ -50,10 +50,8 @@ DESCRIPTION
             # change language
             $stemmer->language($language);
 
-        A stemmer object can be instantiated without a language, but it will
-        return words as-is without stemming until a language is set. Country
-        codes such as "cz" for the Czech Republic are not supported, nor are
-        IETF language tags such as "pt-PT" or "pt-BR".
+        Country codes such as "cz" for the Czech Republic are not supported,
+        nor are IETF language tags such as "pt-PT" or "pt-BR".
 
   Methods
     stem

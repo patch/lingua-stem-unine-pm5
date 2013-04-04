@@ -3,45 +3,47 @@ package Lingua::Stem::UniNE;
 use v5.8;
 use utf8;
 use Moo;
-no strict 'refs';
-use Lingua::Stem::UniNE::BG;
-use Lingua::Stem::UniNE::CS;
-use Lingua::Stem::UniNE::FA;
 
 our $VERSION = '0.00_1';
 
+my @languages = qw( bg cs fa );
+my %is_language = map { $_ => 1 } @languages;
+
 has language => (
+    is       => 'rw',
+    isa      => sub { die "Invalid language '$_[0]'" if !$is_language{$_[0]} },
+    coerce   => sub { defined $_[0] ? lc $_[0] : '' },
+    trigger  => 1,
+    required => 1,
+);
+
+has _stemmer => (
     is => 'rw',
 );
 
+sub _trigger_language {
+    my $self = shift;
+    my $language = uc $self->language;
+
+    require "Lingua/Stem/UniNE/$language.pm";
+    $self->_stemmer( \&{"Lingua::Stem::UniNE::${language}::stem"} );
+}
+
 sub languages {
-    my @languages = qw( bg cs fa );
     return @languages;
 }
 
 sub stem {
     my $self = shift;
-    my $stemmer;
-
-    if ($self->language) {
-        $stemmer = \&{'Lingua::Stem::UniNE::' . uc($self->language) . '::stem'};
-    }
 
     if (@_ == 1 && ref $_[0] eq 'ARRAY') {
-        my ($words) = @_;
-
-        return unless $self->language;
-
-        for my $word (@$words) {
-            $word = $stemmer->($word);
+        for my $word ( @{$_[0]} ) {
+            $word = $self->_stemmer->($word);
         }
-
         return;
     }
     else {
-        my @words = @_;
-        my @stems = $self->language ? map { $stemmer->($_) } @words : @words;
-
+        my @stems = map { $self->_stemmer->($_) } @_;
         return wantarray ? @stems : pop @stems;
     }
 }
@@ -112,10 +114,8 @@ always returned in lowercase when requested.
     # change language
     $stemmer->language($language);
 
-A stemmer object can be instantiated without a language, but it will return
-words as-is without stemming until a language is set.  Country codes such as
-C<cz> for the Czech Republic are not supported, nor are IETF language tags such
-as C<pt-PT> or C<pt-BR>.
+Country codes such as C<cz> for the Czech Republic are not supported, nor are
+IETF language tags such as C<pt-PT> or C<pt-BR>.
 
 =back
 
