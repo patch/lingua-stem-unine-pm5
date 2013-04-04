@@ -18,7 +18,7 @@ my $builder = Module::Build->new(
         'strict'             => 0,
         'utf8'               => 0,
         'warnings'           => 0,
-        'Moo'                => 0,
+        'Moo'                => 1.000000,
         'Unicode::CaseFold'  => 0,
         'Unicode::Normalize' => 0,
     },
