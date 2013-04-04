@@ -18,3 +18,8 @@
 ^README.pod$
 ^src\b
 ^TODO$
+
+# Avoid other random files
+^Debian_CPANTS.txt$
+.tar.gz$
+.zip$

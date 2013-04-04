@@ -3,10 +3,9 @@ use warnings;
 use Module::Build;
 
 my $builder = Module::Build->new(
-    module_name    => 'Lingua::Stem::UniNE',
-    license        => 'perl',
-    create_license => 1,
-    create_readme  => 1,
+    module_name   => 'Lingua::Stem::UniNE',
+    license       => 'perl',
+    create_readme => 1,
     configure_requires => {
         'Module::Build' => 0.36,
     },
