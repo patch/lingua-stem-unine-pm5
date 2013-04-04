@@ -15,4 +15,6 @@
 \bLingua-Stem-UniNE-[\d\.\_]+
 
 # Avoid files from the repository not intended for distribution
-^src
+^README.pod$
+^src\b
+^TODO$

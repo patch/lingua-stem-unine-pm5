@@ -12,7 +12,6 @@ t/bg.t
 t/cs-50k.t
 t/cs.t
 t/stemmer.t
-TODO
 xt/author/changes.t
 xt/author/kwalitee.t
 xt/author/pod-coverage.t
