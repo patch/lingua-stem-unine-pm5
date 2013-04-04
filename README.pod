@@ -93,7 +93,11 @@ supported.
 
 Returns a list of supported two-letter language codes using lowercase letters.
 
+    # object method
     @languages = $stemmer->languages;
+
+    # class method
+    @languages = Lingua::Stem::UniNE->languages;
 
 In scalar context it returns the number of supported languages.
 
