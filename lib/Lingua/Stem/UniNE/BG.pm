@@ -8,7 +8,7 @@ use parent 'Exporter';
 use Unicode::CaseFold qw( fc );
 use Unicode::Normalize qw( NFC );
 
-our $VERSION   = '0.00_1';
+our $VERSION   = '0.01';
 our @EXPORT_OK = qw( stem stem_bg );
 
 *stem_bg = \&stem;
@@ -125,7 +125,7 @@ Lingua::Stem::UniNE::BG - Bulgarian stemmer
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE::BG v0.00_1.
+This document describes Lingua::Stem::UniNE::BG v0.01.
 
 =head1 SYNOPSIS
 

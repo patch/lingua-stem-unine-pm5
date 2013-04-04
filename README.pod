@@ -6,7 +6,7 @@ Lingua::Stem::UniNE - University of Neuchâtel stemmers
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE v0.00_1.
+This document describes Lingua::Stem::UniNE v0.01.
 
 =head1 SYNOPSIS
 

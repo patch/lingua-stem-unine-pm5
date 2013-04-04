@@ -1,9 +1,9 @@
 use utf8;
 use strict;
 use warnings;
-use Test::More;
+use Test::More tests => 1;
 
 eval 'use Test::Pod::Coverage 1.00';
 plan skip_all => 'Test::Pod::Coverage 1.00 not installed; skipping' if $@;
 
-all_pod_coverage_ok();
+pod_coverage_ok('Lingua::Stem::UniNE');
