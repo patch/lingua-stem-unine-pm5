@@ -10,6 +10,9 @@ use String::Dump qw( dump_hex );
 # list at http://invokeit.wordpress.com/frequency-word-lists/ and provided under
 # the Creative Commons Attribution–ShareAlike 3.0 license (CC BY-SA 3.0).
 
+# The stems were generated using the Java class by Ljiljana Dolamic at
+# http://members.unine.ch/jacques.savoy/clef/CzechStemmerLight.txt
+
 my @word_stem_pairs = (
     [ to => 'to' ],
     [ se => 'se' ],

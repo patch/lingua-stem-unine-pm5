@@ -10,10 +10,12 @@ my $builder = Module::Build->new(
         'Module::Build' => 0.36,
     },
     build_requires => {
-        'Test::More' => 0.82,  # note()
+        'String::Dump' => 0.05,
+        'Test::More'   => 0.82,  # note()
     },
     requires => {
         'perl'               => '5.8.0',  # minimum Unicode support
+        'charnames'          => 0,
         'parent'             => 0,
         'strict'             => 0,
         'utf8'               => 0,

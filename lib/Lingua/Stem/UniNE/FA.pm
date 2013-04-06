@@ -122,7 +122,7 @@ L<Lingua::Stem::UniNE> provides a stemming object with access to all of the
 implemented University of Neuchâtel stemmers including this one.
 
 This stemming algorithm was originally implemented by Ljiljana Dolamic in
-L<Java|http://members.unine.ch/jacques.savoy/clef/persianStemmerArabic.txt>.
+L<Java|http://members.unine.ch/jacques.savoy/clef/persianStemmerUnicode.txt>.
 
 =head1 ACKNOWLEDGEMENTS
 
