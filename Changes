@@ -1,7 +1,7 @@
 Revision history for Perl module Lingua::Stem::UniNE
 
 v0.02 XXX
- - Added 50K generated Persian tests
+ - Added 50K generated Bulgarian and Persian tests
  - Fixed Persian bugs discovered by new tests
  - The 50K tests per language are now included in the repo only, not the distro
 
