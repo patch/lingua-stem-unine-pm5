@@ -4,6 +4,7 @@ use warnings;
 use open qw( :encoding(UTF-8) :std );
 use Test::More tests => 50_000;
 use Lingua::Stem::UniNE::CS qw( stem );
+use String::Dump qw( dump_hex );
 
 # The words used in these tests are from Hermit Dave’s Czech frequency word
 # list at http://invokeit.wordpress.com/frequency-word-lists/ and provided under
@@ -50014,5 +50015,7 @@ my @word_stem_pairs = (
 
 for my $pair (@word_stem_pairs) {
     my ($word, $stem) = @$pair;
-    is stem($word), $stem, "$word stems to $stem";
+    is stem($word), $stem, "$word stems to $stem"
+        or diag "word: ", dump_hex($word), "\n",
+                "stem: ", dump_hex($stem);
 }
