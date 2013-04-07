@@ -50018,7 +50018,10 @@ my @word_stem_pairs = (
 
 for my $pair (@word_stem_pairs) {
     my ($word, $stem) = @$pair;
-    is stem($word), $stem, "$word stems to $stem"
-        or diag "word: ", dump_hex($word), "\n",
-                "stem: ", dump_hex($stem);
+    my $result = stem($word);
+    is $result, $stem, "$word stems to $stem" or diag (
+        '     got hex: ', dump_hex($result), "\n",
+        'expected hex: ', dump_hex($stem),   "\n",
+        'original hex: ', dump_hex($word),   "\n",
+    );
 }
