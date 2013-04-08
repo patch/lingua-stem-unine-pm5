@@ -3,6 +3,7 @@ package Lingua::Stem::UniNE;
 use v5.8;
 use utf8;
 use Moo;
+use Carp;
 
 our $VERSION = '0.01';
 
@@ -11,7 +12,8 @@ my %is_language = map { $_ => 1 } @languages;
 
 has language => (
     is       => 'rw',
-    isa      => sub { die "Invalid language '$_[0]'" if !$is_language{$_[0]} },
+    isa      => sub { croak "Invalid language '$_[0]'"
+                      unless $is_language{$_[0]} },
     coerce   => sub { defined $_[0] ? lc $_[0] : '' },
     trigger  => 1,
     required => 1,
