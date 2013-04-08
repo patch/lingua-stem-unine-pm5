@@ -8,7 +8,7 @@ use parent 'Exporter';
 use Unicode::CaseFold qw( fc );
 use Unicode::Normalize qw( NFC );
 
-our $VERSION   = '0.01';
+our $VERSION   = '0.02';
 our @EXPORT_OK = qw( stem stem_bg );
 
 *stem_bg = \&stem;
@@ -125,7 +125,7 @@ Lingua::Stem::UniNE::BG - Bulgarian stemmer
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE::BG v0.01.
+This document describes Lingua::Stem::UniNE::BG v0.02.
 
 =head1 SYNOPSIS
 
@@ -140,10 +140,15 @@ This document describes Lingua::Stem::UniNE::BG v0.01.
 
 A stemmer for the Bulgarian language.
 
+This module provides the C<stem> and C<stem_bg> functions, which are synonymous
+and can optionally be exported.  They accept a single word and return a single
+stem.
+
 =head1 SEE ALSO
 
 L<Lingua::Stem::UniNE> provides a stemming object with access to all of the
-implemented University of Neuchâtel stemmers including this one.
+implemented University of Neuchâtel stemmers including this one.  It has
+additional features like stemming lists or array references of words.
 
 This stemming algorithm was defined in
 L<Searching Strategies for the Bulgarian Language|http://dl.acm.org/citation.cfm?id=1298736>

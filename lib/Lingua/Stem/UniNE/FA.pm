@@ -9,7 +9,7 @@ use parent 'Exporter';
 use Unicode::CaseFold qw( fc );
 use Unicode::Normalize qw( NFC );
 
-our $VERSION   = '0.01';
+our $VERSION   = '0.02';
 our @EXPORT_OK = qw( stem stem_fa );
 
 *stem_fa = \&stem;
@@ -101,7 +101,7 @@ Lingua::Stem::UniNE::FA - Persian stemmer
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE::FA v0.01.
+This document describes Lingua::Stem::UniNE::FA v0.02.
 
 =head1 SYNOPSIS
 
@@ -116,10 +116,15 @@ This document describes Lingua::Stem::UniNE::FA v0.01.
 
 A stemmer for the Persian (Farsi) language.
 
+This module provides the C<stem> and C<stem_fa> functions, which are synonymous
+and can optionally be exported.  They accept a single word and return a single
+stem.
+
 =head1 SEE ALSO
 
 L<Lingua::Stem::UniNE> provides a stemming object with access to all of the
-implemented University of Neuchâtel stemmers including this one.
+implemented University of Neuchâtel stemmers including this one.  It has
+additional features like stemming lists or array references of words.
 
 This stemming algorithm was originally implemented by Ljiljana Dolamic in
 L<Java|http://members.unine.ch/jacques.savoy/clef/persianStemmerUnicode.txt>.

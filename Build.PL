@@ -7,11 +7,12 @@ my $builder = Module::Build->new(
     license       => 'perl',
     create_readme => 1,
     configure_requires => {
-        'Module::Build' => 0.36,
+        'Module::Build' => '0.36',
     },
     build_requires => {
-        'String::Dump' => 0.05,
-        'Test::More'   => 0.82,  # note()
+        'Pod::Man'     => '2.04',
+        'String::Dump' => '0.05',
+        'Test::More'   => '0.82',
     },
     requires => {
         'perl'               => '5.8.0',  # minimum Unicode support
@@ -21,7 +22,7 @@ my $builder = Module::Build->new(
         'utf8'               => 0,
         'warnings'           => 0,
         'Carp'               => 0,
-        'Moo'                => 1.000000,
+        'Moo'                => '1.000000',
         'Unicode::CaseFold'  => 0,
         'Unicode::Normalize' => 0,
     },

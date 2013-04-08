@@ -1,14 +1,9 @@
 Lingua::Stem::UniNE to-do list
 
 * Additional languages:
-  * Semitic: Arabic, Persian
   * Eastern: Bengali, Hindi, Marathi
   * Uralic: Finnish, Hungarian
   * Italic: French, Italian, Portuguese, Spanish
-  * Others: German, Russian, Swedish
+  * Others: Arabic, German, Russian, Swedish
 * Add aggressive option: Czech
-* Design API
-* More tests
-* Should it be Lingua::Stem::UniNE or ::Savoy? (contact Jacques Savoy)
-* Change to grapheme-level instead of codepoint-level
-* Add caching option? (see Lingua::Stem)
+* Add caching option

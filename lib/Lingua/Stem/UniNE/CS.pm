@@ -8,7 +8,7 @@ use parent 'Exporter';
 use Unicode::CaseFold qw( fc );
 use Unicode::Normalize qw( NFC );
 
-our $VERSION   = '0.01';
+our $VERSION   = '0.02';
 our @EXPORT_OK = qw( stem stem_cs );
 
 *stem_cs = \&stem;
@@ -132,7 +132,7 @@ Lingua::Stem::UniNE::CS - Czech stemmer
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE::CS v0.01.
+This document describes Lingua::Stem::UniNE::CS v0.02.
 
 =head1 SYNOPSIS
 
@@ -149,10 +149,15 @@ A light stemmer for the Czech language that removes case endings from nouns and
 adjectives, possessive adjective endings from names, and takes care of
 palatalization.
 
+This module provides the C<stem> and C<stem_cs> functions, which are synonymous
+and can optionally be exported.  They accept a single word and return a single
+stem.
+
 =head1 SEE ALSO
 
 L<Lingua::Stem::UniNE> provides a stemming object with access to all of the
-implemented University of Neuchâtel stemmers including this one.
+implemented University of Neuchâtel stemmers including this one.  It has
+additional features like stemming lists or array references of words.
 
 This stemming algorithm was defined in
 L<Indexing and stemming approaches for the Czech language|http://dl.acm.org/citation.cfm?id=1598600>

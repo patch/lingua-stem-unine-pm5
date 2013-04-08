@@ -5,7 +5,7 @@ use utf8;
 use Moo;
 use Carp;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my @languages = qw( bg cs fa );
 my %is_language = map { $_ => 1 } @languages;
@@ -62,7 +62,7 @@ Lingua::Stem::UniNE - University of Neuchâtel stemmers
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE v0.01.
+This document describes Lingua::Stem::UniNE v0.02.
 
 =head1 SYNOPSIS
 
@@ -167,9 +167,6 @@ provides the original stemming algorithms that were implemented in this module.
 L<Lingua::Stem::Snowball> provides alternate stemming algorithms for Finnish,
 French, German, Hungarian, Italian, Portuguese, Russian, Spanish, and Swedish,
 as well as other languages.
-
-L<Lingua::Stem::Any> provides a consistent unified interface for
-Lingua::Stem::UniNE, Lingua::Stem::Snowball, and other stemming modules on CPAN.
 
 =head1 ACKNOWLEDGEMENTS
 

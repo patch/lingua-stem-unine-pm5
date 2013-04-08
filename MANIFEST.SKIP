@@ -17,7 +17,7 @@
 # Avoid files from the repository not intended for distribution
 ^README.pod$
 ^src\b
-^t/[a-z]{2}-50k.t$
+^t/exhaustive\b
 ^TODO$
 
 # Avoid other random files
