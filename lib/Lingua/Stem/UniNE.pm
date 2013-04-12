@@ -5,7 +5,7 @@ use utf8;
 use Moo;
 use Carp;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 my @languages = qw( bg cs fa );
 my %is_language = map { $_ => 1 } @languages;
@@ -62,7 +62,7 @@ Lingua::Stem::UniNE - University of Neuchâtel stemmers
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE v0.02.
+This document describes Lingua::Stem::UniNE v0.03.
 
 =head1 SYNOPSIS
 

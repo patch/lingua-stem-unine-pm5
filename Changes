@@ -1,5 +1,8 @@
 Revision history for Perl module Lingua::Stem::UniNE
 
+v0.03 2013-04-12
+ - Fixed mojibake in the abstract of META.json and META.yml
+
 v0.02 2013-04-08
  - First public release to CPAN
  - Significantly improved test coverage
