@@ -30,12 +30,12 @@ sub remove_case {
 
     if ($length > 7) {
         return $word
-            if $word =~ s{ atech $}{}x;  # -atech
+            if $word =~ s{ atech $}{}x;
     }
 
     if ($length > 6) {
         return $word
-            if $word =~ s{ atům $}{}x;  # -atům
+            if $word =~ s{ atům $}{}x;
 
         return palatalize($word)
             if $word =~ s{ (?<= ě ) tem $}{}x;  # -ětem → -ě
@@ -81,16 +81,16 @@ sub remove_case {
 
     if ($length > 3) {
         return $word
-            if $word =~ s{ [aáéouůyý] $}{}x;  # -a -á -é -o -u -ů -y -ý
+            if $word =~ s{ [aáéouůyý] $}{}x;
 
         return palatalize($word)
-            if $word =~ m{ [eěií] $}x;  # -e -ě -i -í
+            if $word =~ m{ [eěií] $}x;
     }
 
     return $word;
 }
 
-# remove possesive endings from names -ov- and -in-
+# remove possesive endings from names
 sub remove_possessives {
     my ($word) = @_;
 

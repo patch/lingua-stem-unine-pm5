@@ -25,7 +25,7 @@ sub stem {
 
     if ($length > 5) {
         return $word
-            if $word =~ s{ ища $}{}x;  # -HWa
+            if $word =~ s{ ища $}{}x;
     }
 
     $word = remove_article($word);
@@ -33,22 +33,22 @@ sub stem {
     $length = length $word;
 
     if ($length > 3) {
-        $word =~ s{ я $}{}x;  # -(R) (masc)
+        $word =~ s{ я $}{}x;  # masculine
 
-        # normalization (e.g., -a could be a definite article or plural form)
-        $word =~ s{ [аео] $}{}x;  # -a -e -o
+        # normalization (e.g., -а could be a definite article or plural form)
+        $word =~ s{ [аео] $}{}x;
 
         $length = length $word;
     }
 
     if ($length > 4) {
-        $word =~ s{ е (?= н $) }{}x;  # -eH → -H
+        $word =~ s{ е (?= н $) }{}x;  # -ен → -н
 
         $length = length $word;
     }
 
     if ($length > 5) {
-        $word =~ s{ ъ (?= \p{Cyrl} $) }{}x;  # -b� → -�
+        $word =~ s{ ъ (?= \p{Cyrl} $) }{}x;  # -ъ� → -�
     };
 
     return $word;
@@ -59,26 +59,25 @@ sub remove_article {
     my $length = length $word;
 
     if ($length > 6) {
-        # definite article with adjectives and masc
+        # definite article with adjectives and masculine
         return $word
-            if $word =~ s{ ият $}{}x;  # -H(R)T
+            if $word =~ s{ ият $}{}x;
     }
 
     if ($length > 5) {
         return $word
             if $word =~ s{ (?:
-                  ия  # -H(R)
-                      # definite article for nouns:
-                | ът  # -bT (art for masc)
-                | та  # -Ta (art for femi)
-                | то  # -To (art for neutral)
-                | те  # -Te (art in plural)
+                  ия  # definite articles for nouns:
+                | ът  # ∙ masculine
+                | та  # ∙ feminine
+                | то  # ∙ neutral
+                | те  # ∙ plural
             ) $}{}x;
     }
 
     if ($length > 4) {
         return $word
-            if $word =~ s{ ят $}{}x;  # -(R)T (art for masc)
+            if $word =~ s{ ят $}{}x;  # article for masculine
     }
 
     return $word;
@@ -88,26 +87,26 @@ sub remove_plural {
     my ($word) = @_;
     my $length = length $word;
 
-    # specific plural rules for some words (masc)
+    # specific plural rules for some words (masculine)
     if ($length > 6) {
         return $word
-            if $word =~ s{ ове  $}{}x    # -OBe
-            || $word =~ s{ еве  $}{й}x   # -eBe  → N
-            || $word =~ s{ овци $}{о}x;  # -oBUH → O
+            if $word =~ s{ ове  $}{}x
+            || $word =~ s{ еве  $}{й}x
+            || $word =~ s{ овци $}{о}x;
     }
 
     if ($length > 5) {
         return $word
-            if $word =~ s{ зи               $}{г}x    # -(e)H → -T
-            || $word =~ s{ е ( \p{Cyrl} ) и $}{я$1}x  # -e�H  → -(R)�
-            || $word =~ s{ ци               $}{к}x    # -UH   → -k
-            || $word =~ s{ (?: та | ища )   $}{}x;    # -Ta -HWa
+            if $word =~ s{ зи               $}{г}x
+            || $word =~ s{ е ( \p{Cyrl} ) и $}{я$1}x  # -е�и → -я�
+            || $word =~ s{ ци               $}{к}x
+            || $word =~ s{ (?: та | ища )   $}{}x;
     }
 
     if ($length > 4) {
         return $word
-            if $word =~ s{ си $}{х}x  # -cH → -x
-            || $word =~ s{ и  $}{}x;  # -H (plural for various nouns/adjectives)
+            if $word =~ s{ си $}{х}x
+            || $word =~ s{ и  $}{}x;  # plural for various nouns and adjectives
     }
 
     return $word;
