@@ -49,7 +49,7 @@ sub stem {
 
     if ($length > 5) {
         $word =~ s{ ъ (?= \p{Cyrl} $) }{}x;  # -ъ� → -�
-    };
+    }
 
     return $word;
 }
