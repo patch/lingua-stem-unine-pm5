@@ -28,10 +28,10 @@ sub stem {
 sub remove_kasra {
     my ($word) = @_;
 
-    if (length $word > 4) {
-        return $word
-            if $word =~ s{ \N{ARABIC KASRA} $}{}x;
-    }
+    return $word
+        if length $word < 5;
+
+    $word =~ s{ \N{ARABIC KASRA} $}{}x;
 
     return $word;
 }
