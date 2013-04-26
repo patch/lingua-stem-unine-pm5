@@ -6,7 +6,7 @@ use strict;
 use warnings;
 use parent 'Exporter';
 
-our $VERSION   = '0.03';
+our $VERSION   = '0.04';
 our @EXPORT_OK = qw( stem stem_bg );
 
 *stem_bg = \&stem;
@@ -120,7 +120,7 @@ Lingua::Stem::UniNE::BG - Bulgarian stemmer
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE::BG v0.03.
+This document describes Lingua::Stem::UniNE::BG v0.04.
 
 =head1 SYNOPSIS
 

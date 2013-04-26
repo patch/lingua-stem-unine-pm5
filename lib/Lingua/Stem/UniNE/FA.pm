@@ -7,7 +7,7 @@ use warnings;
 use charnames ':full';
 use parent 'Exporter';
 
-our $VERSION   = '0.03';
+our $VERSION   = '0.04';
 our @EXPORT_OK = qw( stem stem_fa );
 
 *stem_fa = \&stem;
@@ -98,7 +98,7 @@ Lingua::Stem::UniNE::FA - Persian stemmer
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE::FA v0.03.
+This document describes Lingua::Stem::UniNE::FA v0.04.
 
 =head1 SYNOPSIS
 
