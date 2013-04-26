@@ -5,8 +5,6 @@ use utf8;
 use strict;
 use warnings;
 use parent 'Exporter';
-use Unicode::CaseFold qw( fc );
-use Unicode::Normalize qw( NFC );
 
 our $VERSION   = '0.03';
 our @EXPORT_OK = qw( stem stem_bg );
@@ -15,8 +13,6 @@ our @EXPORT_OK = qw( stem stem_bg );
 
 sub stem {
     my ($word) = @_;
-
-    $word = NFC fc $word;
 
     my $length = length $word;
 

@@ -15,16 +15,14 @@ my $builder = Module::Build->new(
         'Test::More'   => '0.82',
     },
     requires => {
-        'perl'               => '5.8.0',  # minimum Unicode support
-        'charnames'          => 0,
-        'parent'             => 0,
-        'strict'             => 0,
-        'utf8'               => 0,
-        'warnings'           => 0,
-        'Carp'               => 0,
-        'Moo'                => '1.000000',
-        'Unicode::CaseFold'  => 0,
-        'Unicode::Normalize' => 0,
+        'perl'      => '5.8.0',  # minimum Unicode support
+        'charnames' => 0,
+        'parent'    => 0,
+        'strict'    => 0,
+        'utf8'      => 0,
+        'warnings'  => 0,
+        'Carp'      => 0,
+        'Moo'       => '1.000000',
     },
     meta_merge => {
         resources => {
