@@ -3,6 +3,8 @@ Revision history for Perl module Lingua::Stem::UniNE
 v0.04 XXX
  - Moved Unicode casefolding and normalization out of Lingua::Stem::UniNE and
    into Lingua::Stem::Any
+ - Deprecated in-place stemming of arrayrefs, which will be removed in a future
+   release, in favor of the stem_in_place method of Lingua::Stem::Any
 
 v0.03 2013-04-12
  - Fixed mojibake in the abstract of META.json and META.yml

@@ -121,7 +121,11 @@ stem.
 
 L<Lingua::Stem::UniNE> provides a stemming object with access to all of the
 implemented University of Neuchâtel stemmers including this one.  It has
-additional features like stemming lists or array references of words.
+additional features like stemming lists of words.
+
+L<Lingua::Stem::Any> provides a unified interface to any stemmer on CPAN,
+including this one, as well as additional features like normalization,
+casefolding, and in-place stemming.
 
 This stemming algorithm was originally implemented by Ljiljana Dolamic in
 L<Java|http://members.unine.ch/jacques.savoy/clef/persianStemmerUnicode.txt>.
