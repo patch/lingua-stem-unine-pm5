@@ -7,15 +7,29 @@ use warnings;
 use parent 'Exporter';
 
 our $VERSION   = '0.04';
-our @EXPORT_OK = qw( stem stem_cs );
+our @EXPORT_OK = qw( stem stem_cs stem_aggressive stem_cs_aggressive );
 
-*stem_cs = \&stem;
+*stem_cs            = \&stem;
+*stem_cs_aggressive = \&stem_aggressive;
 
 sub stem {
     my ($word) = @_;
 
     $word = remove_case($word);
-    $word = remove_possessives($word);
+    $word = remove_possessive($word);
+
+    return $word;
+}
+
+sub stem_aggressive {
+    my ($word) = @_;
+
+    $word = remove_case($word);
+    $word = remove_possessive($word);
+    $word = remove_comparative($word);
+    $word = remove_diminutive($word);
+    $word = remove_augmentative($word);
+    $word = remove_derivational($word);
 
     return $word;
 }
@@ -88,7 +102,7 @@ sub remove_case {
 }
 
 # remove possesive endings from names
-sub remove_possessives {
+sub remove_possessive {
     my ($word) = @_;
 
     return $word
@@ -99,6 +113,173 @@ sub remove_possessives {
 
     return palatalize($word)
         if $word =~ s{ (?<= i ) n $}{}x;  # -in → -i
+
+    return $word;
+}
+
+sub remove_comparative {
+    my ($word) = @_;
+
+    return $word
+        if length $word < 6;
+
+    return palatalize($word)
+        if $word =~ s{ (?<= [eě] ) jš $}{}x;  # -ejš -ějš → -e -ě
+
+    return $word;
+}
+
+sub remove_diminutive {
+    my ($word) = @_;
+    my $length = length $word;
+
+    if ($length > 7) {
+        return $word
+            if $word =~ s{ oušek $}{}x;
+    }
+
+    if ($length > 6) {
+        # -aček -áček -anek -ánek -oček -onek -uček -unek
+        return $word
+            if $word =~ s{ [aáou][čn]ek $}{}x;
+
+        # -eček -éček -enek -ének -iček -íček -inek -ínek → -e -é -i -í
+        return palatalize($word)
+            if $word =~ s{ (?<= [eéií] ) [čn]ek $}{}x;
+    }
+
+    if ($length > 5) {
+        # -ačk -áčk -ank -ánk -átk -očk -onk -učk -unk -ušk
+        return $word
+            if $word =~ s{ (?: [aáou][čn] | át | uš ) k $}{}x;
+
+        # -ečk -éčk -enk -énk -ičk -íčk -ink -ínk
+        return palatalize($word)
+            if $word =~ s{ [eéií][čn]k $}{}x;
+    }
+
+    if ($length > 4) {
+        # -ak -ák -ok -uk → -a -á -o -u
+        return $word
+            if $word =~ s{ (?<= [aáou] ) k $}{}x;
+
+        # -ek -ék -ik -ík → -e -é -i -í
+        return palatalize($word)
+            if $word =~ s{ (?<= [eéií] ) k $}{}x;
+    }
+
+    if ($length > 3) {
+        return $word
+            if $word =~ s{ k $}{}x;
+    }
+
+    return $word;
+}
+
+sub remove_augmentative {
+    my ($word) = @_;
+    my $length = length $word;
+
+    if ($length > 6) {
+        return $word
+            if $word =~ s{ ajzn $}{}x;
+    }
+
+    if ($length > 5) {
+        return palatalize($word)
+            if $word =~ s{ (?<= i ) (?: sk | zn ) $}{}x;  # -isk -izn → -i
+    }
+
+    if ($length > 4) {
+        return $word
+            if $word =~ s{ ák $}{}x;
+    }
+
+    return $word;
+}
+
+sub remove_derivational {
+    my ($word) = @_;
+    my $length = length $word;
+
+    if ($length > 8) {
+        return $word
+            if $word =~ s{ obinec $}{}x;
+    }
+
+    if ($length > 7) {
+        # -ovisk -ovišt -ovník -ovstv
+        return $word
+            if $word =~ s{ ov (?: isk | išt | ník | stv ) $}{}x;
+
+        # -ionář → -i
+        return palatalize($word)
+            if $word =~ s{ (?<= i ) onář $}{}x;
+    }
+
+    if ($length > 6) {
+        return $word
+            if $word =~ s{ (?:
+                ásek | loun | nost | štin | teln |
+                ov (?: ec | ík | in | tv )  # -ovec -ovík -ovin -ovtv
+            ) $}{}x;
+
+        # -enic -inec -itel → -e -i
+        return palatalize($word)
+            if $word =~ s{ (?: (?<= e ) nic | (?<= i ) (?: nec | tel ) ) $}{}x;
+    }
+
+    if ($length > 5) {
+        return $word
+            if $word =~ s{ árn $}{}x;
+
+        return palatalize($word)
+            if $word =~ s{ (?<= ě ) nk $}{}x;  # -ěnk → -ě
+
+        # -ián -isk -ist -išt -itb → -i -í
+        return palatalize($word)
+            if $word =~ s{ (?<= i ) (?: án | sk | st | št | tb ) $}{}x;
+
+        # -írn → -í
+        return palatalize($word)
+            if $word =~ s{ (?<= í ) rn $}{}x;
+
+        # -och -ost -oun -ouš -out -ovn
+        return $word
+            if $word =~ s{ o (?: ch | st | un | uš | ut | vn ) $}{}x;
+
+        return $word
+            if $word =~ s{ (?:
+                čan | ctv | kář | kyn | néř | ník | stv | ušk
+            ) $}{}x;
+    }
+
+    if ($length > 4) {
+        # -ač -áč -an -án -ář -as
+        return $word
+            if $word =~ s{ (?: a[čns] | á[čnř] ) $}{}x;
+
+        # -ec -en -ěn -éř -ic -in -it -iv -ín -íř → -e -ě -é -i -í
+        return palatalize($word)
+            if $word =~ s{ (?:
+                  (?<= e ) [cn]
+                | (?<= ě ) n
+                | (?<= é ) ř
+                | (?<= i ) [cntv]
+                | (?<= í ) [nř]
+            ) $}{}x;
+
+        # -čk -čn -dl -nk -ob -oň -ot -ov -tk -tv -ul -vk -yn
+        return $word
+            if $word =~ s{ (?:
+                č[kn] | o[bňtv] | t[kv] | [du]l | [nv]k | yn
+            ) $}{}x;
+    }
+
+    if ($length > 3) {
+        return $word
+            if $word =~ s{ [cčklnt] $}{}x;
+    }
 
     return $word;
 }
@@ -133,22 +314,27 @@ This document describes Lingua::Stem::UniNE::CS v0.04.
 
 =head1 SYNOPSIS
 
-    use Lingua::Stem::UniNE::CS qw( stem_cs );
+    use Lingua::Stem::UniNE::CS qw( stem_cs stem_cs_aggressive );
 
     $stem = stem_cs($word);
+    $stem = stem_cs_aggressive($word);
 
     # alternate syntax
     $stem = Lingua::Stem::UniNE::CS::stem($word);
+    $stem = Lingua::Stem::UniNE::CS::stem_aggressive($word);
 
 =head1 DESCRIPTION
 
-A light stemmer for the Czech language that removes case endings from nouns and
-adjectives, possessive adjective endings from names, and takes care of
-palatalization.
+Light and aggressive stemmers for the Czech language.  The light stemmer removes
+case endings from nouns and adjectives, possessive adjective endings from names,
+and takes care of palatalization.  The aggressive stemmer also removes
+diminutive, augmentative, and comparative sufixes and derivational sufixes from
+nouns.
 
-This module provides the C<stem> and C<stem_cs> functions, which are synonymous
-and can optionally be exported.  They accept a single word and return a single
-stem.
+This module provides the C<stem> and C<stem_cs> functions for the light stemmer,
+which are synonymous and can optionally be exported, plus C<stem_aggressive> and
+C<stem_cs_aggressive> functions for the light stemmer.  They accept a single
+word and return a single stem.
 
 =head1 SEE ALSO
 
