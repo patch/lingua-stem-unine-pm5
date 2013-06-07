@@ -7510,7 +7510,7 @@ došla	doš
 čistou	čis
 provedli	prove
 vincent	vincen
-vysílačku	vysíl
+vysílačku	vysí
 odpočinek	odpo
 nedotýkejte	nedotýkej
 utíkal	utíka
@@ -14403,7 +14403,7 @@ clevelandu	cleveland
 martha	marth
 řidičský	řidičs
 dokončení	dokonk
-vysílačky	vysíl
+vysílačky	vysí
 nálož	nálož
 vídám	víd
 rychlí	rych
@@ -14540,7 +14540,7 @@ kazí	kaz
 postřelili	postřeli
 dlouhej	dlouhej
 kolejí	kolej
-vysílačka	vysíl
+vysílačka	vysí
 podání	pod
 zázraků	zázra
 supermarketu	supermarke
@@ -14767,7 +14767,7 @@ pocitem	pok
 chuti	chu
 rušení	ruš
 profesorem	profesor
-žvýkačku	žvýk
+žvýkačku	žvý
 hloubka	hloub
 zvolili	zvoli
 dani	dan
@@ -21376,7 +21376,7 @@ odpočineme	odpočinem
 zruším	zru
 sokol	soko
 dostatečné	dostate
-brnkačka	brnk
+brnkačka	brn
 vlhkost	vlhk
 nemluvíte	nemluví
 dostřel	dostře
@@ -21935,7 +21935,7 @@ snažně	snaž
 arab	arab
 rue	rue
 kouše	kouš
-žvýkačky	žvýk
+žvýkačky	žvý
 ponořit	ponoř
 sbaleno	sbal
 dorazily	dorazi
@@ -23220,7 +23220,7 @@ současná	součas
 prkna	prk
 psychické	psych
 joanna	joan
-vysílačkou	vysíl
+vysílačkou	vysí
 protoze	protoh
 utahanej	utahanej
 informační	informa
@@ -27456,7 +27456,7 @@ bytem	byt
 částky	čás
 poučné	pou
 pohneme	pohnem
-jasnačka	jasn
+jasnačka	jas
 slečinka	sle
 koupele	koupe
 terasu	ter
@@ -29037,7 +29037,7 @@ hříšný	hříš
 prázdným	prázd
 vyrušit	vyruš
 školství	škol
-stříkačku	střík
+stříkačku	stří
 nezkusíte	nezkusí
 reakcí	reak
 vyhrožovali	vyhrožova
@@ -29045,7 +29045,7 @@ přehánět	přeháně
 skalní	skal
 larvy	larv
 neškodné	neškod
-žvýkačka	žvýk
+žvýkačka	žvý
 následovali	následova
 zazvonit	zazvon
 zdržíte	zdrží
@@ -38289,7 +38289,7 @@ gaston	gasto
 duval	duva
 předností	před
 rozčílilo	rozčíli
-školačka	škol
+školačka	ško
 předáte	předá
 klubem	klub
 uloží	ulož
@@ -38392,7 +38392,7 @@ pozdější	pozd
 strhnu	strh
 lezete	leze
 nebijte	nebij
-žvejkačku	žvejk
+žvejkačku	žvej
 sjednat	sjed
 zadostiučinění	zadostiučin
 pouštíš	pouštíš
@@ -40019,7 +40019,7 @@ zajištěno	zajisk
 pedály	pedá
 stříbrném	stříbr
 utrácíš	utrácíš
-vysílačce	vysíl
+vysílačce	vysí
 andělské	anděls
 elektrickém	elektr
 bombový	bomb
@@ -45723,7 +45723,7 @@ poškozena	poškoh
 mej	mej
 proklatou	prokla
 armád	armád
-stříkačky	střík
+stříkačky	stří
 bzučení	bzuk
 plachta	plach
 muly	mul
