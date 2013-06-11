@@ -2,7 +2,7 @@ use utf8;
 use strict;
 use warnings;
 use open qw( :encoding(UTF-8) :std );
-use Test::More tests => 66;
+use Test::More tests => 68;
 use Lingua::Stem::UniNE::CS qw( stem );
 
 is stem('zvířatech'), 'zvíř',    'remove case: -atech';
@@ -17,6 +17,8 @@ is stem('pánové'),    'pán',     'remove case: -ové';
 is stem('tátovi'),    'tát',     'remove case: -ovi';
 is stem('novinách'),  'novin',   'remove case: -ách';
 is stem('kterých'),   'kter',    'remove case: -ých';
+is stem('chcete'),    'chk',     'remove case: -te from -ete';
+is stem('deseti'),    'des',     'remove case: -ti from -eti';
 is stem('řekněte'),   'řekn',    'remove case: -te from -ěte';
 is stem('paměti'),    'pam',     'remove case: -ti from -ěti';
 is stem('systému'),   'syst',    'remove case: -mu from -ému';

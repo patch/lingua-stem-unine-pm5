@@ -246,7 +246,7 @@ kurva	kurv
 sám	sám
 let	let
 pryč	pry
-chcete	chce
+chcete	chk
 naše	naš
 počkej	počkej
 první	prv
@@ -297,7 +297,7 @@ snad	snad
 určitě	urk
 ráno	rán
 svou	svo
-můžete	může
+můžete	můh
 ke	ke
 kolik	kol
 děti	dět
@@ -321,7 +321,7 @@ nebude	nebud
 abys	abys
 poslední	posled
 nějaké	něja
-budete	bude
+budete	bud
 žádný	žád
 řekla	řek
 také	tak
@@ -637,7 +637,7 @@ ono	ono
 jistý	jis
 neviděl	nevidě
 problémy	problém
-řekněte	řekně
+řekněte	řek
 dá	dá
 auta	aut
 šest	šes
@@ -734,7 +734,7 @@ doby	dob
 kluci	klu
 odkud	odkud
 tvou	tvo
-nemůžete	nemůže
+nemůžete	nemůh
 vězení	věh
 jaká	jak
 tudy	tud
@@ -1183,7 +1183,7 @@ držte	drž
 nechtěla	nechtě
 john	joh
 někomu	někom
-nechcete	nechce
+nechcete	nech
 jakmile	jakmi
 zem	zem
 nemohla	nemoh
@@ -1349,7 +1349,7 @@ boží	bož
 hoši	hoš
 viď	viď
 hru	hru
-potřebujete	potřebuje
+potřebujete	potřebuj
 zůstaňte	zůstaň
 brácho	brách
 dělejte	dělej
@@ -1565,7 +1565,7 @@ málem	mál
 umím	umím
 střední	střed
 tohohle	tohoh
-nebudete	nebude
+nebudete	nebud
 narozeniny	naroh
 situace	situa
 příležitost	příležit
@@ -1608,7 +1608,7 @@ mistře	mistř
 svému	svém
 jednoduché	jednoduch
 zlý	zlý
-otevřete	otevře
+otevřete	otevř
 těžký	těž
 jestliže	jestlih
 jane	jan
@@ -1658,7 +1658,7 @@ pozornost	pozor
 tony	ton
 manželství	manžel
 manžela	manže
-vezměte	vezmě
+vezměte	vezm
 typ	typ
 in	in
 jednom	jednom
@@ -1734,7 +1734,7 @@ akorát	akorá
 přátele	přáte
 uvidí	uvid
 tisíce	tis
-vypadněte	vypadně
+vypadněte	vypad
 válce	vál
 georgi	georg
 otci	otk
@@ -1756,7 +1756,7 @@ tvrdí	tvrd
 síla	síl
 doopravdy	doopravd
 mil	mil
-dostanete	dostane
+dostanete	dost
 vítej	vítej
 zvládnu	zvlád
 vědí	věd
@@ -2041,7 +2041,7 @@ beze	beh
 těma	těm
 au	au
 zasraný	zasr
-pošlete	pošle
+pošlete	poš
 chytit	chyt
 postavit	postav
 důkazy	důkaz
@@ -2157,7 +2157,7 @@ můžem	můh
 podej	podej
 sundej	sundej
 fér	fér
-řeknete	řekne
+řeknete	řek
 leží	lež
 kalhoty	kalh
 panu	pan
@@ -2180,7 +2180,7 @@ dojem	doj
 matkou	mat
 lucy	luc
 vyšetřování	vyšetřov
-uklidněte	uklidně
+uklidněte	uklid
 nechali	necha
 kámen	kám
 pistoli	pisto
@@ -2200,7 +2200,7 @@ ruka	ruk
 prodat	prod
 maminka	ma
 nejdříve	nejdřív
-chápete	chápe
+chápete	cháp
 hloupý	hloup
 udržet	udrže
 ryby	ryb
@@ -2385,7 +2385,7 @@ států	stá
 neřeknu	neřek
 banky	ban
 mistr	mistr
-koukněte	koukně
+koukněte	kouk
 návštěvu	návštěv
 právník	práv
 přitom	přitom
@@ -2415,7 +2415,7 @@ babek	bab
 severní	sever
 akci	akk
 týhle	týh
-půjdete	půjde
+půjdete	půjd
 santa	san
 blbej	blbej
 dostanou	dost
@@ -2488,7 +2488,7 @@ stálo	stá
 minulost	minul
 náladu	nálad
 omluvit	omluv
-sedněte	sedně
+sedněte	sed
 včetně	včet
 tancovat	tan
 přijď	přijď
@@ -2577,7 +2577,7 @@ zkoušel	zkouše
 napřed	napřed
 jenny	jen
 oběti	obě
-přejete	přeje
+přejete	přej
 květiny	kvě
 zničil	zniči
 mladší	mladš
@@ -2628,7 +2628,7 @@ pracuješ	pracuješ
 uhni	uhn
 záznamy	záznam
 zemí	zem
-najděte	najdě
+najděte	najd
 halo	hal
 sluší	sluš
 sobotu	sob
@@ -2679,14 +2679,14 @@ dají	daj
 učitel	učite
 blbec	blb
 vejce	vej
-pamatujete	pamatuje
+pamatujete	pamatuj
 takovým	tak
 svobodu	svobod
 americké	amer
 hodí	hod
 ustupte	ustup
 trest	tres
-najdete	najde
+najdete	najd
 policajti	policaj
 pěknej	pěknej
 jménu	jmé
@@ -2734,7 +2734,7 @@ podařilo	podaři
 nezabil	nezabi
 přijmout	přijm
 přinést	přinés
-jmenujete	jmenuje
+jmenujete	jmenuj
 článek	člá
 nikým	nik
 princ	prin
@@ -3227,7 +3227,7 @@ kouzlo	kouz
 spadl	spa
 nemohou	nemoh
 promluvím	promlu
-zavřete	zavře
+zavřete	zavř
 pracovala	pracova
 kočky	koč
 kapitána	kapit
@@ -3314,9 +3314,9 @@ představu	představ
 whisky	whis
 jistěže	jistěh
 počítat	počí
-jedete	jede
+jedete	jed
 video	vide
-dítěte	dítě
+dítěte	dít
 odpovědi	odpověd
 očividně	očivid
 držím	dr
@@ -3549,7 +3549,7 @@ rodičů	rodi
 nevim	nevim
 nepotřebuji	nepotřebuj
 vstávat	vstáv
-pracujete	pracuje
+pracujete	pracuj
 zavolala	zavola
 carol	caro
 mrtvého	mrtv
@@ -3626,7 +3626,7 @@ synovi	syn
 známky	znám
 modrý	modr
 x	x
-dokážete	dokáže
+dokážete	dokáh
 robert	rober
 obrázek	obráh
 vnitřní	vnitř
@@ -3682,7 +3682,7 @@ el	el
 neříkám	neř
 přicházejí	přicházej
 zasraná	zasr
-odejděte	odejdě
+odejděte	odejd
 čtvrti	čtvr
 boku	bok
 lituji	lituj
@@ -3691,7 +3691,7 @@ tančit	tank
 zvládneme	zvládnem
 lid	lid
 myslim	myslim
-uhněte	uhně
+uhněte	uhn
 jedinej	jedinej
 začneš	začneš
 lhář	lhář
@@ -3720,7 +3720,7 @@ napůl	napů
 slečnu	sle
 týdne	týd
 pokračuje	pokračuj
-přijdete	přijde
+přijdete	přijd
 soutěž	soutěž
 žádost	žád
 především	předev
@@ -3759,7 +3759,7 @@ necháte	nechá
 beth	beth
 vašim	vašim
 skupinu	skup
-začněte	začně
+začněte	zač
 umře	umř
 hračka	hra
 drahé	drah
@@ -3955,7 +3955,7 @@ problému	prob
 lidech	lid
 model	mode
 hřiště	hřis
-paměti	pamě
+paměti	pam
 hledání	hled
 sýr	sýr
 policista	polik
@@ -3977,7 +3977,7 @@ texasu	tex
 užij	užij
 přednost	před
 vytvořit	vytvoř
-zvedněte	zvedně
+zvedněte	zved
 pohledu	pohled
 hrají	hraj
 dědeček	děd
@@ -4085,7 +4085,7 @@ titul	tit
 skutečnost	skuteč
 zjistíme	zjistím
 těžší	těžš
-dítěti	dítě
+dítěti	dít
 dorazí	doraz
 předem	před
 náklaďák	náklaďá
@@ -4261,7 +4261,7 @@ bla	bla
 vskutku	vsku
 domem	dom
 nenechte	nenech
-nechápete	nechápe
+nechápete	necháp
 teddy	tedd
 verzi	verh
 uvolni	uvol
@@ -4340,7 +4340,7 @@ vítěz	vítěz
 krevní	krev
 klient	klien
 slabý	slab
-vezmete	vezme
+vezmete	vezm
 uklidnit	uklidn
 budově	bud
 fantastické	fantast
@@ -4352,13 +4352,13 @@ zabijí	zabij
 uteč	ute
 jediným	jed
 patře	patř
-pomůžete	pomůže
+pomůžete	pomůh
 kost	kos
 chytili	chyti
 nešel	neše
 miss	miss
 náboženství	nábožen
-hrajete	hraje
+hrajete	hraj
 stojíš	stojíš
 zjistím	zjis
 ježíše	ježíš
@@ -4485,7 +4485,7 @@ letu	let
 telefony	telefo
 trpí	trp
 one	one
-berete	bere
+berete	ber
 stanu	sta
 washington	washingto
 mladej	mladej
@@ -4600,7 +4600,7 @@ napíšu	napíš
 rakety	rake
 zlaté	zla
 inteligentní	inteligent
-žijete	žije
+žijete	žij
 opravdové	opravd
 got	got
 pizzu	pizz
@@ -4674,7 +4674,7 @@ nadále	nadá
 člen	čle
 pozvání	pozv
 vyšlo	vyš
-pohněte	pohně
+pohněte	poh
 sophie	sophi
 trénovat	tré
 reakce	rea
@@ -4742,7 +4742,7 @@ táhni	táh
 manželem	manže
 zločinu	zlo
 chlapem	chlap
-zůstanete	zůstane
+zůstanete	zůst
 pozdrav	pozdrav
 walter	walter
 zavazadla	zavaza
@@ -5128,7 +5128,7 @@ zpráv	zpráv
 vrchol	vrcho
 monsieur	monsieur
 las	las
-vypněte	vypně
+vypněte	vyp
 now	now
 megan	meg
 knih	knih
@@ -5398,7 +5398,7 @@ druhej	druhej
 obav	obav
 le	le
 ustup	ustup
-milujete	miluje
+milujete	miluj
 zachraň	zachraň
 chovej	chovej
 myšlení	myšl
@@ -5415,7 +5415,7 @@ vozu	voz
 osamělý	osamě
 bavili	bavi
 vzdálenost	vzdále
-uvolněte	uvolně
+uvolněte	uvol
 stupně	stup
 neublíží	neublíž
 úvahu	úvah
@@ -5533,7 +5533,7 @@ učitele	učite
 nemůžem	nemůh
 rychlostí	rychl
 úsilí	úsi
-nedostanete	nedostane
+nedostanete	nedost
 excelence	exce
 pokusit	pokus
 džungle	džung
@@ -5890,7 +5890,7 @@ díváte	dívá
 vzrušení	vzruš
 kříž	kříž
 popsat	pops
-nepotřebujete	nepotřebuje
+nepotřebujete	nepotřebuj
 ústavu	ústav
 dav	dav
 robot	rob
@@ -5988,7 +5988,7 @@ drak	dra
 jízdu	jízd
 vězni	věz
 společností	společ
-začnete	začne
+začnete	zač
 emoce	emo
 dobrovolně	dobrovol
 díře	díř
@@ -6641,7 +6641,7 @@ princeznu	princez
 dvdrip	dvdrip
 vojenský	vojens
 linku	lin
-zvládnete	zvládne
+zvládnete	zvlád
 krást	krás
 kapitola	kapito
 gangu	gang
@@ -6725,7 +6725,7 @@ antonio	antoni
 base	bas
 prochází	procház
 seděla	sedě
-ozvěte	ozvě
+ozvěte	ozv
 hráči	hrá
 údaje	údaj
 čepici	čep
@@ -6773,7 +6773,7 @@ as	as
 pleteš	pleteš
 koupel	koupe
 bláznivá	blázn
-pojedete	pojede
+pojedete	pojed
 linii	lini
 hovado	hovad
 omlouvat	omlouv
@@ -6820,7 +6820,7 @@ převzít	převzí
 ohrožení	ohroh
 kurs	kurs
 šampión	šampió
-vytáhněte	vytáhně
+vytáhněte	vytáh
 německo	něm
 obviněn	obvin
 zlobit	zlob
@@ -7171,7 +7171,7 @@ indii	indi
 neumíte	neumí
 bývala	býva
 továrně	tov
-neřeknete	neřekne
+neřeknete	neřek
 trávit	tráv
 bavil	bavi
 cm	cm
@@ -7336,7 +7336,7 @@ zaútočí	zaúto
 trápit	tráp
 partneři	partneř
 obličeji	obličej
-zabijete	zabije
+zabijete	zabij
 pitomá	pitom
 lane	lan
 veřejné	veřej
@@ -7778,7 +7778,7 @@ zemřelo	zemře
 hroznou	hroz
 hank	han
 přivede	přived
-zemřete	zemře
+zemřete	zemř
 bydlení	bydl
 přijedeš	přijedeš
 sbor	sbor
@@ -8079,7 +8079,7 @@ zanechal	zanecha
 prohlídku	prohlíd
 trůn	trů
 čelem	čel
-přečtěte	přečtě
+přečtěte	pře
 pozítří	pozítř
 vraťme	vraťm
 napište	nap
@@ -8146,7 +8146,7 @@ woody	wood
 britské	brits
 náramek	náram
 odmítla	odmít
-myslete	mysle
+myslete	mys
 rozchod	rozchod
 odvezli	odvez
 slavná	slav
@@ -8189,7 +8189,7 @@ hrdost	hrd
 neděláme	nedělám
 honit	hon
 wall	wal
-sledujete	sleduje
+sledujete	sleduj
 magie	magi
 tlustej	tlustej
 otevření	otevř
@@ -8202,7 +8202,7 @@ home	hom
 hlupáci	hlupá
 jezdil	jezdi
 zóny	zón
-nenajdete	nenajde
+nenajdete	nenajd
 dráhy	dráh
 vystup	vystup
 sledujeme	sledujem
@@ -8233,7 +8233,7 @@ ztracené	ztrak
 bývalá	býva
 nezabije	nezabij
 moudrý	moudr
-poslechněte	poslechně
+poslechněte	poslech
 stáli	stá
 načasování	načasov
 navrhl	navrh
@@ -8284,7 +8284,7 @@ noví	nov
 splní	spl
 zbláznili	zblázni
 dj	dj
-zjistěte	zjistě
+zjistěte	zjis
 nepiju	nepij
 včerejška	včerejš
 trouba	troub
@@ -8396,7 +8396,7 @@ očekával	očekáva
 žijící	žijí
 zničím	zni
 zoufalý	zoufa
-uvědomujete	uvědomuje
+uvědomujete	uvědomuj
 básník	bás
 ulic	uli
 heil	hei
@@ -8438,7 +8438,7 @@ zítřejší	zítř
 kompletně	komplet
 vypořádat	vypořád
 metr	metr
-nejdete	nejde
+nejdete	nejd
 tušil	tuši
 sprše	sprš
 náčelníku	náčel
@@ -8870,7 +8870,7 @@ tudíž	tudíž
 pohybovat	pohyb
 pořadu	pořad
 taxíka	tax
-nemyslete	nemysle
+nemyslete	nemys
 mluvení	mluv
 rozrušená	rozruš
 hroznej	hroznej
@@ -8895,7 +8895,7 @@ nepouštěj	nepouštěj
 kamerou	kamer
 policisté	polik
 považovat	považ
-odejdete	odejde
+odejdete	odejd
 padat	pad
 tonyho	tonyh
 hřbitově	hřb
@@ -8929,7 +8929,7 @@ vypít	vypí
 odpouštím	odp
 heleno	hel
 záměr	záměr
-zapněte	zapně
+zapněte	zap
 grante	gran
 night	nigh
 osob	osob
@@ -8990,11 +8990,11 @@ ochotný	ochot
 břicha	břich
 nedotkl	nedotk
 boy	boy
-mužete	muže
+mužete	muh
 naprostý	napr
 řidiči	řid
 složitý	sloh
-stáhněte	stáhně
+stáhněte	stáh
 poprvý	poprv
 dotkl	dotk
 bridget	bridge
@@ -9446,7 +9446,7 @@ ujistil	ujisti
 place	pla
 ubožák	ubožá
 mizíme	mizím
-vedete	vede
+vedete	ved
 filip	filip
 stranách	str
 rozdat	rozd
@@ -9491,7 +9491,7 @@ olivere	oliver
 cheryl	chery
 hlasitěji	hlasitěj
 konat	kon
-zatkněte	zatkně
+zatkněte	zatk
 nevinných	nevin
 hold	hold
 nejraději	nejraděj
@@ -10091,7 +10091,7 @@ svítit	svít
 políbila	políbi
 zasedání	zased
 zásilku	zási
-píšete	píše
+píšete	píš
 vzpomenu	vzpom
 uniformě	uniform
 spusť	spusť
@@ -10230,7 +10230,7 @@ benjamin	benjam
 napříč	napří
 nutný	nut
 pozoroval	pozorova
-nedokážete	nedokáže
+nedokážete	nedokáh
 střehu	střeh
 středa	střed
 potěší	potěš
@@ -10294,7 +10294,7 @@ zničíme	zničím
 zlatých	zla
 kříže	kříh
 městu	měs
-zajistěte	zajistě
+zajistěte	zaj
 útočiště	útočis
 prožil	proži
 vyberu	vyber
@@ -10315,7 +10315,7 @@ vnuk	vnu
 konkurz	konkurz
 pověděl	povědě
 spravedlivý	spravedl
-táhněte	táhně
+táhněte	táh
 účast	účas
 pomyšlení	pomyšl
 snoubenec	snouben
@@ -10449,7 +10449,7 @@ němec	něm
 nepovedlo	nepove
 zdržet	zdrže
 han	han
-nepůjdete	nepůjde
+nepůjdete	nepůjd
 kol	kol
 všemohoucí	všemohou
 prokázat	prokáz
@@ -10596,7 +10596,7 @@ zatykač	zatyk
 ocenil	oceni
 shakespeare	shakespear
 vítězí	vítěz
-přijměte	přijmě
+přijměte	přijm
 kláštera	klášter
 nezvládne	nezvlád
 otroci	otro
@@ -10890,7 +10890,7 @@ věznici	věz
 poloviny	pol
 užili	uži
 line	lin
-ujistěte	ujistě
+ujistěte	ujis
 bang	bang
 nabitá	nab
 amigo	amig
@@ -10913,7 +10913,7 @@ rito	rit
 nepřátelské	nepřátels
 poručíka	poru
 angličtiny	angl
-vysvětlete	vysvětle
+vysvětlete	vysvět
 prohlásil	prohlási
 vracel	vrace
 kid	kid
@@ -11311,7 +11311,7 @@ vynech	vyn
 modlí	mod
 shání	shá
 wilsone	wilso
-uzavřete	uzavře
+uzavřete	uzavř
 koná	kon
 párky	pár
 uslyším	usly
@@ -11794,7 +11794,7 @@ malér	malér
 zbabělci	zbabě
 neopustil	neopusti
 nudná	nud
-smějete	směje
+smějete	směj
 minulej	minulej
 oddaný	odd
 předpokládal	předpokláda
@@ -11837,7 +11837,7 @@ viděly	vidě
 raněný	ran
 údery	úder
 terč	ter
-lehněte	lehně
+lehněte	leh
 nestyď	nestyď
 zajistil	zajisti
 překvápko	překváp
@@ -11879,7 +11879,7 @@ vězňů	vězň
 ručníky	ruč
 mořem	moř
 bandu	band
-ukážete	ukáže
+ukážete	ukáh
 pochopte	pochop
 úsudek	úsud
 vzpomínat	vzpom
@@ -12106,7 +12106,7 @@ toužíš	toužíš
 obsazeno	obsah
 chybějící	chybějí
 zodpovědnosti	zodpověd
-navrhujete	navrhuje
+navrhujete	navrhuj
 najdem	najd
 dickie	dicki
 skutečném	skute
@@ -12248,7 +12248,7 @@ komedie	komedi
 rizika	rih
 explozi	exploh
 prostřednictvím	prostřednic
-opovažujete	opovažuje
+opovažujete	opovažuj
 zapište	zap
 granáty	graná
 obyčejní	obyčej
@@ -12850,11 +12850,11 @@ důstojníků	důstoj
 diplom	diplom
 náročné	náro
 dodržet	dodrže
-vyhrajete	vyhraje
+vyhrajete	vyhraj
 neruším	neru
 závislá	závis
 praxe	prax
-vyjděte	vyjdě
+vyjděte	vyjd
 přežiju	přežij
 hochy	hoch
 zisky	zis
@@ -12917,7 +12917,7 @@ drew	drew
 omar	omar
 denise	denis
 oceňuju	oceňuj
-nepamatujete	nepamatuje
+nepamatujete	nepamatuj
 nehýbat	nehýb
 kriminálník	kriminál
 běh	běh
@@ -13122,7 +13122,7 @@ opatrnější	opatr
 ríkal	ríka
 nasadil	nasadi
 hi	hi
-žertujete	žertuje
+žertujete	žertuj
 každodenní	každoden
 pasák	pasá
 elle	ell
@@ -13313,7 +13313,7 @@ hloupou	hloup
 nezávislost	nezávisl
 připomínám	připom
 poděkuj	poděkuj
-zamkněte	zamkně
+zamkněte	zamk
 světového	svě
 holí	hol
 narozdíl	narozdí
@@ -13388,7 +13388,7 @@ ronald	ronald
 hladinu	hlad
 great	gre
 míříme	mířím
-pijete	pije
+pijete	pij
 warrene	warr
 fanoušky	fano
 kliniku	kli
@@ -13427,7 +13427,7 @@ tuny	tun
 červen	červ
 millie	milli
 zírat	zír
-vyslechněte	vyslechně
+vyslechněte	vyslech
 zálohy	záloh
 spropitné	spropit
 podávat	podáv
@@ -13523,7 +13523,7 @@ malcolm	malcolm
 jedi	jed
 božské	božs
 naplní	napl
-plánujete	plánuje
+plánujete	plánuj
 hruď	hruď
 masivní	masiv
 zásluhy	zásluh
@@ -13599,7 +13599,7 @@ soukromou	soukrom
 hasiči	has
 rozpaků	rozpa
 trubky	trub
-sklapněte	sklapně
+sklapněte	sklap
 vlajky	vlaj
 vážnou	váž
 zkontroluju	zkontroluj
@@ -13838,7 +13838,7 @@ chodník	chod
 správného	správ
 zajali	zaja
 neutečeš	neutečeš
-rozhodnete	rozhodne
+rozhodnete	rozhod
 vyvíjí	vyvíj
 leon	leo
 einstein	einste
@@ -13936,7 +13936,7 @@ prokurátor	prokurátor
 image	imag
 kulek	kul
 ák	ák
-stanete	stane
+stanete	sta
 neodpustím	neodpus
 punčochy	punč
 poděl	podě
@@ -13949,7 +13949,7 @@ orchestr	orchestr
 informujte	informuj
 mráz	mráz
 bezpečno	bezpe
-zaujměte	zaujmě
+zaujměte	zaujm
 zvykl	zvyk
 obchodníci	obchod
 žádala	žáda
@@ -14122,7 +14122,7 @@ potter	potter
 poctu	poc
 železný	želez
 sálu	sál
-pletete	plete
+pletete	ple
 schováme	schovám
 rozmyslela	rozmysle
 prodejce	prodej
@@ -14554,7 +14554,7 @@ ozbrojené	ozbroj
 zkoušíme	zkouším
 silného	sil
 missouri	missour
-hraběte	hrabě
+hraběte	hrab
 dočasné	dočas
 potěšit	potěš
 strpení	strp
@@ -14967,7 +14967,7 @@ royal	roya
 chemie	chemi
 vypila	vypi
 přežiješ	přežiješ
-stiskněte	stiskně
+stiskněte	stisk
 malinko	ma
 misku	mis
 gayové	gay
@@ -15345,7 +15345,7 @@ pomstě	poms
 obecenstvo	obecen
 vědomosti	vědom
 zabily	zabi
-přijedete	přijede
+přijedete	přijed
 stěna	stě
 neuškodí	neuškod
 střízlivý	střízl
@@ -15357,7 +15357,7 @@ cizími	ciz
 okradl	okra
 moucha	mouch
 spravil	spravi
-zmlkněte	zmlkně
+zmlkněte	zmlk
 vypadaj	vypadaj
 netrapte	netrap
 zamiluješ	zamiluješ
@@ -15483,7 +15483,7 @@ jr	jr
 živote	živ
 podala	poda
 všimnout	všimn
-rozejděte	rozejdě
+rozejděte	rozejd
 vsi	vsi
 vtipálek	vtipá
 neobjeví	neobjev
@@ -15581,7 +15581,7 @@ půjčky	půj
 zábradlí	zábra
 pěstovat	pěs
 začínala	začína
-přijmete	přijme
+přijmete	přijm
 pockej	pockej
 laskavosti	laskav
 konkrétního	konkrét
@@ -16153,7 +16153,7 @@ císařem	císař
 vypustil	vypusti
 statečnost	stateč
 setkáte	setká
-všimněte	všimně
+všimněte	všim
 nápoje	nápoj
 minci	min
 šíření	šíř
@@ -16623,7 +16623,7 @@ stýkat	stý
 vymýšlet	vymýšle
 přicházíš	přicházíš
 lupiči	lup
-přestanete	přestane
+přestanete	přest
 pohřbil	pohřbi
 nepřijatelné	nepřija
 nebojíte	nebojí
@@ -16711,7 +16711,7 @@ poučit	pouk
 zbil	zbi
 napočítám	napočí
 hrou	hro
-zvířete	zvíře
+zvířete	zvíř
 náruče	náru
 lví	lví
 koncertu	koncer
@@ -16907,7 +16907,7 @@ udržuj	udržuj
 brittany	britt
 bowling	bowling
 vítá	vít
-vzpomenete	vzpomene
+vzpomenete	vzpom
 neuvěřitelnou	neuvěři
 zábavní	zábav
 uvařil	uvaři
@@ -17169,7 +17169,7 @@ psychiatrické	psychiatr
 určitých	urk
 mrzák	mrzá
 netvař	netvař
-nepomůžete	nepomůže
+nepomůžete	nepomůh
 schodišti	schodis
 německých	něm
 adrese	adres
@@ -17199,7 +17199,7 @@ přitažlivost	přitažliv
 praskla	prask
 nezačne	neza
 vojákem	vojá
-chytněte	chytně
+chytněte	chyt
 potkalo	potka
 uklidnění	uklidn
 prohlížel	prohlíže
@@ -17290,7 +17290,7 @@ krokodýl	krokodý
 vydělala	vyděla
 žhavé	žhav
 nepojedeš	nepojedeš
-bojujete	bojuje
+bojujete	bojuj
 šerifovi	šerif
 spojka	spoj
 zasáhli	zasáh
@@ -17371,7 +17371,7 @@ atentát	atentá
 námět	námě
 ráně	rán
 chester	chester
-modlete	modle
+modlete	mod
 trojúhelník	trojúhel
 sympatie	sympati
 astná	ast
@@ -17484,10 +17484,10 @@ pudink	pu
 hlavičku	hla
 sud	sud
 souseda	soused
-nepřijdete	nepřijde
+nepřijdete	nepřijd
 ministrem	ministr
 nechytí	nechy
-nevezmete	nevezme
+nevezmete	nevezm
 obklíčeni	obklík
 nezachrání	nezachr
 neudrží	neudrž
@@ -17525,7 +17525,7 @@ rozhodování	rozhodov
 otravný	otrav
 skotska	skots
 předmětem	předm
-sejměte	sejmě
+sejměte	sejm
 standard	standard
 vybereme	vyberem
 výstava	výstav
@@ -17774,7 +17774,7 @@ vyslat	vys
 milejší	mil
 pomerančový	pomeran
 citu	cit
-zamyslete	zamysle
+zamyslete	zamys
 rouhání	rouh
 montana	mont
 nezajímám	nezajím
@@ -17958,7 +17958,7 @@ velkolepý	velkolep
 chang	chang
 nalezl	nalez
 omáčky	omá
-zmáčkněte	zmáčkně
+zmáčkněte	zmáčk
 dance	dan
 jeste	jes
 nechcem	nech
@@ -18385,7 +18385,7 @@ přijímáme	přijímám
 polohy	poloh
 kdesi	kdes
 phillip	phillip
-vezete	veze
+vezete	veh
 shoří	shoř
 dávka	dáv
 lékařem	lékař
@@ -18401,7 +18401,7 @@ kouříte	kouří
 přestupek	přestup
 šlapat	šlap
 špičku	špi
-považujete	považuje
+považujete	považuj
 sekretářku	sekret
 uložil	uloži
 krajině	kraj
@@ -18517,7 +18517,7 @@ neprodal	neproda
 zničíte	zničí
 neotravuj	neotravuj
 rostlina	rost
-podepíšete	podepíše
+podepíšete	podepíš
 postačí	post
 dosáhneme	dosáhnem
 múj	múj
@@ -18534,7 +18534,7 @@ délky	dél
 půi	půi
 práskač	prásk
 stráži	stráh
-závěti	závě
+závěti	záv
 victoria	victori
 hospodyně	hospod
 klidnější	klid
@@ -18744,7 +18744,7 @@ omezený	omeh
 kruhy	kruh
 denního	den
 vyhrožuje	vyhrožuj
-umřete	umře
+umřete	umř
 zvířatům	zvíř
 obrovského	obrovs
 nenarodil	nenarodi
@@ -18802,7 +18802,7 @@ braň	braň
 pomstím	poms
 povolil	povoli
 oplatit	oplat
-ušetřete	ušetře
+ušetřete	ušetř
 zakazuje	zakazuj
 pokusíš	pokusíš
 červa	červ
@@ -18824,7 +18824,7 @@ gangů	gang
 týpci	týp
 zajímala	zajíma
 malby	malb
-prohlédněte	prohlédně
+prohlédněte	prohléd
 komunita	komun
 výplaty	výp
 zkoušíte	zkouší
@@ -18920,7 +18920,7 @@ lidskost	lidsk
 mast	mas
 popravčí	poprav
 obviněný	obvin
-dovolujete	dovoluje
+dovolujete	dovoluj
 záhadu	záhad
 pruhy	pruh
 děsivá	děs
@@ -19271,7 +19271,7 @@ překážka	překáž
 temného	tem
 tequilu	tequi
 first	firs
-rozhodněte	rozhodně
+rozhodněte	rozhod
 vyprší	vyprš
 býka	býk
 ztichni	ztich
@@ -19311,7 +19311,7 @@ fotografií	fotografi
 bavilo	bavi
 vztyk	vzty
 admirála	admirá
-nasedněte	nasedně
+nasedněte	nased
 ovo	ovo
 nezabere	nezaber
 zářit	zář
@@ -19541,7 +19541,7 @@ flirtovat	flir
 ubytovat	uby
 níže	níh
 salonu	salo
-napíšete	napíše
+napíšete	napíš
 lékárny	lék
 lístků	lís
 slyšely	slyše
@@ -19676,7 +19676,7 @@ pekelné	pekel
 pomalejší	poma
 nestojíš	nestojíš
 vyhnuli	vyhn
-projděte	projdě
+projděte	projd
 spadneš	spadneš
 nebezpečnější	nebezpe
 gangsteři	gangsteř
@@ -20038,7 +20038,7 @@ zmatení	zmat
 hrdinka	hr
 bílýho	bílýh
 moderního	moder
-vyberete	vybere
+vyberete	vyber
 otestovat	otes
 němý	něm
 labuť	labuť
@@ -20056,7 +20056,7 @@ mizerové	mizer
 řídíte	řídí
 božská	božs
 zásadně	zásad
-slibujete	slibuje
+slibujete	slibuj
 vytáhnul	vytáhn
 kouta	kou
 pocitů	pok
@@ -20153,7 +20153,7 @@ enrique	enriqu
 subrip	subrip
 valium	valium
 fantozzi	fantozh
-sověti	sově
+sověti	sov
 hulení	hul
 ally	all
 deprimující	deprimují
@@ -20178,7 +20178,7 @@ nesetkali	nesetka
 god	god
 nechaj	nechaj
 léku	lék
-prohrajete	prohraje
+prohrajete	prohraj
 úřadě	úřad
 řešením	řeše
 přebral	přebra
@@ -20203,13 +20203,13 @@ zamkla	zamk
 pneumatik	pneuma
 pára	pár
 klín	klí
-představujete	představuje
+představujete	představuj
 vydával	vydáva
 nesnaží	nesnaž
 obviní	obv
 pokusů	pokus
 zvítězíme	zvítězím
-odjedete	odjede
+odjedete	odjed
 dostavník	dostav
 učitelku	učite
 předvolání	předvol
@@ -20570,7 +20570,7 @@ vedly	ved
 tučňák	tučňá
 vystrašení	vystraš
 průměru	průměr
-přejděte	přejdě
+přejděte	přejd
 posrané	posr
 přemístit	přemíst
 peněžní	peněž
@@ -20915,7 +20915,7 @@ bojuji	bojuj
 odporně	odpor
 tají	taj
 nepovíš	nepovíš
-zhasněte	zhasně
+zhasněte	zhas
 nedávné	nedáv
 nezdržím	nezdr
 holuby	holub
@@ -21037,7 +21037,7 @@ věnuji	věnuj
 nezjistil	nezjisti
 vyskočí	vysko
 písmen	písm
-vyšlete	vyšle
+vyšlete	vyš
 formalita	formal
 uklouzl	uklouz
 uvítací	uvíta
@@ -21058,7 +21058,7 @@ skotské	skots
 podpisu	podpis
 rozkazů	rozkaz
 zdrží	zdrž
-ukončete	ukonče
+ukončete	uko
 stihla	stih
 pokrytec	pokryt
 neumějí	neuměj
@@ -21149,7 +21149,7 @@ nápadem	nápad
 milovník	mil
 odešly	odeš
 sejdu	sejd
-cestujete	cestuje
+cestujete	cestuj
 posvátná	posvát
 ohnivé	ohn
 ohřát	ohřá
@@ -21199,7 +21199,7 @@ porotci	por
 arizona	arizo
 vespolek	vespo
 buffalo	buffa
-zapomenete	zapomene
+zapomenete	zapom
 útěcha	útěch
 automobil	automobi
 rockyho	rockyh
@@ -21217,7 +21217,7 @@ ambulanci	amb
 nemocného	nemoc
 klientka	klien
 netlač	netl
-použijete	použije
+použijete	použij
 odborníci	odbor
 vzdáváme	vzdávám
 snáší	snáš
@@ -21326,7 +21326,7 @@ jedenácté	jedenác
 přejděme	přejděm
 družstva	druž
 zemědělství	zeměděl
-mrkněte	mrkně
+mrkněte	mrk
 mužstva	muž
 nákladu	náklad
 jakýchkoliv	jakýchkol
@@ -21731,7 +21731,7 @@ tahejte	tahej
 koňmi	koň
 naplňuje	naplňuj
 vraždící	vraždí
-shromážděte	shromáždě
+shromážděte	shromážd
 zapadne	zapad
 zaměstnavatel	zaměstnavate
 problem	prob
@@ -21906,7 +21906,7 @@ trefíš	trefíš
 srazilo	srazi
 odrazit	odrah
 lůžko	lůž
-dohlédněte	dohlédně
+dohlédněte	dohléd
 tenký	ten
 schováváte	schovává
 zdržení	zdrh
@@ -21968,7 +21968,7 @@ nadlouho	nadlouh
 mučí	muč
 objektivní	objektiv
 obálka	obá
-rozmyslete	rozmysle
+rozmyslete	rozmys
 cara	car
 oženíš	oženíš
 transakce	transa
@@ -22417,7 +22417,7 @@ užití	uži
 kabáty	kabá
 dramatický	dramat
 léčil	léči
-dovedete	dovede
+dovedete	doved
 sladkého	slad
 užitek	uži
 zesnulého	zesn
@@ -22466,7 +22466,7 @@ stačila	stači
 pššt	pšš
 propast	propas
 bývaly	býva
-rozhlédněte	rozhlédně
+rozhlédněte	rozhléd
 prodejem	prodej
 pronesl	prones
 ky	ky
@@ -22595,7 +22595,7 @@ představená	představ
 nečetla	nečet
 cvoku	cvo
 zastavily	zastavi
-naznačujete	naznačuje
+naznačujete	naznačuj
 ríká	rík
 kýbl	kýb
 charliemu	charliem
@@ -22627,7 +22627,7 @@ pokorný	pokor
 výsledků	výsled
 rezignaci	rezigna
 terčem	ter
-opřete	opře
+opřete	opř
 zkoumání	zkoum
 navrhnu	navrh
 mušle	muš
@@ -22778,7 +22778,7 @@ vražedné	vražed
 pověste	pověs
 thing	thing
 bobovi	bob
-projdete	projde
+projdete	projd
 vyhlásili	vyhlási
 vybíral	vybíra
 stahuje	stahuj
@@ -22803,7 +22803,7 @@ sudy	sud
 nenapsala	nenapsa
 nemocnou	nemoc
 ohiu	ohi
-nejedete	nejede
+nejedete	nejed
 nálet	nále
 nule	nul
 bijou	bij
@@ -22954,7 +22954,7 @@ vozil	vozi
 kabátu	kabá
 prstech	prs
 vyvedl	vyve
-vyspěte	vyspě
+vyspěte	vysp
 dominique	dominiqu
 zeleniny	zel
 čestná	čest
@@ -22969,7 +22969,7 @@ tour	tour
 flétnu	flét
 svrhnout	svrhn
 hnát	hná
-vypadnete	vypadne
+vypadnete	vypad
 isabello	isabel
 divní	div
 stoupat	stoup
@@ -23089,7 +23089,7 @@ oblbnout	oblbn
 umístil	umísti
 otcova	otc
 ňadra	ňadr
-pomyslete	pomysle
+pomyslete	pomys
 vycházející	vycházejí
 praha	prah
 společníci	spole
@@ -23346,7 +23346,7 @@ rozpis	rozpis
 zvládá	zvlád
 zeleného	zel
 menších	menš
-riskujete	riskuje
+riskujete	riskuj
 sol	sol
 přikrývku	přikrýv
 napospas	naposp
@@ -23381,7 +23381,7 @@ vředy	vřed
 živoucí	živou
 býti	být
 nakrm	nakrm
-spolehněte	spolehně
+spolehněte	spoleh
 budoucím	budou
 stopař	stopař
 vzácnou	vzác
@@ -23508,7 +23508,7 @@ vyměnila	vyměni
 požádáš	požádáš
 zpíváte	zpívá
 obluda	oblud
-natáhněte	natáhně
+natáhněte	natáh
 vítězi	vítěh
 nežertuji	nežertuj
 nezavěšujte	nezavěšuj
@@ -23601,7 +23601,7 @@ rváč	rvá
 čtvrtém	čtvr
 rozhodlo	rozho
 zpomalí	zpoma
-vyčistěte	vyčistě
+vyčistěte	vyk
 andílci	andí
 zástavu	zástav
 poděla	podě
@@ -23688,7 +23688,7 @@ souši	souš
 americkej	americkej
 pohřešovaných	pohřešov
 nevinnej	nevinnej
-vyhrožujete	vyhrožuje
+vyhrožujete	vyhrožuj
 přemejšlel	přemejšle
 švábi	šváb
 udržíme	udržím
@@ -23713,7 +23713,7 @@ odborníka	odbor
 nesnesitelný	nesnesi
 školné	škol
 kousat	kous
-neodejdete	neodejde
+neodejdete	neodejd
 objevíte	objeví
 zásluha	zásluh
 štychu	štych
@@ -23744,7 +23744,7 @@ kravinu	krav
 větších	větš
 sedmou	sedm
 briggsi	briggs
-přinesete	přinese
+přinesete	přines
 vylezla	vylez
 okraje	okraj
 trase	tras
@@ -23945,7 +23945,7 @@ medvídku	medvíd
 navigátor	navigátor
 vysavač	vysav
 zachary	zachar
-kašlete	kašle
+kašlete	kaš
 biologii	biologi
 držme	držm
 neobyčejné	neobyčej
@@ -24041,7 +24041,7 @@ věděly	vědě
 sardinky	sar
 civilizací	civiliza
 dodělal	doděla
-zklidněte	zklidně
+zklidněte	zklid
 opustíte	opustí
 poole	poo
 zkouškách	zko
@@ -24222,7 +24222,7 @@ nepoznáte	nepozná
 lidskými	lids
 experimentů	experimen
 provizi	provih
-seženete	sežene
+seženete	seh
 protiútok	protiúto
 nepochopili	nepochopi
 nepříjemnost	nepříjem
@@ -24258,7 +24258,7 @@ drobná	drob
 využije	využij
 postižení	postih
 vyběhl	vyběh
-kuřete	kuře
+kuřete	kuř
 partnerku	partner
 chápal	chápa
 vymyšlený	vymyšl
@@ -24415,7 +24415,7 @@ zvukem	zvu
 vyhýbá	vyhýb
 zadnice	zad
 měsíčním	měsí
-obviňujete	obviňuje
+obviňujete	obviňuj
 spasení	spas
 letadlu	leta
 nezjistíme	nezjistím
@@ -25055,7 +25055,7 @@ nezemřeš	nezemřeš
 rám	rám
 round	round
 porážky	poráž
-nezabijete	nezabije
+nezabijete	nezabij
 rabíne	rab
 kýmkoli	kýmko
 jachtě	jach
@@ -25082,7 +25082,7 @@ telefonovala	telefonova
 ovládnutí	ovládnu
 imitace	imita
 španělská	španěls
-zvyknete	zvykne
+zvyknete	zvyk
 kupodivu	kupod
 firmou	firm
 rufusi	rufus
@@ -25112,7 +25112,7 @@ smečka	sme
 studentem	studen
 nestřílel	nestříle
 děsivě	děs
-šetřete	šetře
+šetřete	šetř
 vějíř	věj
 papoušek	pap
 gile	gil
@@ -25124,7 +25124,7 @@ oblíbil	oblíbi
 skákej	skákej
 brente	bren
 střelí	stře
-nepřestanete	nepřestane
+nepřestanete	nepřest
 nepředstavil	nepředstavi
 filozof	filozof
 zamluvil	zamluvi
@@ -25322,7 +25322,7 @@ stavte	stav
 tabáku	tabá
 chudáky	chudá
 hraniční	hrani
-nesete	nese
+nesete	nes
 klepal	klepa
 trvale	trva
 poskytla	poskyt
@@ -25498,7 +25498,7 @@ cvoka	cvo
 nesnažíš	nesnažíš
 samých	sam
 holý	hol
-svlékněte	svlékně
+svlékněte	svlék
 lékařů	lékař
 spatřila	spatři
 rovnováhy	rovnováh
@@ -25641,7 +25641,7 @@ ktere	kter
 jine	jin
 nezvládli	nezvlá
 archere	archer
-knížete	kníže
+knížete	kníh
 strejdovi	strejd
 pozorují	pozoruj
 sourozence	souro
@@ -25874,7 +25874,7 @@ ukradnout	ukradn
 smee	sme
 nástupu	nástup
 partyzáni	partyz
-hejbněte	hejbně
+hejbněte	hejb
 amos	amos
 dokončen	dokonk
 neštvi	neš
@@ -25970,10 +25970,10 @@ potuluje	potuluj
 neobvyklá	neobvyk
 slanina	sla
 strejdy	strejd
-nelžete	nelže
+nelžete	nelh
 živým	živ
 zastavíte	zastaví
-reknete	rekne
+reknete	rek
 branže	branh
 nevidel	nevide
 otevírat	otevír
@@ -26002,7 +26002,7 @@ odvahou	odvah
 solí	sol
 albuquerque	albuquerqu
 objevím	obje
-nabídněte	nabídně
+nabídněte	nabíd
 měkká	měk
 pláště	plás
 elso	els
@@ -26041,7 +26041,7 @@ drželo	drže
 voliči	vol
 vytvořen	vytvoř
 podělil	poděli
-zahněte	zahně
+zahněte	zah
 vražedná	vražed
 prázdnýma	prázdným
 lehnu	leh
@@ -26195,7 +26195,7 @@ zlodějka	zloděj
 počal	poča
 plnil	plni
 dlouhými	dlouh
-zajděte	zajdě
+zajděte	zajd
 kravaty	krav
 vylezli	vylez
 tančíte	tančí
@@ -26239,7 +26239,7 @@ farnosti	far
 strčíš	strčíš
 volte	vol
 prospělo	prospě
-neuvědomujete	neuvědomuje
+neuvědomujete	neuvědomuj
 zacházel	zacháze
 twa	twa
 pověsíme	pověsím
@@ -26270,7 +26270,7 @@ pověřen	pověř
 složila	složi
 vodí	vod
 probůh	probůh
-dokončete	dokonče
+dokončete	dok
 dohady	dohad
 každoroční	každoro
 riu	riu
@@ -26278,7 +26278,7 @@ mlčel	mlče
 dominik	dom
 bludiště	bludis
 ocitla	ocit
-roztáhněte	roztáhně
+roztáhněte	roztáh
 okrádat	okrád
 zbít	zbí
 zdvořilé	zdvoři
@@ -26367,7 +26367,7 @@ noi	noi
 zeisha	zeish
 vzdávat	vzdáv
 belgie	belgi
-neblázněte	neblázně
+neblázněte	nebláz
 vyrušil	vyruši
 dozvědí	dozvěd
 znamením	zname
@@ -26385,7 +26385,7 @@ selhat	selh
 prázdnin	prázd
 dílů	díl
 odmítneš	odmítneš
-stoupněte	stoupně
+stoupněte	stoup
 vine	vin
 vypustí	vypus
 odvedou	odved
@@ -26420,7 +26420,7 @@ zatlačte	zatlač
 neoficiálně	neoficiál
 neuposlechl	neuposlech
 dusit	dus
-umístěte	umístě
+umístěte	umís
 hlídači	hlída
 svahu	svah
 zesílit	zesíl
@@ -26430,7 +26430,7 @@ sklapnout	sklapn
 vývar	vývar
 mezek	meh
 naložili	naloži
-přivedete	přivede
+přivedete	přived
 tichu	tich
 podotknout	podotkn
 únosců	únos
@@ -26499,7 +26499,7 @@ projížděl	projíždě
 vodopád	vodopád
 projíždět	projíždě
 vyřešila	vyřeši
-přečtete	přečte
+přečtete	přeč
 nosy	nos
 prohledávat	prohledáv
 nehráli	nehrá
@@ -26667,7 +26667,7 @@ hasičů	hasi
 posílala	posíla
 denver	denver
 lekla	lek
-nezvládnete	nezvládne
+nezvládnete	nezvlád
 závan	záv
 husté	hus
 vyšším	vyš
@@ -27223,7 +27223,7 @@ dvacátého	dvacá
 popral	popra
 povstal	povsta
 rip	rip
-studujete	studuje
+studujete	studuj
 dětinský	dětins
 volným	vol
 neznělo	nezně
@@ -27314,7 +27314,7 @@ federálních	federál
 zorro	zorr
 starlingová	starling
 tigers	tigers
-gadgete	gadge
+gadgete	gadg
 amíre	amír
 omluvám	omluv
 prolhanej	prolhanej
@@ -27326,7 +27326,7 @@ poradila	poradi
 poskytují	poskytuj
 považována	považov
 nabíjet	nabíje
-šlapete	šlape
+šlapete	šlap
 plácni	plác
 chutě	chu
 soukromým	soukrom
@@ -27377,7 +27377,7 @@ drobnosti	drob
 nehrají	nehraj
 úraz	úraz
 vejci	vej
-odřízněte	odřízně
+odřízněte	odříz
 vysvobodit	vysvobod
 vyměňte	vyměň
 nepodceňujte	nepodceňuj
@@ -27391,7 +27391,7 @@ posuňte	posuň
 udělalas	udělal
 bačkory	bačkor
 kostelem	koste
-přežijete	přežije
+přežijete	přežij
 rozlučte	rozluč
 označené	oznak
 recenze	recenh
@@ -27402,7 +27402,7 @@ nakládat	naklád
 splácet	spláce
 švagra	švagr
 živo	živ
-vyjdete	vyjde
+vyjdete	vyjd
 bezohledný	bezohled
 koruně	koru
 zasluhuje	zasluhuj
@@ -27412,7 +27412,7 @@ nepřinese	nepřines
 namazat	namaz
 brokovnicí	brokovn
 drake	dra
-zatáhněte	zatáhně
+zatáhněte	zatáh
 taxíky	tax
 nákupu	nákup
 báječní	báje
@@ -27643,7 +27643,7 @@ získávání	získáv
 uspořádáme	uspořádám
 úpatí	úpa
 opustilo	opusti
-vytáhnete	vytáhne
+vytáhnete	vytáh
 frau	fra
 štětku	ště
 krásky	krás
@@ -27726,7 +27726,7 @@ kupci	kup
 stvořila	stvoři
 projednat	projed
 hráz	hráz
-neberete	nebere
+neberete	neber
 rybník	ryb
 koncentrace	koncentra
 dostavte	dostav
@@ -27935,7 +27935,7 @@ luko	luk
 zásnuby	zásnub
 porodit	porod
 zaveďte	zaveď
-odvezete	odveze
+odvezete	odveh
 rozčílit	rozčíl
 opatřit	opatř
 svatost	svat
@@ -28218,7 +28218,7 @@ skrýše	skrýš
 frazier	frazier
 osmičku	os
 schytá	schy
-doupěte	doupě
+doupěte	doup
 vejpůl	vejpů
 pomodlíme	pomodlím
 překážku	překáž
@@ -28264,7 +28264,7 @@ schmidt	schmid
 prcka	prc
 protesty	protes
 volantu	volan
-kupujete	kupuje
+kupujete	kupuj
 nastanou	nast
 citron	citro
 nacpu	nacp
@@ -28486,7 +28486,7 @@ hospodu	hospod
 střešní	střeš
 vykoupit	vykoup
 jezdců	jezd
-děvčete	děvče
+děvčete	děv
 pomátla	pomát
 kleknout	klekn
 černochů	čern
@@ -28525,7 +28525,7 @@ nahore	nahor
 skvostné	skvost
 ochránci	ochr
 sestřenka	ses
-doupěti	doupě
+doupěti	doup
 slecno	slec
 mazanej	mazanej
 pneumatika	pneuma
@@ -28538,7 +28538,7 @@ trdlo	trd
 klenotnictví	klenotni
 zabrala	zabra
 přidělili	přiděli
-nadechněte	nadechně
+nadechněte	nadech
 pocahontas	pocahont
 nenápadný	nenápad
 neurážej	neurážej
@@ -28715,7 +28715,7 @@ naskytne	naskyt
 zlomeného	zlom
 atlas	atl
 nejskvělejší	nejskvě
-přepněte	přepně
+přepněte	přep
 michal	micha
 hodného	hod
 neklape	neklap
@@ -28896,7 +28896,7 @@ odvaze	odvah
 šlofíka	šlof
 snažim	snažim
 nakopeme	nakopem
-vymyslete	vymysle
+vymyslete	vymys
 neprofesionální	neprofesionál
 náklaďáků	náklaďá
 nádheru	nádher
@@ -29363,7 +29363,7 @@ vilu	vil
 nemocných	nemoc
 námitek	nám
 zkorumpovaný	zkorumpov
-nehněte	nehně
+nehněte	neh
 okresního	okres
 sodou	sod
 džípu	džíp
@@ -29392,7 +29392,7 @@ hostinec	host
 pomoh	pomoh
 nejžhavější	nejžhav
 boze	boh
-nezůstanete	nezůstane
+nezůstanete	nezůst
 neuhodil	neuhodi
 babku	bab
 bitvách	bitv
@@ -29480,7 +29480,7 @@ kalifornské	kaliforns
 škrábance	škráb
 hari	har
 alexem	alex
-dotknete	dotkne
+dotknete	dotk
 nezbytný	nezbyt
 ambasáda	ambasád
 utrhnout	utrhn
@@ -29545,7 +29545,7 @@ hříšníci	hříš
 kytarou	kytar
 nevšimnou	nevšim
 okamžitý	okamh
-vejdete	vejde
+vejdete	vejd
 objet	obje
 ironické	iron
 spolupracovníci	spoluprac
@@ -29654,7 +29654,7 @@ lišák	lišá
 pouštím	pouš
 uřízli	uříz
 lůžku	lůž
-skončete	skonče
+skončete	sko
 hovoříte	hovoří
 budˇ	budˇ
 učením	uče
@@ -29783,7 +29783,7 @@ transportu	transpor
 vrchním	vrch
 vyprázdnit	vyprázdn
 ruperte	ruper
-převezměte	převezmě
+převezměte	převezm
 vězňové	vězň
 sheridan	sherid
 pověstí	pověs
@@ -29849,7 +29849,7 @@ highway	highwa
 provazů	provaz
 savci	sav
 zo	zo
-odmítnete	odmítne
+odmítnete	odmít
 poprat	popr
 míčkem	míč
 určili	urči
@@ -30301,7 +30301,7 @@ slušelo	sluše
 myje	myj
 bejk	bej
 platem	pla
-nezapomenete	nezapomene
+nezapomenete	nezapom
 prudké	prud
 hnojivo	hnoj
 předsedkyně	předsed
@@ -30441,7 +30441,7 @@ kopejte	kopej
 jeptiškou	jeptiš
 břídil	břídi
 fialové	fia
-naleznete	nalezne
+naleznete	nalez
 cosmo	cosm
 marná	mar
 spouštím	spouš
@@ -30971,7 +30971,7 @@ hladký	hlad
 stávky	stáv
 ozývá	ozýv
 kandidáti	kandidá
-vyzvedněte	vyzvedně
+vyzvedněte	vyzved
 krájet	kráje
 rozděluje	rozděluj
 pětky	pět
@@ -31254,7 +31254,7 @@ náruč	náru
 šperk	šper
 neteče	net
 stáj	stáj
-užijete	užije
+užijete	užij
 založíme	založím
 seno	sen
 morrise	morris
@@ -31429,7 +31429,7 @@ prosíš	prosíš
 vyhni	vyh
 kmenů	kme
 stoličku	sto
-zamilujete	zamiluje
+zamilujete	zamiluj
 zvedejte	zvedej
 zkrátil	zkráti
 patrika	patr
@@ -31658,7 +31658,7 @@ opilce	opi
 mizeru	mizer
 posadili	posadi
 ženatí	žena
-nepracujete	nepracuje
+nepracujete	nepracuj
 květů	kvě
 ubohých	uboh
 obžalován	obžalov
@@ -31686,7 +31686,7 @@ odvažuješ	odvažuješ
 poprask	popr
 evansi	evans
 riccardo	riccard
-kradete	krade
+kradete	krad
 toulá	tou
 baronko	bar
 gramofon	gramofo
@@ -31743,7 +31743,7 @@ usmívala	usmíva
 provinil	provini
 tužka	tuž
 nelituj	nelituj
-pochybujete	pochybuje
+pochybujete	pochybuj
 následovala	následova
 nevděčná	nevdě
 creeku	cre
@@ -32067,7 +32067,7 @@ půjček	půj
 ranilo	rani
 hodna	hod
 lékárně	lék
-vykašlete	vykašle
+vykašlete	vykaš
 otvírák	otvírá
 stewarte	stewar
 nával	náva
@@ -32081,7 +32081,7 @@ uložené	uloh
 zveš	zveš
 duchovním	duch
 ostražití	ostrah
-nemužete	nemuže
+nemužete	nemuh
 napomáhání	napomáh
 nevzdávám	nevzdáv
 indická	ind
@@ -32396,7 +32396,7 @@ přeskoč	přesko
 obsadil	obsadi
 náčiní	nák
 hlášku	hláš
-porušujete	porušuje
+porušujete	porušuj
 podělané	poděl
 trhat	trh
 poplatníků	poplat
@@ -32449,7 +32449,7 @@ nepolíbil	nepolíbi
 vládla	vlá
 ca	ca
 halu	hal
-napijete	napije
+napijete	napij
 výstavní	výstav
 mstít	mstí
 zajištěna	zajisk
@@ -32764,11 +32764,11 @@ bělochů	běl
 provedena	proved
 und	und
 hostinský	hostins
-nejezděte	nejezdě
+nejezděte	nejezd
 promluvíte	promluví
 něžné	něž
 můrou	můr
-klekněte	klekně
+klekněte	klek
 nejodpornější	nejodpor
 vře	vře
 radeji	radej
@@ -32909,10 +32909,10 @@ sháníte	shání
 vzbuzuje	vzbuzuj
 klamat	klam
 spolupracujeme	spolupracujem
-sejdete	sejde
+sejdete	sejd
 automobilové	automobi
 mrtvole	mrtvo
-zpaměti	zpamě
+zpaměti	zpam
 pramení	pram
 zvrácená	zvrák
 rozhodit	rozhod
@@ -33031,7 +33031,7 @@ spoléháme	spoléhám
 ségro	ségr
 voličů	voli
 tepleji	teplej
-bennete	benne
+bennete	ben
 stanem	sta
 kdyžtak	kdyžta
 lydia	lydi
@@ -33293,7 +33293,7 @@ kapitálu	kapitá
 tommymu	tommym
 nařídit	naříd
 martinez	martinez
-nehrajete	nehraje
+nehrajete	nehraj
 advokátní	advokát
 troška	troš
 překáží	překáž
@@ -33451,7 +33451,7 @@ noo	noo
 zubu	zub
 negrů	negr
 srážka	sráž
-prasete	prase
+prasete	pras
 texaský	tex
 larkin	lar
 hallie	halli
@@ -33628,7 +33628,7 @@ povoluje	povoluj
 stydlivá	stydl
 rolety	role
 carolina	caro
-vyhněte	vyhně
+vyhněte	vyh
 mošt	moš
 doplnil	doplni
 rys	rys
@@ -34041,7 +34041,7 @@ přidají	přidaj
 vzkažte	vzkaž
 tmou	tmo
 pacientky	pacien
-dojděte	dojdě
+dojděte	dojd
 šikula	šik
 sady	sad
 obejdeme	obejdem
@@ -34106,7 +34106,7 @@ bruslích	brus
 berle	ber
 skoky	sko
 přibližovat	přibliž
-dosáhnete	dosáhne
+dosáhnete	dosáh
 lslandu	lsland
 přirození	přiroh
 hráblo	hráb
@@ -34123,7 +34123,7 @@ vyhovovalo	vyhovova
 potit	pot
 peabody	peabod
 zákaznice	zákaz
-stěhujete	stěhuje
+stěhujete	stěhuj
 ohromený	ohrom
 zavraždila	zavraždi
 hlasuje	hlasuj
@@ -34440,7 +34440,7 @@ soumrak	soumra
 hotovou	hot
 žáru	žár
 vyhnala	vyhna
-provedete	provede
+provedete	proved
 přijíždět	přijíždě
 vymlátit	vymlát
 překvapuješ	překvapuješ
@@ -34848,7 +34848,7 @@ krej	krej
 důkazní	důkaz
 hochům	hoch
 neteře	neteř
-nepojedete	nepojede
+nepojedete	nepojed
 zařaďte	zařaď
 pikniku	pik
 bandité	band
@@ -34858,7 +34858,7 @@ miminka	mi
 štědrá	štědr
 benzinu	benh
 marmeládu	marmelád
-sednete	sedne
+sednete	sed
 komorník	komor
 arcibiskup	arcibiskup
 nekouše	nek
@@ -34923,7 +34923,7 @@ nesnažila	nesnaži
 snoubencem	snou
 stéblo	stéb
 řeckého	řec
-promyslete	promysle
+promyslete	promys
 dělení	děl
 benzínce	ben
 dokážem	dokáh
@@ -35047,7 +35047,7 @@ boxeři	boxeř
 dozorčí	dozor
 policisto	polik
 parťákem	parťá
-zvednete	zvedne
+zvednete	zved
 taxikáři	taxi
 šašky	šaš
 fate	fat
@@ -35320,7 +35320,7 @@ zabalené	zabal
 úlohou	úloh
 werner	werner
 výuka	výu
-zahrajete	zahraje
+zahrajete	zahraj
 okurka	okur
 peci	pek
 dokázáno	dokáz
@@ -35394,7 +35394,7 @@ přehrada	přehrad
 nepřijedou	nepřijed
 rodinném	rod
 sháníme	sháním
-povedete	povede
+povedete	poved
 jemnější	jem
 propuštěný	propusk
 ríci	rík
@@ -35471,7 +35471,7 @@ ponižování	ponižov
 pomlouvat	pomlouv
 počítali	počíta
 cromwell	cromwel
-příjdete	příjde
+příjdete	příjd
 nestarají	nestaraj
 mířila	míři
 zlatu	zla
@@ -35908,7 +35908,7 @@ nezavřel	nezavře
 kartelu	karte
 taste	tas
 dojedl	doje
-sáhněte	sáhně
+sáhněte	sáh
 doděláš	doděláš
 posluchač	posluch
 nadává	nadáv
@@ -36262,7 +36262,7 @@ poustevník	poustev
 nezastřelíš	nezastřelíš
 vystrašeně	vystraš
 ledacos	leda
-nepijete	nepije
+nepijete	nepij
 syndromem	syndrom
 monolog	monolog
 zmeškám	zmeš
@@ -36445,7 +36445,7 @@ sob	sob
 vyrobí	vyr
 setkávám	setkáv
 lestera	lester
-věnujete	věnuje
+věnujete	věnuj
 donem	don
 rozdílem	rozdí
 dotáhneš	dotáhneš
@@ -36527,7 +36527,7 @@ enid	enid
 předstírali	předstíra
 tlustým	tlus
 zdály	zdá
-neukážete	neukáže
+neukážete	neukáh
 delfínů	delf
 pumpě	pump
 arms	arms
@@ -36692,7 +36692,7 @@ nedostupný	nedostup
 zaváhání	zaváh
 vohoz	vohoz
 padací	pada
-zatknete	zatkne
+zatknete	zatk
 nepoužiješ	nepoužiješ
 nevedel	nevede
 chcípnu	chcíp
@@ -36740,7 +36740,7 @@ blahobytu	blahoby
 rybku	ryb
 prrr	prrr
 ocelový	oce
-nezačnete	nezačne
+nezačnete	neza
 slunko	slu
 dovedeme	dovedem
 ubožáka	ubožá
@@ -36779,7 +36779,7 @@ léčbou	léčb
 půlhodinu	půlhod
 mesa	mes
 zlepšila	zlepši
-nemilujete	nemiluje
+nemilujete	nemiluj
 kamennou	kamen
 časům	čas
 sirem	sir
@@ -36931,7 +36931,7 @@ larrym	larrym
 zlými	zlý
 narovinu	nar
 soustředíme	soustředím
-popadněte	popadně
+popadněte	popad
 svorku	svor
 křesťanů	křesť
 špičkou	špi
@@ -37295,7 +37295,7 @@ popadne	popad
 schválila	schváli
 odložila	odloži
 nežila	neži
-stihnete	stihne
+stihnete	stih
 zamýšlím	zamýš
 doprovodíme	doprovodím
 nedokončím	nedoko
@@ -37364,7 +37364,7 @@ zloby	zlob
 zúčastnili	zúčastni
 vyslýchal	vyslýcha
 chybné	chyb
-šlápněte	šlápně
+šlápněte	šláp
 nepadá	nepad
 cestami	ces
 mraku	mra
@@ -38340,7 +38340,7 @@ ohnivou	ohn
 nadějně	naděj
 předvedeme	předvedem
 oddělá	oddě
-vyzvednete	vyzvedne
+vyzvednete	vyzved
 pekné	pek
 nejisté	nej
 klesáme	klesám
@@ -38390,7 +38390,7 @@ ležely	leže
 radno	rad
 pozdější	pozd
 strhnu	strh
-lezete	leze
+lezete	leh
 nebijte	nebij
 žvejkačku	žvej
 sjednat	sjed
@@ -38467,7 +38467,7 @@ nenechává	nenecháv
 baseballové	basebal
 brával	bráva
 zabráníme	zabráním
-pláčete	pláče
+pláčete	plá
 nepoužila	nepouži
 deveraux	deveraux
 hezcí	hez
@@ -38499,7 +38499,7 @@ fíky	fík
 naučilo	nauči
 ujímá	ujím
 sekta	sek
-vyprázdněte	vyprázdně
+vyprázdněte	vyprázd
 vládnutí	vládnu
 tud	tud
 okruhy	okruh
@@ -38760,8 +38760,8 @@ nehledáte	nehledá
 usmířili	usmíři
 jenkinsi	jenkins
 nepovídejte	nepovídej
-oblékněte	oblékně
-nesednete	nesedne
+oblékněte	oblék
+nesednete	nesed
 povinnostem	povin
 šmejdy	šmejd
 kamenný	kamen
@@ -38872,7 +38872,7 @@ naviják	navijá
 přepočítat	přepočí
 umyvadlo	umyva
 haines	hai
-litujete	lituje
+litujete	lituj
 nejezte	nejez
 velrybí	velryb
 warrena	warr
@@ -38887,7 +38887,7 @@ protilátky	proti
 hudebních	hudeb
 sedá	sed
 stébla	stéb
-utečete	uteče
+utečete	ute
 dev	dev
 nazýván	nazýv
 jistější	jis
@@ -39123,7 +39123,7 @@ explodovala	explodova
 slast	slas
 aaaa	aaa
 landon	lando
-vstupujete	vstupuje
+vstupujete	vstupuj
 stephane	steph
 nadhazovač	nadhazov
 šlapko	šlap
@@ -39242,7 +39242,7 @@ nedovolíte	nedovolí
 obléhání	obléh
 odpočíval	odpočíva
 sprchoval	sprchova
-pohřběte	pohřbě
+pohřběte	pohřb
 krvácející	krvácejí
 lehkého	leh
 vyžeň	vyžeň
@@ -39660,7 +39660,7 @@ informovaný	informov
 smaží	smaž
 shrnutí	shrnu
 odrazí	odraz
-dotkněte	dotkně
+dotkněte	dotk
 výkladu	výklad
 rolf	rolf
 staveništi	stavenis
@@ -39823,7 +39823,7 @@ nepředpokládal	nepředpokláda
 obrů	obr
 poražena	porah
 činem	čin
-pozvěte	pozvě
+pozvěte	pozv
 příbytku	příby
 čelili	čeli
 poznaly	pozna
@@ -39884,7 +39884,7 @@ přímého	přím
 fabriku	fabr
 ucítíte	ucítí
 nelepší	nelepš
-vyhazujete	vyhazuje
+vyhazujete	vyhazuj
 ukradení	ukrad
 odměně	odm
 povyražení	povyrah
@@ -40144,7 +40144,7 @@ upravíme	upravím
 marine	mar
 rozvádět	rozvádě
 nažrat	nažr
-vejděte	vejdě
+vejděte	vejd
 kupujeme	kupujem
 rubín	rub
 existující	existují
@@ -40666,7 +40666,7 @@ nasvědčuje	nasvědčuj
 osamělosti	osaměl
 seňorito	seňor
 million	millio
-pokračujete	pokračuje
+pokračujete	pokračuj
 dospěješ	dospěješ
 suroviny	sur
 padnu	pad
@@ -40861,7 +40861,7 @@ protivníci	protiv
 aktivace	aktiva
 maui	mau
 vzkvétá	vzkvé
-připravujete	připravuje
+připravujete	připravuj
 parodie	parodi
 procentní	procent
 vílo	víl
@@ -40906,7 +40906,7 @@ nepředstavíš	nepředstavíš
 obnovil	obnovi
 tkání	tká
 uk	uk
-kadete	kade
+kadete	kad
 jeny	jen
 zaměřuje	zaměřuj
 múžeme	múžem
@@ -40994,7 +40994,7 @@ seriály	seriá
 kapučíno	kapuč
 nudličko	nud
 ztraceny	ztrak
-chcípněte	chcípně
+chcípněte	chcíp
 neille	neil
 chemoterapie	chemoterapi
 bilderbergu	bilderberg
@@ -41086,7 +41086,7 @@ fabriky	fabr
 hadrů	hadr
 vážnosti	váž
 rozmyslíte	rozmyslí
-zažijete	zažije
+zažijete	zažij
 perel	pere
 zamknuté	zamknu
 obdivují	obdivuj
@@ -41128,7 +41128,7 @@ jakobys	jakobys
 chemik	chem
 oblékal	obléka
 přemet	přeme
-dojdete	dojde
+dojdete	dojd
 kukuřicí	kukuř
 prdět	prdě
 tvejma	tvejm
@@ -41296,7 +41296,7 @@ stefan	stef
 vyzvednul	vyzvedn
 nacistů	nak
 emerson	emerso
-prokážete	prokáže
+prokážete	prokáh
 zadržovat	zadrž
 nejbližšímu	nejbližším
 doví	dov
@@ -41783,7 +41783,7 @@ chudej	chudej
 ložnic	ložn
 schůzkou	schůz
 poflakuje	poflakuj
-obtěžujete	obtěžuje
+obtěžujete	obtěžuj
 předvádění	předvád
 vzdáleného	vzdál
 lopata	lop
@@ -41892,7 +41892,7 @@ giles	gi
 lovíte	loví
 ranního	ran
 oblékají	oblékaj
-tancujete	tancuje
+tancujete	tancuj
 deportace	deporta
 vyvrhel	vyvrhe
 šťouch	šťouch
@@ -41901,7 +41901,7 @@ zapůsobilo	zapůsobi
 konkurenční	konkuren
 kořenů	koř
 archibald	archibald
-ukazujete	ukazuje
+ukazujete	ukazuj
 netvařte	netvař
 slzám	slz
 sbírala	sbíra
@@ -41926,7 +41926,7 @@ studenej	studenej
 pac	pac
 rozestupte	rozestup
 healy	hea
-spadnete	spadne
+spadnete	spad
 zamyslíte	zamyslí
 doletí	dole
 rychlých	rych
@@ -42112,7 +42112,7 @@ penězmi	peněz
 svitky	svi
 přijímají	přijímaj
 slang	slang
-muzete	muze
+muzete	muh
 muzeme	muzem
 obe	obe
 vyšle	vyš
@@ -42485,7 +42485,7 @@ baletka	bale
 stádu	stád
 žaluje	žaluj
 plazil	plazi
-nepoužijete	nepoužije
+nepoužijete	nepoužij
 rozptyl	rozpty
 útěky	útě
 vyjíždí	vyjížd
@@ -42499,7 +42499,7 @@ přesouváme	přesouvám
 ohrada	ohrad
 vteřinách	vteř
 ahmede	ahmed
-obejměte	obejmě
+obejměte	obejm
 odboji	odboj
 duplikát	dupliká
 stesk	stes
@@ -42535,7 +42535,7 @@ tetičky	te
 vojenskému	vojens
 herně	her
 dře	dře
-chytnete	chytne
+chytnete	chyt
 plynně	plyn
 bludy	blud
 ušli	ušl
@@ -43122,7 +43122,7 @@ vozili	vozi
 stavějí	stavěj
 vozům	voz
 pomazání	pomaz
-perete	pere
+perete	per
 nespustím	nespus
 nevdám	nevd
 reda	red
@@ -43138,7 +43138,7 @@ sponky	spo
 klasiky	klas
 renfielde	renfield
 prodávající	prodávají
-ubližujete	ubližuje
+ubližujete	ubližuj
 potrebovat	potreb
 noble	nob
 otevri	otevr
@@ -43158,7 +43158,7 @@ obývacím	obýva
 nechytíme	nechytím
 vyloženě	vyloh
 jedˇ	jedˇ
-nepaměti	nepamě
+nepaměti	nepam
 posadˇte	posadˇ
 pánve	pánv
 vytížený	vytíh
@@ -43400,7 +43400,7 @@ vytratil	vytrati
 torpédoborec	torpédobor
 obešli	obeš
 zabloudila	zabloudi
-blbnete	blbne
+blbnete	blb
 narodíš	narodíš
 postupovali	postupova
 marcos	mar
@@ -43445,7 +43445,7 @@ automatickou	automat
 finsku	fins
 nejdůležitějším	nejdůležitěj
 naučily	nauči
-uvažujete	uvažuje
+uvažujete	uvažuj
 nadávají	nadávaj
 dceruška	dcer
 osobám	osob
@@ -43901,7 +43901,7 @@ slídit	slíd
 zkratky	zkra
 čerstvém	čers
 posiední	posied
-zdvihněte	zdvihně
+zdvihněte	zdvih
 nebyi	neby
 odvážného	odváž
 pózovat	póz
@@ -43990,7 +43990,7 @@ medik	med
 devet	deve
 rev	rev
 nízkého	níz
-obdivujete	obdivuje
+obdivujete	obdivuj
 svezla	svez
 chráněnec	chráněn
 neprojdeme	neprojdem
@@ -44101,7 +44101,7 @@ nepodal	nepoda
 podnikli	podnik
 cílová	cíl
 stárneme	stárnem
-pozvedněte	pozvedně
+pozvedněte	pozved
 hladovění	hladov
 podezíravý	podezírav
 dlaždice	dlažd
@@ -44181,7 +44181,7 @@ zkazím	zka
 reklamách	reklam
 očekáváním	očekává
 kokosy	kokos
-zmizněte	zmizně
+zmizněte	zmiz
 povim	povim
 zatopit	zatop
 dusíš	dusíš
@@ -44580,7 +44580,7 @@ plavčík	plav
 heslem	hes
 poflakoval	poflakova
 nákres	nák
-neseženete	nesežene
+neseženete	neseh
 lahodný	lahod
 vídá	víd
 nechodit	nechod
@@ -44641,7 +44641,7 @@ skrýši	skrýš
 dostavníku	dostav
 vrty	vrt
 sie	sie
-vyslechnete	vyslechne
+vyslechnete	vyslech
 nezmůžeme	nezmůžem
 cukrárně	cukr
 nakrmili	nakrmi
@@ -44740,7 +44740,7 @@ brownovi	brow
 otcových	otc
 nesmrtelným	nesmr
 slídí	slíd
-všimnete	všimne
+všimnete	všim
 férové	fér
 nevyhrála	nevyhrá
 stavitel	stav
@@ -45042,7 +45042,7 @@ kristýno	kristý
 předurčeni	předurk
 win	win
 dvořit	dvoř
-nabídnete	nabídne
+nabídnete	nabíd
 polepšit	polepš
 rozzuřil	rozzuři
 ubytovali	ubytova
@@ -45360,7 +45360,7 @@ citróny	citró
 sektory	sektor
 vymazán	vymaz
 předního	před
-hraběti	hrabě
+hraběti	hrab
 vystupují	vystupuj
 mýtu	mýt
 věštba	věštb
@@ -45553,7 +45553,7 @@ podnájem	podnáj
 brzdí	brzd
 rozhlas	rozhl
 chamtivosti	chamtiv
-zdržujete	zdržuje
+zdržujete	zdržuj
 hanebný	haneb
 považováni	považov
 nevztahuje	nevztahuj
@@ -45609,7 +45609,7 @@ promlouvat	promlouv
 vyhozený	vyhoh
 úctyhodný	úctyhod
 natáhneš	natáhneš
-nadějete	naděje
+nadějete	naděj
 růžově	růž
 prostých	pros
 litovali	litova
@@ -45679,7 +45679,7 @@ pracovnu	prac
 nevyslovuj	nevyslovuj
 cod	cod
 hup	hup
-zmáčknete	zmáčkne
+zmáčknete	zmáčk
 zkaženost	zkaže
 neklidná	neklid
 reynoldsi	reynolds
@@ -45777,7 +45777,7 @@ pečoval	pečova
 šmik	šmi
 champs	champs
 paranoik	parano
-převezmete	převezme
+převezmete	převezm
 spikli	spik
 zabraňuje	zabraňuj
 podvádíte	podvádí
@@ -45925,7 +45925,7 @@ skafandry	skafandr
 danielsová	daniels
 zámožný	zámož
 získalo	získa
-pronásledujete	pronásleduje
+pronásledujete	pronásleduj
 royale	roya
 povzbuzovat	povzbuz
 výkonná	výkon
@@ -46224,14 +46224,14 @@ sedat	sed
 bránilo	bráni
 spasil	spasi
 dopřejte	dopřej
-svezete	sveze
+svezete	sveh
 jezírku	jezír
 townsend	townsend
 kajutu	kaju
 seňorita	seňor
 hlašte	hlaš
 žlutém	žlu
-třesete	třese
+třesete	třes
 disciplíně	discipl
 zešílet	zešíle
 pochytil	pochyti
@@ -46241,11 +46241,11 @@ nesnáze	nesnáh
 uvědomíme	uvědomím
 trasou	tras
 tajemníkem	tajem
-podporujete	podporuje
+podporujete	podporuj
 nestaneš	nestaneš
 zpozdím	zpoz
 sazbu	sazb
-neutečete	neuteče
+neutečete	neu
 chatky	cha
 internátu	interná
 nacpi	nacp
@@ -46277,7 +46277,7 @@ tad	tad
 zdráva	zdráv
 bramborová	brambor
 probiémy	probiém
-přitáhněte	přitáhně
+přitáhněte	přitáh
 pino	pin
 zmar	zmar
 obhájit	obháj
@@ -46346,7 +46346,7 @@ ušlechtilá	ušlechti
 židech	žid
 incidenty	inciden
 vysprchovat	vysprch
-přejdete	přejde
+přejdete	přejd
 diamantové	diaman
 nevzpomíná	nevzpom
 hmyzem	hmyh
@@ -46409,7 +46409,7 @@ nejdrsnější	nejdrs
 pohřebák	pohřebá
 praskání	prask
 oáza	oáz
-seberete	sebere
+seberete	seber
 zdržování	zdržov
 nevkusné	nevkus
 dortem	dor
@@ -46496,7 +46496,7 @@ zatočím	zato
 kavalerii	kavaleri
 desátníka	desát
 snižují	snižuj
-doporučujete	doporučuje
+doporučujete	doporučuj
 zníte	zní
 masážní	masáž
 kancelářích	kancel
@@ -46609,7 +46609,7 @@ tančíme	tančím
 vyčkat	vyč
 armádních	armád
 závažnost	závaž
-neblbněte	neblbně
+neblbněte	neblb
 sei	sei
 vsech	vsech
 nastavena	nastav
@@ -47005,7 +47005,7 @@ krků	krk
 mcguire	mcguir
 kryštof	kryštof
 dírkou	dír
-pozvete	pozve
+pozvete	pozv
 davidova	david
 nenese	nenes
 rídit	ríd
@@ -47193,7 +47193,7 @@ barely	bare
 vyslýchá	vyslých
 bláhová	bláh
 přemohla	přemoh
-překvapujete	překvapuje
+překvapujete	překvapuj
 skleslý	skles
 vytrvale	vytrva
 vyplácet	vypláce
@@ -47212,7 +47212,7 @@ nehledají	nehledaj
 ríkat	rík
 nepolíbíš	nepolíbíš
 letušky	let
-ozvete	ozve
+ozvete	ozv
 woogie	woogi
 tlaková	tla
 šedivé	šed
@@ -47221,7 +47221,7 @@ svěřovat	svěř
 sayonara	sayonar
 francouzském	francouzs
 polovic	polov
-upozorněte	upozorně
+upozorněte	upozor
 hurikány	hurik
 piráta	pirá
 večerním	večer
@@ -47493,7 +47493,7 @@ hodinová	hod
 vršku	vrš
 pokloňte	pokloň
 nespokojenost	nespokoje
-múžete	múže
+múžete	múh
 martinu	mar
 sklonit	sklon
 luciano	luci
@@ -47514,7 +47514,7 @@ velkoryse	velkorys
 wichitě	wich
 rozplyne	rozpl
 instalaci	instala
-otravujete	otravuje
+otravujete	otravuj
 smyslné	smysl
 měřil	měři
 nízkým	níz
@@ -47885,7 +47885,7 @@ mandiro	mandir
 nahatej	nahatej
 podporuješ	podporuješ
 nějakejma	nějakejm
-odvažujete	odvažuje
+odvažujete	odvažuj
 vykoupu	vykoup
 rákosí	rákos
 nařídím	naří
@@ -47964,7 +47964,7 @@ připluje	připluj
 povolena	povol
 krach	krach
 zavřena	zavř
-ponesete	ponese
+ponesete	pones
 patřičné	patři
 osobními	osob
 společenském	společens
@@ -48003,7 +48003,7 @@ neviditelného	nevidi
 vrstvou	vrs
 zotavil	zotavi
 pletení	plet
-poslechnete	poslechne
+poslechnete	poslech
 dělostřelectva	dělostřele
 arden	ard
 vetřít	vetří
@@ -48013,7 +48013,7 @@ pochybuje	pochybuj
 rezignace	rezigna
 přivítanou	přivít
 puškami	puš
-kryjete	kryje
+kryjete	kryj
 vypořádáme	vypořádám
 brigádě	brigád
 nezískáte	nezíská
@@ -48061,7 +48061,7 @@ odveta	odve
 vyhlašuje	vyhlašuj
 severních	sever
 počínání	počín
-podceňujete	podceňuje
+podceňujete	podceňuj
 pihy	pih
 bazar	bazar
 utečme	utečm
@@ -48086,7 +48086,7 @@ vznesl	vznes
 gilesi	giles
 nezkoušela	nezkouše
 nemilé	nemi
-trhněte	trhně
+trhněte	trh
 snižování	snižov
 křižníky	křiž
 spojme	spojm
@@ -48102,7 +48102,7 @@ hromů	hrom
 strašíš	strašíš
 namazaný	namaz
 včelka	vče
-neotevřete	neotevře
+neotevřete	neotevř
 diesel	diese
 pojišťovnu	pojišť
 vystřílel	vystříle
@@ -48393,11 +48393,11 @@ tlustých	tlus
 hloupostmi	hloup
 rozmazlené	rozmazl
 quality	qual
-poděkujete	poděkuje
+poděkujete	poděkuj
 zatřást	zatřás
 flannagane	flannag
 nejroztomilejší	nejroztomi
-melete	mele
+melete	mel
 nesouhlasili	nesouhlasi
 zaměstnaní	zaměstn
 runy	run
@@ -48930,7 +48930,7 @@ tvěho	tvěh
 taktní	takt
 obligace	obliga
 neminul	nemin
-napněte	napně
+napněte	nap
 kopeme	kopem
 mnohá	mnoh
 johns	johns
@@ -48951,8 +48951,8 @@ tlamo	tlam
 pomstila	pomsti
 novorozeně	novoroh
 broskvička	bros
-prominete	promine
-utřete	utře
+prominete	prom
+utřete	utř
 nepoužíváte	nepoužívá
 ustane	ust
 kojota	koj
@@ -49033,7 +49033,7 @@ krajích	kraj
 velkolepou	velkolep
 vychovávali	vychováva
 vincentem	vincen
-pohnete	pohne
+pohnete	poh
 nesnesitelně	nesnesi
 tajemných	tajem
 vysvobodí	vysvobod
@@ -49078,7 +49078,7 @@ barelů	bare
 ropere	roper
 vydána	vyd
 profesorů	profesor
-přistanete	přistane
+přistanete	přist
 malíčku	ma
 lékařům	lékař
 respektujeme	respektujem
@@ -49324,7 +49324,7 @@ tear	tear
 poskytnutí	poskytnu
 kazdy	kazd
 roztrhnout	roztrhn
-prohlídněte	prohlídně
+prohlídněte	prohlíd
 hubeňour	hubeňour
 kristýna	kristý
 slin	sli
@@ -49560,7 +49560,7 @@ informátory	informátor
 vyrůstají	vyrůstaj
 vyloučil	vylouči
 údržbě	údržb
-nedovedete	nedovede
+nedovedete	nedoved
 helikoptér	helikoptér
 mom	mom
 half	half
@@ -49598,7 +49598,7 @@ loretta	loret
 točení	tok
 mordecai	mordeca
 odvysílat	odvysí
-přitahujete	přitahuje
+přitahujete	přitahuj
 nenaštvi	nenaš
 očitý	oči
 zdrojích	zdroj

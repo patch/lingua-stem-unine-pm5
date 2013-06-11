@@ -64,11 +64,11 @@ sub remove_case {
 
         return palatalize($word)
             if $word =~ s{ (?:
-                  (?<= ě     ) t[ei]  # -ěte -ěti      → -ě
-                | (?<= [éi]  ) mu     # -ému -imu      → -é -i
-                | (?<= [eií] ) ch     # -ech -ich -ích → -e -i -í
-                | (?<= [eěí] ) mi     # -emi -ěmi -ími → -e -ě -í
-                | (?<= [éií] ) ho     # -ého -iho -ího → -é -i -í
+                  (?<= [eě]  ) t[ei]  # -ete -eti -ěte -ěti → -e -ě
+                | (?<= [éi]  ) mu     # -ému -imu           → -é -i
+                | (?<= [eií] ) ch     # -ech -ich -ích      → -e -i -í
+                | (?<= [eěí] ) mi     # -emi -ěmi -ími      → -e -ě -í
+                | (?<= [éií] ) ho     # -ého -iho -ího      → -é -i -í
             ) $}{}x;
     }
 
