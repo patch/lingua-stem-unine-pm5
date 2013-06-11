@@ -6,6 +6,8 @@ use strict;
 use warnings;
 use charnames ':full';
 use parent 'Exporter';
+use Unicode::CaseFold qw( fc );
+use Unicode::Normalize qw( NFC );
 
 our $VERSION   = '0.04';
 our @EXPORT_OK = qw( stem stem_fa );
@@ -15,6 +17,7 @@ our @EXPORT_OK = qw( stem stem_fa );
 sub stem {
     my ($word) = @_;
 
+    $word = NFC fc $word;
     $word = remove_kasra($word);
     $word = remove_suffix($word);
     $word = remove_kasra($word);
