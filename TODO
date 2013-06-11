@@ -1,9 +1,0 @@
-Lingua::Stem::UniNE to-do list
-
-* Additional languages:
-  * Eastern: Bengali, Hindi, Marathi
-  * Uralic: Finnish, Hungarian
-  * Italic: French, Italian, Portuguese, Spanish
-  * Others: Arabic, German, Russian, Swedish
-* Add aggressive option: Czech
-* Add caching option
