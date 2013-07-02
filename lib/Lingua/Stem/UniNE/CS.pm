@@ -1,6 +1,6 @@
 package Lingua::Stem::UniNE::CS;
 
-use v5.8;
+use v5.10;
 use utf8;
 use strict;
 use warnings;
@@ -52,7 +52,7 @@ sub remove_case {
             if $word =~ s{ atům $}{}x;
 
         return palatalize($word)
-            if $word =~ s{ (?<= ě ) tem $}{}x;  # -ětem → -ě
+            if $word =~ s{ ě \K tem $}{}x;  # -ětem → -ě
     }
 
     if ($length > 5) {
@@ -67,11 +67,11 @@ sub remove_case {
 
         return palatalize($word)
             if $word =~ s{ (?:
-                  (?<= [eě]  ) t[ei]  # -ete -eti -ěte -ěti → -e -ě
-                | (?<= [éi]  ) mu     # -ému -imu           → -é -i
-                | (?<= [eií] ) ch     # -ech -ich -ích      → -e -i -í
-                | (?<= [eěí] ) mi     # -emi -ěmi -ími      → -e -ě -í
-                | (?<= [éií] ) ho     # -ého -iho -ího      → -é -i -í
+                  [eě]  \K t[ei]  # -ete -eti -ěte -ěti → -e -ě
+                | [éi]  \K mu     # -ému -imu           → -é -i
+                | [eií] \K ch     # -ech -ich -ích      → -e -i -í
+                | [eěí] \K mi     # -emi -ěmi -ími      → -e -ě -í
+                | [éií] \K ho     # -ého -iho -ího      → -é -i -í
             ) $}{}x;
     }
 
@@ -87,9 +87,9 @@ sub remove_case {
 
         return palatalize($word)
             if $word =~ s{ (?:
-                  es          # -es
-                | [éí]m       # -ém -ím
-                | (?<= e ) m  # -em → -e
+                  es      # -es
+                | [éí]m   # -ém -ím
+                | e \K m  # -em → -e
             ) $}{}x;
     }
 
@@ -115,7 +115,7 @@ sub remove_possessive {
         if $word =~ s{ [oů]v $}{}x;  # -ov -ův
 
     return palatalize($word)
-        if $word =~ s{ (?<= i ) n $}{}x;  # -in → -i
+        if $word =~ s{ i \K n $}{}x;  # -in → -i
 
     return $word;
 }
@@ -127,7 +127,7 @@ sub remove_comparative {
         if length $word < 6;
 
     return palatalize($word)
-        if $word =~ s{ (?<= [eě] ) jš $}{}x;  # -ejš -ějš → -e -ě
+        if $word =~ s{ [eě] \K jš $}{}x;  # -ejš -ějš → -e -ě
 
     return $word;
 }
@@ -148,7 +148,7 @@ sub remove_diminutive {
 
         # -eček -éček -enek -ének -iček -íček -inek -ínek → -e -é -i -í
         return palatalize($word)
-            if $word =~ s{ (?<= [eéií] ) [čn]ek $}{}x;
+            if $word =~ s{ [eéií] \K [čn]ek $}{}x;
     }
 
     if ($length > 5) {
@@ -164,11 +164,11 @@ sub remove_diminutive {
     if ($length > 4) {
         # -ak -ák -ok -uk → -a -á -o -u
         return $word
-            if $word =~ s{ (?<= [aáou] ) k $}{}x;
+            if $word =~ s{ [aáou] \K k $}{}x;
 
         # -ek -ék -ik -ík → -e -é -i -í
         return palatalize($word)
-            if $word =~ s{ (?<= [eéií] ) k $}{}x;
+            if $word =~ s{ [eéií] \K k $}{}x;
     }
 
     if ($length > 3) {
@@ -190,7 +190,7 @@ sub remove_augmentative {
 
     if ($length > 5) {
         return palatalize($word)
-            if $word =~ s{ (?<= i ) (?: sk | zn ) $}{}x;  # -isk -izn → -i
+            if $word =~ s{ i \K (?: sk | zn ) $}{}x;  # -isk -izn → -i
     }
 
     if ($length > 4) {
@@ -217,7 +217,7 @@ sub remove_derivational {
 
         # -ionář → -i
         return palatalize($word)
-            if $word =~ s{ (?<= i ) onář $}{}x;
+            if $word =~ s{ i \K onář $}{}x;
     }
 
     if ($length > 6) {
@@ -229,7 +229,7 @@ sub remove_derivational {
 
         # -enic -inec -itel → -e -i
         return palatalize($word)
-            if $word =~ s{ (?: (?<= e ) nic | (?<= i ) (?: nec | tel ) ) $}{}x;
+            if $word =~ s{ (?: e \K nic | i \K (?: nec | tel ) ) $}{}x;
     }
 
     if ($length > 5) {
@@ -237,15 +237,15 @@ sub remove_derivational {
             if $word =~ s{ árn $}{}x;
 
         return palatalize($word)
-            if $word =~ s{ (?<= ě ) nk $}{}x;  # -ěnk → -ě
+            if $word =~ s{ ě \K nk $}{}x;  # -ěnk → -ě
 
         # -ián -isk -ist -išt -itb → -i -í
         return palatalize($word)
-            if $word =~ s{ (?<= i ) (?: án | sk | st | št | tb ) $}{}x;
+            if $word =~ s{ i \K (?: án | sk | st | št | tb ) $}{}x;
 
         # -írn → -í
         return palatalize($word)
-            if $word =~ s{ (?<= í ) rn $}{}x;
+            if $word =~ s{ í \K rn $}{}x;
 
         # -och -ost -oun -ouš -out -ovn
         return $word
@@ -265,11 +265,11 @@ sub remove_derivational {
         # -ec -en -ěn -éř -ic -in -it -iv -ín -íř → -e -ě -é -i -í
         return palatalize($word)
             if $word =~ s{ (?:
-                  (?<= e ) [cn]
-                | (?<= ě ) n
-                | (?<= é ) ř
-                | (?<= i ) [cntv]
-                | (?<= í ) [nř]
+                  e \K [cn]
+                | ě \K n
+                | é \K ř
+                | i \K [cntv]
+                | í \K [nř]
             ) $}{}x;
 
         # -čk -čn -dl -nk -ob -oň -ot -ov -tk -tv -ul -vk -yn

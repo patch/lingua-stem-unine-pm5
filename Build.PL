@@ -15,7 +15,7 @@ my $builder = Module::Build->new(
         'Test::More'   => '0.82',
     },
     requires => {
-        'perl'               => '5.8.0',  # minimum Unicode support
+        'perl'               => '5.10.0',  # \K
         'charnames'          => 0,
         'parent'             => 0,
         'strict'             => 0,
