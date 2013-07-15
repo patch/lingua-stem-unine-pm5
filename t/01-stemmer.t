@@ -2,7 +2,7 @@ use utf8;
 use strict;
 use warnings;
 use open qw( :encoding(UTF-8) :std );
-use Test::More tests => 27;
+use Test::More tests => 31;
 use Lingua::Stem::UniNE;
 
 my (@words, @words_copy);
@@ -37,6 +37,12 @@ is scalar $stemmer->stem('prosím'),   'pro',   'word in scalar context';
 is scalar $stemmer->stem(),           undef,   'empty list in scalar context';
 
 is $stemmer->stem('работа'), 'работа', 'only stem for current language';
+
+ok !$stemmer->aggressive,               'light stemmer by default';
+is $stemmer->stem('všechno'), 'všechn', 'light stemmer';
+$stemmer->aggressive(1);
+ok $stemmer->aggressive,                'aggressive stemmer explicitly set';
+is $stemmer->stem('všechno'), 'všech',  'aggressive stemmer';
 
 $stemmer->language('bg');
 is $stemmer->language,       'bg',  'language changed via write-accessor';
