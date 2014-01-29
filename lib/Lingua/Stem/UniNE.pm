@@ -1,9 +1,11 @@
 package Lingua::Stem::UniNE;
 
-use v5.8;
+use v5.8.1;
 use utf8;
-use Moo;
 use Carp;
+
+use Moo;
+use namespace::clean;
 
 our $VERSION = '0.04';
 
@@ -173,9 +175,8 @@ L<Jacques Savoy|http://members.unine.ch/jacques.savoy/> and Ljiljana Dolamic of
 the University of Neuchâtel authored the original stemming algorithms that were
 implemented in this module.
 
-This module is brought to you by L<Shutterstock|http://www.shutterstock.com/>
-(L<@ShutterTech|https://twitter.com/ShutterTech>).  Additional open source
-projects from Shutterstock can be found at
+This project is brought to you by L<Shutterstock|http://www.shutterstock.com/>.
+Additional open source projects from Shutterstock can be found at
 L<code.shutterstock.com|http://code.shutterstock.com/>.
 
 =head1 AUTHOR
@@ -184,7 +185,7 @@ Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-© 2012–2013 Nick Patch
+© 2013–2014 Shutterstock, Inc.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.

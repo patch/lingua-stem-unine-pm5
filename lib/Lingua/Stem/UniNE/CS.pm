@@ -1,6 +1,6 @@
 package Lingua::Stem::UniNE::CS;
 
-use v5.8;
+use v5.8.1;
 use utf8;
 use strict;
 use warnings;
@@ -363,13 +363,17 @@ official distribution and therefore not included in L<Lingua::Stem::Snowball>.
 Ljiljana Dolamic and Jacques Savoy of the University of Neuchâtel authored the
 original stemming algorithm that was implemented in this module.
 
+This module is brought to you by L<Shutterstock|http://www.shutterstock.com/>.
+Additional open source projects from Shutterstock can be found at
+L<code.shutterstock.com|http://code.shutterstock.com/>.
+
 =head1 AUTHOR
 
 Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-© 2012–2013 Nick Patch
+© 2013–2014 Shutterstock, Inc.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.

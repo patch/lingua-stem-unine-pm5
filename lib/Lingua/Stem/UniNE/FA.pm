@@ -1,6 +1,6 @@
 package Lingua::Stem::UniNE::FA;
 
-use v5.8;
+use v5.8.1;
 use utf8;
 use strict;
 use warnings;
@@ -144,7 +144,7 @@ Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-© 2012–2013 Nick Patch
+© 2012–2014 Nick Patch
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
