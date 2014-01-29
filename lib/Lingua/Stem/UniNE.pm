@@ -39,20 +39,9 @@ sub languages {
 
 sub stem {
     my $self = shift;
+    my @stems = map { $self->_stemmer->($_) } @_;
 
-    # in-place stemming of arrayrefs is deprecated, has moved to the
-    # stem_in_place method of Lingua::Stem::Any, and will be removed in a future
-    # release
-    if (@_ == 1 && ref $_[0] eq 'ARRAY') {
-        for my $word ( @{$_[0]} ) {
-            $word = $self->_stemmer->($word);
-        }
-        return;
-    }
-    else {
-        my @stems = map { $self->_stemmer->($_) } @_;
-        return wantarray ? @stems : pop @stems;
-    }
+    return wantarray ? @stems : pop @stems;
 }
 
 1;

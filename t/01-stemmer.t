@@ -2,7 +2,7 @@ use utf8;
 use strict;
 use warnings;
 use open qw( :encoding(UTF-8) :std );
-use Test::More tests => 31;
+use Test::More tests => 30;
 use Lingua::Stem::UniNE;
 
 my (@words, @words_copy);
@@ -25,9 +25,6 @@ is scalar Lingua::Stem::UniNE::languages,    $langs, 'function scalar';
 @words = @words_copy = qw( že dobře ještě );
 is_deeply [$stemmer->stem(@words)], [qw( že dobř jesk )], 'list of words';
 is_deeply \@words, \@words_copy, 'not destructive on arrays';
-
-$stemmer->stem(\@words);
-is_deeply \@words, [qw( že dobř jesk )], 'arrayref modified in place';
 
 is_deeply scalar $stemmer->stem(@words), 'jesk', 'list of words in scalar';
 
