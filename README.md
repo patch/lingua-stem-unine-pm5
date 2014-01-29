@@ -25,12 +25,12 @@ $stem = $stemmer->stem($word);
 
 This module contains a collection of stemmers for multiple languages based on
 stemming algorithms provided by Jacques Savoy of the University of Neuchâtel
-(UniNE).  The languages currently implemented are
+(UniNE). The languages currently implemented are
 [Bulgarian](https://metacpan.org/pod/Lingua::Stem::UniNE::BG), [Czech](https://metacpan.org/pod/Lingua::Stem::UniNE::CS), and
-[Persian](https://metacpan.org/pod/Lingua::Stem::UniNE::FA).  Work is ongoing for Arabic, Bengali,
+[Persian](https://metacpan.org/pod/Lingua::Stem::UniNE::FA). Work is ongoing for Arabic, Bengali,
 Finnish, French, German, Hindi, Hungarian, Italian, Portuguese, Marathi,
-Russian, Spanish, and Swedish.  The top priority is languages for which there
-are no stemmers available on CPAN.
+Russian, Spanish, and Swedish. The top priority is languages for which there are
+no stemmers available on CPAN.
 
 ## Attributes
 
@@ -65,9 +65,9 @@ are no stemmers available on CPAN.
 
 - stem
 
-    Accepts a list of words, stems each word, and returns a list of stems.  The list
+    Accepts a list of words, stems each word, and returns a list of stems. The list
     returned will always have the same number of elements in the same order as the
-    list provided.  When no stemming rules apply to a word, the original word is
+    list provided. When no stemming rules apply to a word, the original word is
     returned.
 
     ```perl
@@ -78,7 +78,7 @@ are no stemmers available on CPAN.
     ```
 
     The words should be provided as character strings and the stems are returned as
-    character strings.  Byte strings in arbitrary character encodings are
+    character strings. Byte strings in arbitrary character encodings are
     intentionally not supported.
 
 - languages

@@ -328,21 +328,21 @@ This document describes Lingua::Stem::UniNE::CS v0.04.
 
 =head1 DESCRIPTION
 
-Light and aggressive stemmers for the Czech language.  The light stemmer removes
+Light and aggressive stemmers for the Czech language. The light stemmer removes
 case endings from nouns and adjectives, possessive adjective endings from names,
-and takes care of palatalization.  The aggressive stemmer also removes
+and takes care of palatalization. The aggressive stemmer also removes
 diminutive, augmentative, and comparative sufixes and derivational sufixes from
 nouns.
 
 This module provides the C<stem> and C<stem_cs> functions for the light stemmer,
 which are synonymous and can optionally be exported, plus C<stem_aggressive> and
-C<stem_cs_aggressive> functions for the light stemmer.  They accept a single
-word and return a single stem.
+C<stem_cs_aggressive> functions for the light stemmer. They accept a single word
+and return a single stem.
 
 =head1 SEE ALSO
 
 L<Lingua::Stem::UniNE> provides a stemming object with access to all of the
-implemented University of Neuchâtel stemmers including this one.  It has
+implemented University of Neuchâtel stemmers including this one. It has
 additional features like stemming lists of words.
 
 L<Lingua::Stem::Any> provides a unified interface to any stemmer on CPAN,

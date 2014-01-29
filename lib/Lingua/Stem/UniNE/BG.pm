@@ -140,13 +140,13 @@ This document describes Lingua::Stem::UniNE::BG v0.04.
 A stemmer for the Bulgarian language.
 
 This module provides the C<stem> and C<stem_bg> functions, which are synonymous
-and can optionally be exported.  They accept a single word and return a single
+and can optionally be exported. They accept a single word and return a single
 stem.
 
 =head1 SEE ALSO
 
 L<Lingua::Stem::UniNE> provides a stemming object with access to all of the
-implemented University of Neuchâtel stemmers including this one.  It has
+implemented University of Neuchâtel stemmers including this one. It has
 additional features like stemming lists of words.
 
 L<Lingua::Stem::Any> provides a unified interface to any stemmer on CPAN,
