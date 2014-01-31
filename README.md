@@ -61,6 +61,15 @@ no stemmers available on CPAN.
     Country codes such as `cz` for the Czech Republic are not supported, nor are
     IETF language tags such as `fa-AF` or `fa-IR`.
 
+- aggressive
+
+    When set to true, aggressive stemmers will be used when available. By default,
+    light stemmers are used when there or multiple options.
+
+    ```perl
+    $stemmer->aggressive(1);
+    ```
+
 ## Methods
 
 - stem

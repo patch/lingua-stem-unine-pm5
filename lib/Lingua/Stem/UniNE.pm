@@ -21,6 +21,12 @@ has language => (
     required => 1,
 );
 
+has aggressive => (
+    is      => 'rw',
+    coerce  => sub { $_[0] ? 1 : 0 },
+    default => 0,
+);
+
 has _stemmer => (
     is => 'rw',
 );
@@ -110,6 +116,13 @@ always returned in lowercase when requested.
 
 Country codes such as C<cz> for the Czech Republic are not supported, nor are
 IETF language tags such as C<fa-AF> or C<fa-IR>.
+
+=item aggressive
+
+When set to true, aggressive stemmers will be used when available. By default,
+light stemmers are used when there or multiple options.
+
+    $stemmer->aggressive(1);
 
 =back
 
