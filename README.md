@@ -63,8 +63,9 @@ no stemmers available on CPAN.
 
 - aggressive
 
-    When set to true, aggressive stemmers will be used when available. By default,
-    light stemmers are used when there or multiple options.
+    By default, if there are multiple strenghs of stemmers, the light stemmers will
+    be used. When `aggressive` is set to true, aggressive stemmers will be used if
+    available.
 
     ```perl
     $stemmer->aggressive(1);

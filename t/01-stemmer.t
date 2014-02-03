@@ -35,6 +35,7 @@ is scalar $stemmer->stem(),           undef,   'empty list in scalar context';
 
 is $stemmer->stem('работа'), 'работа', 'only stem for current language';
 
+$stemmer->language('cs');
 ok !$stemmer->aggressive,               'light stemmer by default';
 is $stemmer->stem('všechno'), 'všechn', 'light stemmer';
 $stemmer->aggressive(1);

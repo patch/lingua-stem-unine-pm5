@@ -9,8 +9,11 @@ use namespace::clean;
 
 our $VERSION = '0.04';
 
-my @languages = qw( bg cs fa );
-my %is_language = map { $_ => 1 } @languages;
+my @languages  = qw( bg cs fa );
+my @aggressive = qw( cs );
+
+my %is_language    = map { $_ => 1 } @languages;
+my %has_aggressive = map { $_ => 1 } @aggressive;
 
 has language => (
     is       => 'rw',
@@ -24,6 +27,7 @@ has language => (
 has aggressive => (
     is      => 'rw',
     coerce  => sub { $_[0] ? 1 : 0 },
+    trigger => \&_trigger_language,
     default => 0,
 );
 
@@ -34,9 +38,14 @@ has _stemmer => (
 sub _trigger_language {
     my $self = shift;
     my $language = uc $self->language;
+    my $function = 'stem';
+
+    if ($self->aggressive && $has_aggressive{$self->language}) {
+        $function .= '_aggressive';
+    }
 
     require "Lingua/Stem/UniNE/$language.pm";
-    $self->_stemmer( \&{"Lingua::Stem::UniNE::${language}::stem"} );
+    $self->_stemmer( \&{"Lingua::Stem::UniNE::$language::$function"} );
 }
 
 sub languages {
@@ -119,8 +128,9 @@ IETF language tags such as C<fa-AF> or C<fa-IR>.
 
 =item aggressive
 
-When set to true, aggressive stemmers will be used when available. By default,
-light stemmers are used when there or multiple options.
+By default, if there are multiple strenghs of stemmers, the light stemmers will
+be used. When C<aggressive> is set to true, aggressive stemmers will be used if
+available.
 
     $stemmer->aggressive(1);
 
