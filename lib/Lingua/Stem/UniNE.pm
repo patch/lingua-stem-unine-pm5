@@ -20,22 +20,25 @@ has language => (
     isa      => sub { croak "Invalid language '$_[0]'"
                       unless $is_language{$_[0]} },
     coerce   => sub { defined $_[0] ? lc $_[0] : '' },
-    trigger  => 1,
+    trigger  => sub { $_[0]->_clear_stemmer },
     required => 1,
 );
 
 has aggressive => (
     is      => 'rw',
-    coerce  => sub { $_[0] ? 1 : 0 },
-    trigger => \&_trigger_language,
+    coerce  => sub { !!$_[0] },
+    trigger => sub { $_[0]->_clear_stemmer },
     default => 0,
 );
 
 has _stemmer => (
-    is => 'rw',
+    is      => 'rw',
+    builder => '_build_stemmer',
+    clearer => '_clear_stemmer',
+    lazy    => 1,
 );
 
-sub _trigger_language {
+sub _build_stemmer {
     my $self = shift;
     my $language = uc $self->language;
     my $function = 'stem';
