@@ -9,7 +9,7 @@ use namespace::clean;
 
 our $VERSION = '0.04_1';
 
-my @languages  = qw( bg cs fa );
+my @languages  = qw( bg cs de fa );
 my @aggressive = qw( cs );
 
 my %is_language    = map { $_ => 1 } @languages;
@@ -111,6 +111,7 @@ The following language codes are currently supported.
     ┌───────────┬────┐
     │ Bulgarian │ bg │
     │ Czech     │ cs │
+    │ German    │ de │
     │ Persian   │ fa │
     └───────────┴────┘
 
@@ -200,7 +201,7 @@ Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-© 2013–2014 Shutterstock, Inc.
+© 2012–2014 Shutterstock, Inc.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.

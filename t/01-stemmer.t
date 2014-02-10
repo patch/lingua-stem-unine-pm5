@@ -13,7 +13,7 @@ can_ok $stemmer, qw( stem language languages );
 
 is $stemmer->language, 'cs', 'language read-accessor';
 
-my @langs = qw( bg cs fa );
+my @langs = qw( bg cs de fa );
 my $langs = @langs;
 is_deeply [$stemmer->languages],            \@langs, 'object method list';
 is_deeply [Lingua::Stem::UniNE->languages], \@langs, 'class method list';
