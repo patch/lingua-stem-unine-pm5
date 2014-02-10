@@ -37,7 +37,7 @@ sub stem_aggressive {
     return $word;
 }
 
-# remove case endings from nouns and adjectives
+# remove grammatical case endings from nouns and adjectives
 sub remove_case {
     my ($word) = @_;
     my $length = length $word;
@@ -329,10 +329,10 @@ This document describes Lingua::Stem::UniNE::CS v0.04_1.
 =head1 DESCRIPTION
 
 Light and aggressive stemmers for the Czech language. The light stemmer removes
-case endings from nouns and adjectives, possessive adjective endings from names,
-and takes care of palatalization. The aggressive stemmer also removes
-diminutive, augmentative, and comparative sufixes and derivational sufixes from
-nouns.
+grammatical case endings from nouns and adjectives, possessive adjective endings
+from names, and takes care of palatalization. The aggressive stemmer also
+removes diminutive, augmentative, and comparative sufixes and derivational
+sufixes from nouns.
 
 This module provides the C<stem> and C<stem_cs> functions for the light stemmer,
 which are synonymous and can optionally be exported, plus C<stem_aggressive> and
@@ -373,7 +373,7 @@ Nick Patch <patch@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-© 2013–2014 Shutterstock, Inc.
+© 2012–2014 Shutterstock, Inc.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
