@@ -39,17 +39,19 @@ sub remove_plural {
     my $length = length $word;
 
     return $word
-        if $length < 4;
+        if $length < 5;
 
     $word = remove_diacritic($word);
 
-    return $word
-        if $length > 5
-        && $word =~ s{ nen $}{}x;  # -nen
+    if ($length > 6) {
+        return $word
+            if $word =~ s{ nen $}{}x;  # -nen
+    }
 
-    return $word
-        if $length > 4
-        && $word =~ s{ (?: e[nrs] | se ) $}{}x;  # -en -er -es -se
+    if ($length > 5) {
+        return $word
+            if $word =~ s{ (?: e[nrs] | se ) $}{}x;  # -en -er -es -se
+    }
 
     return $word
         if $word =~ s{ [enrs] $}{}x;  # -e -n -r -s
