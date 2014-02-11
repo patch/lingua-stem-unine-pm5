@@ -10,7 +10,7 @@ use namespace::clean;
 our $VERSION = '0.04_1';
 
 my @languages  = qw( bg cs de fa );
-my @aggressive = qw( cs );
+my @aggressive = qw( cs de );
 
 my %is_language    = map { $_ => 1 } @languages;
 my %has_aggressive = map { $_ => 1 } @aggressive;

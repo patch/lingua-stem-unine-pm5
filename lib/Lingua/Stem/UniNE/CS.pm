@@ -27,6 +27,7 @@ sub stem {
 sub stem_aggressive {
     my ($word) = @_;
 
+    $word = NFC fc $word;
     $word = remove_case($word);
     $word = remove_possessive($word);
     $word = remove_comparative($word);

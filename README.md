@@ -41,6 +41,7 @@ no stemmers available on CPAN.
         ┌───────────┬────┐
         │ Bulgarian │ bg │
         │ Czech     │ cs │
+        │ German    │ de │
         │ Persian   │ fa │
         └───────────┴────┘
 
@@ -132,7 +133,7 @@ Nick Patch <patch@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-© 2013–2014 Shutterstock, Inc.
+© 2012–2014 Shutterstock, Inc.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
