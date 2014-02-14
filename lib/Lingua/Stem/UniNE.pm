@@ -48,7 +48,7 @@ sub _build_stemmer {
     }
 
     require "Lingua/Stem/UniNE/$language.pm";
-    $self->_stemmer( \&{"Lingua::Stem::UniNE::$language::$function"} );
+    $self->_stemmer( \&{"Lingua::Stem::UniNE::${language}::${function}"} );
 }
 
 sub languages {
