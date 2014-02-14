@@ -7,7 +7,7 @@ use Carp;
 use Moo;
 use namespace::clean;
 
-our $VERSION = '0.04_1';
+our $VERSION = '0.05';
 
 my @languages  = qw( bg cs de fa );
 my @aggressive = qw( cs de );
@@ -74,7 +74,7 @@ Lingua::Stem::UniNE - University of Neuchâtel stemmers
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE v0.04_1.
+This document describes Lingua::Stem::UniNE v0.05.
 
 =head1 SYNOPSIS
 

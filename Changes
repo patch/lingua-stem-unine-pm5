@@ -1,7 +1,17 @@
 Revision history for Perl module Lingua::Stem::UniNE
 
+v0.05 2014-02-13
+ - Added aggressive attribute which defaults to false [github #1]
+ - Added light and aggressive German (de) stemmers
+ - Added aggressive Czech (cs) stemmer
+ - Modified light Czech (cs) stemmer to also remove -ete -eti
+ - Restored Unicode case folding and normalization because they’re required for
+   proper stemming using the current regular expressions
+ - Removed in-place stemming of arrayrefs in favor
+   Lingua::Stem::Any->stem_in_place
+
 v0.04 2013-04-26
- - Moved Unicode casefolding and normalization out of Lingua::Stem::UniNE and
+ - Moved Unicode case folding and normalization out of Lingua::Stem::UniNE and
    into Lingua::Stem::Any
  - Deprecated in-place stemming of arrayrefs, which will be removed in a future
    release, in favor of the stem_in_place method of Lingua::Stem::Any
