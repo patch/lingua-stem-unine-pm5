@@ -1,5 +1,8 @@
 Revision history for Perl module Lingua::Stem::UniNE
 
+v0.06 2014-02-14
+ - Fixed fatal interpolation bug in Perl ≤5.16.x [github #5]
+
 v0.05 2014-02-13
  - Added aggressive attribute which defaults to false [github #1]
  - Added light and aggressive German (de) stemmers

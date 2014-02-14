@@ -8,7 +8,7 @@ use parent 'Exporter';
 use Unicode::CaseFold qw( fc );
 use Unicode::Normalize qw( NFC );
 
-our $VERSION   = '0.05';
+our $VERSION   = '0.06';
 our @EXPORT_OK = qw( stem stem_cs stem_aggressive stem_cs_aggressive );
 
 *stem_cs            = \&stem;
@@ -314,7 +314,7 @@ Lingua::Stem::UniNE::CS - Czech stemmer
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE::CS v0.05.
+This document describes Lingua::Stem::UniNE::CS v0.06.
 
 =head1 SYNOPSIS
 
