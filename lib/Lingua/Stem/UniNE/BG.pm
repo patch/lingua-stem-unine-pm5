@@ -153,15 +153,10 @@ L<Lingua::Stem::Any> provides a unified interface to any stemmer on CPAN,
 including this one, as well as additional features like normalization,
 casefolding, and in-place stemming.
 
-This stemming algorithm was defined in
+This module is based on a stemming algorithm defined in
 L<Searching Strategies for the Bulgarian Language|http://dl.acm.org/citation.cfm?id=1298736>
-(PDF) by Jacques Savoy and originally implemented by him as a
+(PDF) by Jacques Savoy of the University of Neuchâtel and implemented in a
 L<Perl script|http://members.unine.ch/jacques.savoy/clef/bulgarianStemmer.txt>.
-
-=head1 ACKNOWLEDGEMENTS
-
-Jacques Savoy of the University of Neuchâtel authored the original stemming
-algorithm that was implemented in this module.
 
 =head1 AUTHOR
 

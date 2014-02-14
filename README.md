@@ -4,7 +4,7 @@ Lingua::Stem::UniNE - University of Neuchâtel stemmers
 
 # VERSION
 
-This document describes Lingua::Stem::UniNE v0.04_1.
+This document describes Lingua::Stem::UniNE v0.04\_1.
 
 # SYNOPSIS
 
@@ -26,11 +26,11 @@ $stem = $stemmer->stem($word);
 This module contains a collection of stemmers for multiple languages based on
 stemming algorithms provided by Jacques Savoy of the University of Neuchâtel
 (UniNE). The languages currently implemented are
-[Bulgarian](https://metacpan.org/pod/Lingua::Stem::UniNE::BG), [Czech](https://metacpan.org/pod/Lingua::Stem::UniNE::CS), and
-[Persian](https://metacpan.org/pod/Lingua::Stem::UniNE::FA). Work is ongoing for Arabic, Bengali,
-Finnish, French, German, Hindi, Hungarian, Italian, Portuguese, Marathi,
-Russian, Spanish, and Swedish. The top priority is languages for which there are
-no stemmers available on CPAN.
+[Bulgarian](https://metacpan.org/pod/Lingua::Stem::UniNE::BG), [Czech](https://metacpan.org/pod/Lingua::Stem::UniNE::CS),
+[German](https://metacpan.org/pod/Lingua::Stem::UniNE::DE), and [Persian](https://metacpan.org/pod/Lingua::Stem::UniNE::FA). Work
+is ongoing for Arabic, Bengali, Finnish, French, Hindi, Hungarian, Italian,
+Portuguese, Marathi, Russian, Spanish, and Swedish. The top priority is
+languages for which there are no stemmers available on CPAN.
 
 ## Attributes
 
@@ -64,13 +64,15 @@ no stemmers available on CPAN.
 
 - aggressive
 
-    By default, if there are multiple strenghs of stemmers, the light stemmers will
-    be used. When `aggressive` is set to true, aggressive stemmers will be used if
+    By default, if there are multiple strengths of stemmers, a light stemmer will be
+    used. When `aggressive` is set to true, an aggressive stemmer will be used if
     available.
 
     ```perl
     $stemmer->aggressive(1);
     ```
+
+    Czech and German have aggressive options.
 
 ## Methods
 
@@ -106,9 +108,6 @@ no stemmers available on CPAN.
 
 # SEE ALSO
 
-[IR Multilingual Resources at UniNE](http://members.unine.ch/jacques.savoy/clef/)
-provides the original stemming algorithms that were implemented in this module.
-
 [Lingua::Stem::Any](https://metacpan.org/pod/Lingua::Stem::Any) provides a unified interface to any stemmer on CPAN,
 including this module, as well as additional features like normalization,
 casefolding, and in-place stemming.
@@ -117,19 +116,17 @@ casefolding, and in-place stemming.
 French, German, Hungarian, Italian, Portuguese, Russian, Spanish, and Swedish,
 as well as other languages.
 
-# ACKNOWLEDGEMENTS
-
-[Jacques Savoy](http://members.unine.ch/jacques.savoy/) and Ljiljana Dolamic of
-the University of Neuchâtel authored the original stemming algorithms that were
-implemented in this module.
-
-This project is brought to you by [Shutterstock](http://www.shutterstock.com/).
-Additional open source projects from Shutterstock can be found at
-[code.shutterstock.com](http://code.shutterstock.com/).
+These stemming algorithms are based on definition and implementations by Jacques
+Savoy and Ljiljana Dolamic of the University of Neuchâtel and provided at
+[IR Multilingual Resources at UniNE](http://members.unine.ch/jacques.savoy/clef/).
 
 # AUTHOR
 
 Nick Patch <patch@cpan.org>
+
+This project is brought to you by [Shutterstock](http://www.shutterstock.com/).
+Additional open source projects from Shutterstock can be found at
+[code.shutterstock.com](http://code.shutterstock.com/).
 
 # COPYRIGHT AND LICENSE
 

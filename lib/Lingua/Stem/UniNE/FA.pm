@@ -130,13 +130,9 @@ L<Lingua::Stem::Any> provides a unified interface to any stemmer on CPAN,
 including this one, as well as additional features like normalization,
 casefolding, and in-place stemming.
 
-This stemming algorithm was originally implemented by Ljiljana Dolamic in
+This module is based on a stemming algorithm by Ljiljana Dolamic and Jacques
+Savoy of the University of Neuchâtel and implemented in
 L<Java|http://members.unine.ch/jacques.savoy/clef/persianStemmerUnicode.txt>.
-
-=head1 ACKNOWLEDGEMENTS
-
-Ljiljana Dolamic and Jacques Savoy of the University of Neuchâtel authored the
-original stemming algorithm that was implemented in this module.
 
 =head1 AUTHOR
 

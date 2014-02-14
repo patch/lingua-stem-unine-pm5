@@ -332,8 +332,8 @@ This document describes Lingua::Stem::UniNE::CS v0.04_1.
 Light and aggressive stemmers for the Czech language. The light stemmer removes
 grammatical case endings from nouns and adjectives, possessive adjective endings
 from names, and takes care of palatalization. The aggressive stemmer also
-removes diminutive, augmentative, and comparative sufixes and derivational
-sufixes from nouns.
+removes diminutive, augmentative, and comparative suffixes and derivational
+suffixes from nouns.
 
 This module provides the C<stem> and C<stem_cs> functions for the light stemmer,
 which are synonymous and can optionally be exported, plus C<stem_aggressive> and
@@ -350,27 +350,23 @@ L<Lingua::Stem::Any> provides a unified interface to any stemmer on CPAN,
 including this one, as well as additional features like normalization,
 casefolding, and in-place stemming.
 
-This stemming algorithm was defined in
-L<Indexing and stemming approaches for the Czech language|http://dl.acm.org/citation.cfm?id=1598600>
-(PDF) by Ljiljana Dolamic and Jacques Savoy and originally implemented by
-Ljiljana Dolamic in L<Java|http://members.unine.ch/jacques.savoy/clef/CzechStemmerLight.txt>.
-
 A L<Czech stemmer for Snowball|http://snowball.tartarus.org/otherapps/oregan/intro.html>
 by Jimmy O’Regan is available on the Snowball site but not included in the
 official distribution and therefore not included in L<Lingua::Stem::Snowball>.
 
-=head1 ACKNOWLEDGEMENTS
-
-Ljiljana Dolamic and Jacques Savoy of the University of Neuchâtel authored the
-original stemming algorithm that was implemented in this module.
-
-This module is brought to you by L<Shutterstock|http://www.shutterstock.com/>.
-Additional open source projects from Shutterstock can be found at
-L<code.shutterstock.com|http://code.shutterstock.com/>.
+This module is based on a stemming algorithm defined in
+L<Indexing and stemming approaches for the Czech language|http://dl.acm.org/citation.cfm?id=1598600>
+(PDF) by Ljiljana Dolamic and Jacques Savoy of the University of Neuchâtel and
+implemented by Ljiljana Dolamic in
+L<Java|http://members.unine.ch/jacques.savoy/clef/CzechStemmerLight.txt>.
 
 =head1 AUTHOR
 
 Nick Patch <patch@cpan.org>
+
+This module is brought to you by L<Shutterstock|http://www.shutterstock.com/>.
+Additional open source projects from Shutterstock can be found at
+L<code.shutterstock.com|http://code.shutterstock.com/>.
 
 =head1 COPYRIGHT AND LICENSE
 

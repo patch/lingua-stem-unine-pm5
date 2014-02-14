@@ -94,11 +94,11 @@ This document describes Lingua::Stem::UniNE v0.04_1.
 This module contains a collection of stemmers for multiple languages based on
 stemming algorithms provided by Jacques Savoy of the University of Neuchâtel
 (UniNE). The languages currently implemented are
-L<Bulgarian|Lingua::Stem::UniNE::BG>, L<Czech|Lingua::Stem::UniNE::CS>, and
-L<Persian|Lingua::Stem::UniNE::FA>. Work is ongoing for Arabic, Bengali,
-Finnish, French, German, Hindi, Hungarian, Italian, Portuguese, Marathi,
-Russian, Spanish, and Swedish. The top priority is languages for which there are
-no stemmers available on CPAN.
+L<Bulgarian|Lingua::Stem::UniNE::BG>, L<Czech|Lingua::Stem::UniNE::CS>,
+L<German|Lingua::Stem::UniNE::DE>, and L<Persian|Lingua::Stem::UniNE::FA>. Work
+is ongoing for Arabic, Bengali, Finnish, French, Hindi, Hungarian, Italian,
+Portuguese, Marathi, Russian, Spanish, and Swedish. The top priority is
+languages for which there are no stemmers available on CPAN.
 
 =head2 Attributes
 
@@ -132,11 +132,13 @@ IETF language tags such as C<fa-AF> or C<fa-IR>.
 
 =item aggressive
 
-By default, if there are multiple strenghs of stemmers, the light stemmers will
-be used. When C<aggressive> is set to true, aggressive stemmers will be used if
+By default, if there are multiple strengths of stemmers, a light stemmer will be
+used. When C<aggressive> is set to true, an aggressive stemmer will be used if
 available.
 
     $stemmer->aggressive(1);
+
+Czech and German have aggressive options.
 
 =back
 
@@ -174,9 +176,6 @@ Returns a list of supported two-letter language codes using lowercase letters.
 
 =head1 SEE ALSO
 
-L<IR Multilingual Resources at UniNE|http://members.unine.ch/jacques.savoy/clef/>
-provides the original stemming algorithms that were implemented in this module.
-
 L<Lingua::Stem::Any> provides a unified interface to any stemmer on CPAN,
 including this module, as well as additional features like normalization,
 casefolding, and in-place stemming.
@@ -185,19 +184,17 @@ L<Lingua::Stem::Snowball> provides alternate stemming algorithms for Finnish,
 French, German, Hungarian, Italian, Portuguese, Russian, Spanish, and Swedish,
 as well as other languages.
 
-=head1 ACKNOWLEDGEMENTS
-
-L<Jacques Savoy|http://members.unine.ch/jacques.savoy/> and Ljiljana Dolamic of
-the University of Neuchâtel authored the original stemming algorithms that were
-implemented in this module.
-
-This project is brought to you by L<Shutterstock|http://www.shutterstock.com/>.
-Additional open source projects from Shutterstock can be found at
-L<code.shutterstock.com|http://code.shutterstock.com/>.
+These stemming algorithms are based on definition and implementations by Jacques
+Savoy and Ljiljana Dolamic of the University of Neuchâtel and provided at
+L<IR Multilingual Resources at UniNE|http://members.unine.ch/jacques.savoy/clef/>.
 
 =head1 AUTHOR
 
 Nick Patch <patch@cpan.org>
+
+This project is brought to you by L<Shutterstock|http://www.shutterstock.com/>.
+Additional open source projects from Shutterstock can be found at
+L<code.shutterstock.com|http://code.shutterstock.com/>.
 
 =head1 COPYRIGHT AND LICENSE
 
