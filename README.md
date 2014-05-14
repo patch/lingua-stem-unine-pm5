@@ -1,3 +1,7 @@
+[![Build status](https://travis-ci.org/patch/lingua-stem-unine-pm5.png)](https://travis-ci.org/patch/lingua-stem-unine-pm5)
+[![Coverage status](https://coveralls.io/repos/patch/lingua-stem-unine-pm5/badge.png)](https://coveralls.io/r/patch/lingua-stem-unine-pm5)
+[![CPAN version](https://badge.fury.io/pl/Lingua-Stem-UniNE.png)](http://badge.fury.io/pl/Lingua-Stem-UniNE)
+
 # NAME
 
 Lingua::Stem::UniNE - University of Neuchâtel stemmers
