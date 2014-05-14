@@ -9,7 +9,7 @@ use parent 'Exporter';
 use Unicode::CaseFold qw( fc );
 use Unicode::Normalize qw( NFC );
 
-our $VERSION   = '0.06';
+our $VERSION   = '0.07';
 our @EXPORT_OK = qw( stem stem_fa );
 
 *stem_fa = \&stem;
@@ -101,7 +101,7 @@ Lingua::Stem::UniNE::FA - Persian stemmer
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE::FA v0.06.
+This document describes Lingua::Stem::UniNE::FA v0.07.
 
 =head1 SYNOPSIS
 

@@ -1,5 +1,11 @@
 Revision history for Perl module Lingua::Stem::UniNE
 
+0.07 2014-05-14
+ - Remove support for Perl v5.19.4 through v5.19.11 due to Perl core regex bug
+   fixed in RT#121778 [issue #6]
+ - Integrate Travis CI, Devel::Cover, and Coveralls with GitHub repo
+   [issue #8], [issue #9]
+
 0.06 2014-02-14
  - Fixed fatal interpolation bug in Perl ≤5.16.x [issue #5]
 
