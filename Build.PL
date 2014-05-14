@@ -18,7 +18,12 @@ my $builder = Module::Build->new(
         'Test::More'   => '0.82',
     },
     requires => {
-        'perl'               => '5.8.1',
+        # Perl v5.19.4—v5.19.11 has an incompatible bug:
+        # https://rt.perl.org/Public/Bug/Display.html?id=121778
+        'perl' => join(', ',
+            '>= 5.8.1',
+            map { "!= 5.19.$_" } 4 .. 11
+        ),
         'charnames'          => 0,
         'namespace::clean'   => 0,
         'parent'             => 0,
