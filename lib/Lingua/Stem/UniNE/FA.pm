@@ -4,10 +4,15 @@ use v5.8.1;
 use utf8;
 use strict;
 use warnings;
-use charnames ':full';
 use parent 'Exporter';
 use Unicode::CaseFold qw( fc );
 use Unicode::Normalize qw( NFC );
+
+BEGIN { # Perl v5.16.0 workaround for RT#113750
+    local $_;
+    require charnames;
+    charnames->import(':full');
+}
 
 our $VERSION   = '0.07';
 our @EXPORT_OK = qw( stem stem_fa );

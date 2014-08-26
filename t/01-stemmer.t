@@ -2,7 +2,7 @@ use utf8;
 use strict;
 use warnings;
 use open qw( :encoding(UTF-8) :std );
-use Test::More tests => 30;
+use Test::More tests => 38;
 use Lingua::Stem::UniNE;
 
 my (@words, @words_copy);
@@ -62,5 +62,23 @@ like $@, qr/Invalid language ''/, 'undef as language via write-accessor';
 eval { Lingua::Stem::UniNE->new(language => 'xx') };
 like $@, qr/Invalid language 'xx'/, 'invalid language via instantiator';
 
-eval { Lingua::Stem::UniNE->new() };
+eval { Lingua::Stem::UniNE->new };
 like $@, qr/Missing required arguments: language/, 'instantiator w/o language';
+
+my @tests = (
+    [qw( bg това тов )],
+    [qw( cs jste jst )],
+    [qw( cs není nen )],
+    [qw( cs dobře dobř )],
+    [qw( de eine ein )],
+    [qw( de für fur )],
+    [qw( de françoise françois )],
+    [qw( fa برای برا )],
+);
+
+for my $test (@tests) {
+    my ($language, $word, $stem) = @$test;
+
+    $stemmer->language($language);
+    is $stemmer->stem($word), $stem, "$language: $word stems to $stem";
+}
