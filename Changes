@@ -1,8 +1,13 @@
 Revision history for Perl module Lingua::Stem::UniNE
 
+0.08 2014-08-26
+ - Added a workaround for Perl v5.13.10–v5.16.0 bug RT#113750 which caused the
+   Persian (fa) stemmer to clobber $_ due to its use of the charnames pragma
+   which uses the buggy re pragma
+
 0.07 2014-05-14
- - Remove support for Perl v5.19.4 through v5.19.11 due to Perl core regex bug
-   fixed in RT#121778 [issue #6]
+ - Remove support for Perl v5.19.4–v5.19.11 due to Perl core regex bug fixed in
+   RT#121778 [issue #6]
  - Integrate Travis CI, Devel::Cover, and Coveralls with GitHub repo
    [issue #8], [issue #9]
 

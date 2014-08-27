@@ -14,7 +14,7 @@ BEGIN { # Perl v5.16.0 workaround for RT#113750
     charnames->import(':full');
 }
 
-our $VERSION   = '0.07';
+our $VERSION   = '0.08';
 our @EXPORT_OK = qw( stem stem_fa );
 
 *stem_fa = \&stem;
@@ -106,7 +106,7 @@ Lingua::Stem::UniNE::FA - Persian stemmer
 
 =head1 VERSION
 
-This document describes Lingua::Stem::UniNE::FA v0.07.
+This document describes Lingua::Stem::UniNE::FA v0.08.
 
 =head1 SYNOPSIS
 
