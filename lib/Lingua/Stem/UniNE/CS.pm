@@ -337,8 +337,8 @@ suffixes from nouns.
 
 This module provides the C<stem> and C<stem_cs> functions for the light stemmer,
 which are synonymous and can optionally be exported, plus C<stem_aggressive> and
-C<stem_cs_aggressive> functions for the light stemmer. They accept a single word
-and return a single stem.
+C<stem_cs_aggressive> functions for the aggressive stemmer. They accept a single
+word and return a single stem.
 
 =head1 SEE ALSO
 
